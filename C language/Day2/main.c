@@ -168,20 +168,48 @@
 // dividend / divisor = quotient
 // dividend % divisor = remainder
 
+// #include<stdio.h>
+// int main(){
+//   int dividend, divisor, quotient, remainder;
+
+//   printf("\nEnter the dividend: ");
+//   scanf("%d", &dividend);
+
+//   printf("\nEnter the divisor: ");
+//   scanf("%d", &divisor);
+
+//   quotient = dividend / divisor;
+//   remainder = dividend % divisor;
+
+//   printf("\nQuotient is = %d", quotient);
+//   printf("\nRemainder is = %d", remainder);
+//   return 0;
+// }
+
+
+
+//==================================================
+// swap two numbers
+// a = 10
+// b = 20
+// swaped numbers is a = 20 and b = 10
+
 #include<stdio.h>
 int main(){
-  int dividend, divisor, quotient, remainder;
+  int a, b, temp;
+  printf("\nEnter the first number: ");
+  scanf("%d", &a);
 
-  printf("\nEnter the dividend: ");
-  scanf("%d", &dividend);
+  printf("\nEnter the second number: ");
+  scanf("%d", &b);
 
-  printf("\nEnter the divisor: ");
-  scanf("%d", &divisor);
+  // swap the number
+  temp = a;
+  a = b; 
+  b = a;
 
-  quotient = dividend / divisor;
-  remainder = dividend % divisor;
-
-  printf("\nQuotient is = %d", quotient);
-  printf("\nRemainder is = %d", remainder);
+  printf("\nSwaped number");
+  printf("\nvalue of a = %d", a);
+  printf("\nvalue of b = %d", b);
   return 0;
 }
