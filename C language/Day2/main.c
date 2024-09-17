@@ -132,17 +132,32 @@
 
 
 // multiply two floating point number
-#include<stdio.h>
-int main(){
-  float num1, num2, product;
+// #include<stdio.h>
+// int main(){
+//   float num1, num2, product;
 
-  printf("Enter two number to multiply: ");
-  scanf("%f %f", &num1, &num2);
+//   printf("Enter two number to multiply: ");
+//   scanf("%f %f", &num1, &num2);
 
-  product = num1 * num2;
+//   product = num1 * num2;
 
-  printf("Multiplication of num1 and num2 is: %.2f", product);  // %.2f will give after decimal two digits 0.00
-  return 0;
-}
+//   printf("Multiplication of num1 and num2 is: %.2f", product);  // %.2f will give after decimal two digits 0.00
+//   return 0;
+// }
+
+
 
 //=============================================
+// find ASCII(Anerucab standard Code for Information Interchange) value of a character entered by the user.
+// ASCII value is character --> %c
+// but output is int --> %d
+
+#include<stdio.h>
+int main(){
+  char c;
+  printf("\nEnter the character: ");
+  scanf("%c", &c);
+
+  printf("\nASCII value of character %d", c);
+  return 0;
+}
