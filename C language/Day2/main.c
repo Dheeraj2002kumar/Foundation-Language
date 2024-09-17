@@ -152,12 +152,36 @@
 // ASCII value is character --> %c
 // but output is int --> %d
 
+// #include<stdio.h>
+// int main(){
+//   char c;
+//   printf("\nEnter the character: ");
+//   scanf("%c", &c);
+
+//   printf("\nASCII value of character %d", c);
+//   return 0;
+// }
+
+
+//===============================================
+// find quotient and remainder of Two integers.
+// dividend / divisor = quotient
+// dividend % divisor = remainder
+
 #include<stdio.h>
 int main(){
-  char c;
-  printf("\nEnter the character: ");
-  scanf("%c", &c);
+  int dividend, divisor, quotient, remainder;
 
-  printf("\nASCII value of character %d", c);
+  printf("\nEnter the dividend: ");
+  scanf("%d", &dividend);
+
+  printf("\nEnter the divisor: ");
+  scanf("%d", &divisor);
+
+  quotient = dividend / divisor;
+  remainder = dividend % divisor;
+
+  printf("\nQuotient is = %d", quotient);
+  printf("\nRemainder is = %d", remainder);
   return 0;
 }
