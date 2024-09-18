@@ -167,14 +167,30 @@
 
 //=========================================
 // WAP to find out the sum of N natural numbers.
+// #include<stdio.h>
+// int main(){
+//   int n, i, sum = 0;
+//   printf("Enter a number: ");
+//   scanf("%d", &n);
+//   for(i = 1; i <= n; i++){
+//     sum = sum + i;
+//   }
+//   printf("Sum of %d natural numbers is: %d", n, sum);
+//   return 0;
+// }
+
+
+
+//==============================================
+// WAP to find out sum of numbers within range.
 #include<stdio.h>
 int main(){
-  int n, i, sum = 0;
-  printf("Enter a number: ");
-  scanf("%d", &n);
-  for(i = 1; i <= n; i++){
+  int start, end, sum = 0;
+  printf("Enter start and end of range: ");
+  scanf("%d %d", &start, &end);
+  for(int i = start; i <= end; i++){
     sum = sum + i;
   }
-  printf("Sum of %d natural numbers is: %d", n, sum);
+  printf("Sum of numbers within range is: %d", sum);
   return 0;
 }
