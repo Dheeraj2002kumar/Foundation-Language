@@ -215,12 +215,28 @@
 
 // =====================================
 // Print numbers from 1 to 5 using while loop
+// #include<stdio.h>
+// int main(){
+//   int i = 1;
+//   while(i <= 5){
+//     printf("%d\n", i);
+//     i++;
+//   }
+//   return 0;
+// }
+
+
+//===========================================
+// WAP to find number of digits in number using while loop
 #include<stdio.h>
 int main(){
-  int i = 1;
-  while(i <= 5){
-    printf("%d\n", i);
-    i++;
+  int num, count = 0;
+  printf("Enter number: ");
+  scanf("%d", &num);
+  while(num != 0){
+    num = num / 10;
+    count++;
   }
+  printf("Number of digits in number is: %d", count);
   return 0;
 }
