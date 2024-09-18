@@ -183,14 +183,31 @@
 
 //==============================================
 // WAP to find out sum of numbers within range.
+// #include<stdio.h>
+// int main(){
+//   int start, end, sum = 0;
+//   printf("Enter start and end of range: ");
+//   scanf("%d %d", &start, &end);
+//   for(int i = start; i <= end; i++){
+//     sum = sum + i;
+//   }
+//   printf("Sum of numbers within range is: %d", sum);
+//   return 0;
+// }
+
+//=================================================
+// WAP to find factors of numbers.
 #include<stdio.h>
 int main(){
-  int start, end, sum = 0;
-  printf("Enter start and end of range: ");
-  scanf("%d %d", &start, &end);
-  for(int i = start; i <= end; i++){
-    sum = sum + i;
+  int num, i, count = 0;
+  printf("Enter number: ");
+  scanf("%d", &num);
+  for(i = 1; i <= num; i++){
+    if(num % i == 0){
+      count++;
+      printf("\n%d ", i);
+    }
   }
-  printf("Sum of numbers within range is: %d", sum);
+  printf("\nNumber of factors of %d is: %d", num, count);
   return 0;
 }
