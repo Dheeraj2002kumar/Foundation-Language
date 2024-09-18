@@ -47,15 +47,51 @@
 // }
 
 // another way use #define PI 3.14
-#include<stdio.h>
-#define PI 3.14
-int main(){
-  float radius, area;
-  printf("Enter the radius of circle:");
-  scanf("%f", &radius);
+// #include<stdio.h>
+// #define PI 3.14
+// int main(){
+//   float radius, area;
+//   printf("Enter the radius of circle:");
+//   scanf("%f", &radius);
 
-  area = PI * radius * radius;
+//   area = PI * radius * radius;
   
-  printf("Area of circle is: %.2f", area);
-  return 0;
-}
+//   printf("Area of circle is: %.2f", area);
+//   return 0;
+// }
+
+
+//===============================================
+// find area of rectangle
+// #include<stdio.h>
+// int main(){
+//   float length, breadth, area;
+//   printf("Enter the length of rectangle: ");
+//   scanf("%f", &length);
+//   printf("Enter the breadth of ractangle: ");
+//   scanf("%f", &breadth);
+
+//   area = length * breadth;
+
+//   printf("Area of ractangle is: %.2f", area);
+//   return 0;
+// }
+
+
+//==============================================
+// find area of triangle
+// #include<stdio.h>
+// int main(){
+//   float base, height, area;
+//   printf("Enter base of trangle: ");
+//   scanf("%f", &base);
+//   printf("Enter height of trangle: ");
+//   scanf("%f", &height);
+
+//   area = 0.5 * base * height;
+//   printf("Area of triangle is: %.2f", area);
+//   return 0;
+// }
+
+
+//=========================================
