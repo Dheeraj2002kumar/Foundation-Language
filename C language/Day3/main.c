@@ -111,15 +111,34 @@
 
 //=================================================
 // find out factorial of number
+// #include<stdio.h>
+// int main(){
+//   int num, i, fact = 1;
+//   printf("Enter a number: ");
+//   scanf("%d", &num);
+
+//   for(i = 1; i <= num; i++){
+//     fact = fact * i;
+//   }
+//   printf("Factorial of %d is: %d", num, fact);
+//   return 0;
+// }
+
+
+//===========================================
+// WAP to find out Fiboacci series up to n.
 #include<stdio.h>
 int main(){
-  int num, i, fact = 1;
+  int n, i, t1 = 0, t2 = 1, nextTerm;
   printf("Enter a number: ");
-  scanf("%d", &num);
-
-  for(i = 1; i <= num; i++){
-    fact = fact * i;
+  scanf("%d", &n);
+  printf("Fibonacci Series up to %d terms are: ", n);
+  
+  for(i = 1; i <= n; i++){
+    printf("%d ", t1);
+    nextTerm = t1 + t2;
+    t1 = t2;
+    t2 = nextTerm;
   }
-  printf("Factorial of %d is: %d", num, fact);
   return 0;
 }
