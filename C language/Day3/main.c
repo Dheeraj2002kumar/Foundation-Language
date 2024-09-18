@@ -96,11 +96,30 @@
 
 //=========================================
 // WAP to print number 1 to 10
+// #include<stdio.h>
+// int main(){
+//   int i;
+//   for(i = 1; i <= 10; i++){
+//     printf("%d\n",i);
+//   }
+//   return 0;
+// }
+
+
+
+
+
+//=================================================
+// find out factorial of number
 #include<stdio.h>
 int main(){
-  int i;
-  for(i = 1; i <= 10; i++){
-    printf("%d\n",i);
+  int num, i, fact = 1;
+  printf("Enter a number: ");
+  scanf("%d", &num);
+
+  for(i = 1; i <= num; i++){
+    fact = fact * i;
   }
+  printf("Factorial of %d is: %d", num, fact);
   return 0;
 }
