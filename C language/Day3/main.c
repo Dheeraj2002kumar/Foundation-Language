@@ -197,17 +197,30 @@
 
 //=================================================
 // WAP to find factors of numbers.
+// #include<stdio.h>
+// int main(){
+//   int num, i, count = 0;
+//   printf("Enter number: ");
+//   scanf("%d", &num);
+//   for(i = 1; i <= num; i++){
+//     if(num % i == 0){
+//       count++;
+//       printf("\n%d ", i);
+//     }
+//   }
+//   printf("\nNumber of factors of %d is: %d", num, count);
+//   return 0;
+// }
+
+
+// =====================================
+// Print numbers from 1 to 5 using while loop
 #include<stdio.h>
 int main(){
-  int num, i, count = 0;
-  printf("Enter number: ");
-  scanf("%d", &num);
-  for(i = 1; i <= num; i++){
-    if(num % i == 0){
-      count++;
-      printf("\n%d ", i);
-    }
+  int i = 1;
+  while(i <= 5){
+    printf("%d\n", i);
+    i++;
   }
-  printf("\nNumber of factors of %d is: %d", num, count);
   return 0;
 }
