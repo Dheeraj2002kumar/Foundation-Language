@@ -127,18 +127,41 @@
 
 //===========================================
 // WAP to find out Fiboacci series up to n.
-#include<stdio.h>
-int main(){
-  int n, i, t1 = 0, t2 = 1, nextTerm;
-  printf("Enter a number: ");
-  scanf("%d", &n);
-  printf("Fibonacci Series up to %d terms are: ", n);
-  
-  for(i = 1; i <= n; i++){
-    printf("%d ", t1);
-    nextTerm = t1 + t2;
-    t1 = t2;
-    t2 = nextTerm;
-  }
-  return 0;
-}
+// #include<stdio.h>
+// int main(){
+//   int n, i, t1 = 0, t2 = 1, nextTerm;
+//   printf("Enter a number: ");
+//   scanf("%d", &n);
+//   printf("Fibonacci Series up to %d terms are: ", n);
+
+//   for(i = 1; i <= n; i++){
+//     printf("%d ", t1);
+//     nextTerm = t1 + t2;
+//     t1 = t2;
+//     t2 = nextTerm;
+//   }
+//   return 0;
+// }
+
+
+// another way to solve Fiboacci series =========
+// #include<stdio.h>
+// int main(){
+//   int n, i, t1 = -1, t2 = 1, nextTerm;
+
+//   printf("Enter number: ");
+//   scanf("%d", &n);
+
+//   printf("\nFiboacci Series: ");
+
+//   for(i = 1; i <= n; i++){
+//     nextTerm = t1 + t2;
+//     printf("%d", nextTerm);
+//     t1 = t2;
+//     t2 = nextTerm;
+//   }
+//   return 0;
+
+// }
+
+
