@@ -243,15 +243,50 @@
 
 //============================================
 // WAP to find sum of digits of number using while loop
+// #include<stdio.h>
+// int main(){
+//   int num, sum = 0;
+//   printf("Enter number: ");
+//   scanf("%d", &num);
+//   while(num != 0){
+//     sum = sum + num % 10;
+//     num = num / 10;
+//   }
+//   printf("Sum of digits of number is: %d", sum);
+//   return 0;
+// }
+
+
+//=============================================
+// WAP to reverse digits of number.
 #include<stdio.h>
 int main(){
-  int num, sum = 0;
+  int num, rev = 0;
   printf("Enter number: ");
   scanf("%d", &num);
+
   while(num != 0){
-    sum = sum + num % 10;
+    rev = rev * 10 + num % 10;
+    // printf("\n rev --> %d", rev);
     num = num / 10;
+    // printf("\n num--> %d \n", num);
   }
-  printf("Sum of digits of number is: %d", sum);
+
+  printf("Reverse of number is: %d", rev);
+
   return 0;
 }
+
+// input num is 123
+// rev = 0 * 10 + 123 % 10 ==> 0 + 3 ==> 3
+// num = 123 / 10 ==> 12
+
+// rev = 3 * 10 + 12 % 10 ==> 30 + 2 ==> 32
+// num = 12 / 10 ==> 1
+
+// rev = 32 * 10 + 1 % 10 ==> 320 + 1 ==> 321    
+// num = 1/10 ==> 0
+
+// Reverse of number is: 321
+
+// =================================================
