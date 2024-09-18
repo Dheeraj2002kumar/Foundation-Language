@@ -228,15 +228,30 @@
 
 //===========================================
 // WAP to find number of digits in number using while loop
+// #include<stdio.h>
+// int main(){
+//   int num, count = 0;
+//   printf("Enter number: ");
+//   scanf("%d", &num);
+//   while(num != 0){
+//     num = num / 10;
+//     count++;
+//   }
+//   printf("Number of digits in number is: %d", count);
+//   return 0;
+// }
+
+//============================================
+// WAP to find sum of digits of number using while loop
 #include<stdio.h>
 int main(){
-  int num, count = 0;
+  int num, sum = 0;
   printf("Enter number: ");
   scanf("%d", &num);
   while(num != 0){
+    sum = sum + num % 10;
     num = num / 10;
-    count++;
   }
-  printf("Number of digits in number is: %d", count);
+  printf("Sum of digits of number is: %d", sum);
   return 0;
 }
