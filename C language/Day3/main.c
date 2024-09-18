@@ -259,23 +259,23 @@
 
 //=============================================
 // WAP to reverse digits of number.
-#include<stdio.h>
-int main(){
-  int num, rev = 0;
-  printf("Enter number: ");
-  scanf("%d", &num);
+// #include<stdio.h>
+// int main(){
+//   int num, rev = 0;
+//   printf("Enter number: ");
+//   scanf("%d", &num);
 
-  while(num != 0){
-    rev = rev * 10 + num % 10;
-    // printf("\n rev --> %d", rev);
-    num = num / 10;
-    // printf("\n num--> %d \n", num);
-  }
+//   while(num != 0){
+//     rev = rev * 10 + num % 10;
+//     // printf("\n rev --> %d", rev);
+//     num = num / 10;
+//     // printf("\n num--> %d \n", num);
+//   }
 
-  printf("Reverse of number is: %d", rev);
+//   printf("Reverse of number is: %d", rev);
 
-  return 0;
-}
+//   return 0;
+// }
 
 // input num is 123
 // rev = 0 * 10 + 123 % 10 ==> 0 + 3 ==> 3
@@ -289,4 +289,73 @@ int main(){
 
 // Reverse of number is: 321
 
-// =================================================
+// // =================================================
+// // WAP to find if Number is Perfect Number using while loop.
+// #include <stdio.h>
+
+// // Function to check if a number is perfect
+// int isPerfectNumber(int num) {
+//     int sum = 0;
+//     int i = 1;
+
+//     // Loop to find divisors and add them using a while loop
+//     while (i <= num / 2) {
+//         if (num % i == 0) {
+//             sum += i;
+//         }
+//         i++;
+//     }
+
+//     // If sum of divisors equals the number, it's a perfect number
+//     return sum == num;
+// }
+
+// int main() {
+//     int number;
+
+//     // Ask user for input
+//     printf("Enter a number: ");
+//     scanf("%d", &number);
+
+//     // Check if the number is perfect and display result
+//     if (isPerfectNumber(number)) {
+//         printf("%d is a perfect number.\n", number);
+//     } else {
+//         printf("%d is not a perfect number.\n", number);
+//     }
+
+//     return 0;
+// }
+
+
+
+//=========================================
+// WAP to identify if the number is Palindrome or not
+#include <stdio.h>
+
+int main() {
+    int number, originalNumber, reversedNumber = 0, remainder;
+
+    // Ask user for input
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    // Store the original number to compare later
+    originalNumber = number;
+
+    // Reverse the number
+    while (number != 0) {
+        remainder = number % 10;  // Get the last digit
+        reversedNumber = reversedNumber * 10 + remainder;  // Add it to the reversed number
+        number /= 10;  // Remove the last digit from the original number
+    }
+
+    // Check if the original number is equal to the reversed number
+    if (originalNumber == reversedNumber) {
+        printf("%d is a palindrome.\n", originalNumber);
+    } else {
+        printf("%d is not a palindrome.\n", originalNumber);
+    }
+
+    return 0;
+}
