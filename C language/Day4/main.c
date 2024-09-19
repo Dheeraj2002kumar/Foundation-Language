@@ -83,22 +83,90 @@
 
 // Program to calculate the sum of numbers (10 numbers max) // if the user enters a negative number. It's not added to the result.
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-  int i;
-  double number, sum = 0.0;
+// int main()
+// {
+//   int i;
+//   double number, sum = 0.0;
 
-  for(i = 1; i <= 10; i++){
-    printf("Enter number %d: ", i);
-    scanf("%lf", &number);
+//   for(i = 1; i <= 10; i++){
+//     printf("Enter number %d: ", i);
+//     scanf("%lf", &number);
     
+//     if(number < 0.0){
+//       continue;
+//     }
+//     sum += number;
+//   }
+//   printf("Sum = %.2f", sum);
+//   return 0;
+// }
+
+
+
+//=====================================================
+// WAP for arithmetic calculator using switch case stetement.
+
+// #include <stdio.h>
+
+// int main(){
+//   int num1, num2;
+//   int choice;
+//   printf("Enter num1: ");
+//   scanf("%d", &num1);
+
+//   printf("Enter num2: ");
+//   scanf("%d", &num2);
+
+//   printf("\n1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n");
+//   printf("Choice the which type of calculation you want (+ - * /): ");
+//   scanf("%d", &choice);
+
+//   switch (choice)
+//   {
+//   case 1: printf("\nAddition is = %d", num1 + num2);
+//     break;
+  
+//   case 2: printf("\nubtraction is = %d", num1 - num2);
+//     break;
+
+//   case 3: printf("\nMultiplication is = %d", num1 * num2);
+//     break;
+
+//   case 4: printf("\nDivision is = %d", num1 / num2);
+//     break; 
+
+//   default: printf("\nYou have entered wrong choice");
+//     break;
+//   }
+
+// return 0;
+// }
+
+
+//==================================================================
+// Program to calculate the sum and average of positive number
+// If the user enters a negative number, the  sum and average are displayed.
+#include <stdio.h>
+int main(){
+
+  const int maxInput = 100;
+  int i;
+  double number, average, sum = 0.0;
+
+  for(i = 1; i <= maxInput; i++){
+    printf("%d Enter a number ", i);
+    scanf("%lf", &number);
+
+    // go to jump if the user enters a negative number
     if(number < 0.0){
-      continue;
+      goto jump;
     }
     sum += number;
   }
-  printf("Sum = %.2f", sum);
+  jump:average = sum / (i - 1);
+  printf("Sum = %.2f\n", sum);
+  printf("Average = %.2f", average);
   return 0;
 }
