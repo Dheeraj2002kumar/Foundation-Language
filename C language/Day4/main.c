@@ -216,34 +216,63 @@
 // }
 
 
-//=================================================
+// //=================================================
 
-// check Armstrong number or not
+// // check Armstrong number or not
+
+// #include <stdio.h>
+
+// int main(){
+
+//   int num, originalNum, remainder, result=0;
+
+//   printf("Enter a three-digit integer: ");
+//   scanf("%d", &num);
+
+//   originalNum = num;
+
+//   while(originalNum != 0){
+//     // remainder contains the last digit
+//     remainder = originalNum % 10;
+//     result += remainder * remainder * remainder;
+
+//     // removing last digit from the original number
+//     originalNum /= 10;
+//   }
+
+//   if(result == num){
+//     printf("%d is an Armstrong number", num);
+//   } else {
+//     printf("%d is not an Armstrong number", num);
+//   }
+//   return 0;
+// }
+
+//===================================================
+
+// create half pyramid of *
+// *
+// * *
+// * * *
+// * * * *
+// * * * * *
 
 #include <stdio.h>
 
 int main(){
 
-  int num, originalNum, remainder, result=0;
+  int i, j, rows;
 
-  printf("Enter a three-digit integer: ");
-  scanf("%d", &num);
+  printf("Enter the number of rows: ");
+  scanf("%d", &rows);
 
-  originalNum = num;
+  for(i = 1; i <= rows; i++){
+    
+    for(j = 1; j <= i; j++){
+      printf("* ");
+    }
+    printf("\n");
 
-  while(originalNum != 0){
-    // remainder contains the last digit
-    remainder = originalNum % 10;
-    result += remainder * remainder * remainder;
-
-    // removing last digit from the original number
-    originalNum /= 10;
-  }
-
-  if(result == num){
-    printf("%d is an Armstrong number", num);
-  } else {
-    printf("%d is not an Armstrong number", num);
   }
   return 0;
 }
