@@ -201,16 +201,49 @@
 
 // Generate multiplication table
 
+// #include <stdio.h>
+
+// int main(){
+//   int n, j;
+//   printf("Enter an integer: ");
+//   scanf("%d", &n);
+
+//   for(j = 0; j <= 10; j++){
+//     printf("%d * %d = %d\n", n, j, n * j);
+//   }
+
+//   return 0;
+// }
+
+
+//=================================================
+
+// check Armstrong number or not
+
 #include <stdio.h>
 
 int main(){
-  int n, j;
-  printf("Enter an integer: ");
-  scanf("%d", &n);
 
-  for(j = 0; j <= 10; j++){
-    printf("%d * %d = %d\n", n, j, n * j);
+  int num, originalNum, remainder, result=0;
+
+  printf("Enter a three-digit integer: ");
+  scanf("%d", &num);
+
+  originalNum = num;
+
+  while(originalNum != 0){
+    // remainder contains the last digit
+    remainder = originalNum % 10;
+    result += remainder * remainder * remainder;
+
+    // removing last digit from the original number
+    originalNum /= 10;
   }
 
+  if(result == num){
+    printf("%d is an Armstrong number", num);
+  } else {
+    printf("%d is not an Armstrong number", num);
+  }
   return 0;
 }
