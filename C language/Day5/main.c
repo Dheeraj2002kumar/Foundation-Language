@@ -115,16 +115,63 @@
 // Example: User-defined function with no argument pass but return  value
 // create getvalue function and find prime number
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int getValue();
+// int getValue();
+
+// int main(){
+//   int n, i, flag = 0;
+//   n = getValue();
+
+//   for(i = 2; i <= n/2; i++){
+//     if(n % i == 0){
+//       flag = 1;
+//       break;
+//     }
+//   }
+
+//   if(flag == 1){
+//     printf("%d is not a prime number", n);
+//   } else{
+//     printf("%d is a prime number", n);
+//   }
+
+//   return 0;
+// }
+
+// int getValue(){
+//   int n; 
+//   printf("Enter the number: ");
+//   scanf("%d", &n);
+
+//   return n;
+// }
+
+
+//=============================================
+
+// Example: User-defined function with argument pass and no return value
+// create prime number function
+
+#include<stdio.h>
+
+void prime(int n);
 
 int main(){
-  int n, i, flag = 0;
-  n = getValue();
+  int n; 
 
-  for(i = 2; i <= n/2; i++){
-    if(n % 2 == 0){
+  printf("Enter the number: ");
+  scanf("%d", &n);
+
+  prime(n);
+  return 0;
+}
+
+void prime(int n){
+  int i, flag = 0;
+  //   int n, i, flag = 0;
+   for(i = 2; i <= n/2; i++){
+    if(n % i == 0){
       flag = 1;
       break;
     }
@@ -135,14 +182,4 @@ int main(){
   } else{
     printf("%d is a prime number", n);
   }
-
-  return 0;
-}
-
-int getValue(){
-  int n; 
-  printf("Enter the number: ");
-  scanf("%d", &n);
-
-  return n;
 }
