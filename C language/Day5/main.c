@@ -55,23 +55,94 @@
 //=====================================================
 // Example: User-defined function with eveOdd
 // function to check whether a number is even or odd
-#include <stdio.h>
-int eveOdd(int n); // function prototype
+// #include <stdio.h>
+// int eveOdd(int n); // function prototype
 
-int main()
-{
-  int n;
-  printf("Enter a number: ");
-  scanf("%d", &n);
-  printf("Number is %s", eveOdd(n) == 1 ? "even" : "odd");
+// int main()
+// {
+//   int n;
+//   printf("Enter a number: ");
+//   scanf("%d", &n);
+//   printf("Number is %s", eveOdd(n) == 1 ? "even" : "odd");
+//   return 0;
+// }
+// // function definition
+// int eveOdd(int n)
+// { // function definition
+//   if (n % 2 == 0)
+//     return 1; // return statement
+//   else
+//     return 0;
+// }
+
+
+
+//===============================================
+// Example: User-defined function with no argument pass and no return value
+// create function for prime number
+// #include<stdio.h>
+
+// void prime(); // function prototype
+
+// int main(){
+//   prime(); // function call
+//   return 0;
+// }
+
+// void prime(){   // function definition
+//   int n, i, flag = 0;
+
+//   printf("Enter the number: ");
+//   scanf("%d", &n);
+
+//   for(i=2; i <= n/2; i++){
+//     if(n % i == 0){
+//       flag = 1;
+//     } 
+//   }
+
+//   if(flag == 1){
+//     printf("%d is not a prime number", n);
+//   } else {
+//     printf("%d is a prime number", n);
+//   }
+// }
+
+
+
+//=================================================
+
+// Example: User-defined function with no argument pass but return  value
+// create getvalue function and find prime number
+
+#include <stdio.h>
+
+int getValue();
+
+int main(){
+  int n, i, flag = 0;
+  n = getValue();
+
+  for(i = 2; i <= n/2; i++){
+    if(n % 2 == 0){
+      flag = 1;
+      break;
+    }
+  }
+
+  if(flag == 1){
+    printf("%d is not a prime number", n);
+  } else{
+    printf("%d is a prime number", n);
+  }
+
   return 0;
 }
-// function definition
-int eveOdd(int n)
-{ // function definition
-  if (n % 2 == 0)
-    return 1; // return statement
-  else
-    return 0;
-}
 
+int getValue(){
+  int n; 
+  printf("Enter the number: ");
+  scanf("%d", &n);
+
+  return n;
+}
