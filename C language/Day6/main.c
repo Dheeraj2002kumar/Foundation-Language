@@ -117,6 +117,54 @@
 //   return 1;
 // }
 
-
 //==============================================================
 
+// Find the sum of natural number using recursion
+
+// #include <stdio.h>
+// int sum(int n);
+// int main()
+// {
+//   int n;
+//   printf("Enter a number: ");
+//   scanf("%d", &n);
+//   printf("Sum of natural numbers from 1 to %d is: %d", n, sum(n));
+//   return 0;
+// }
+// int sum(int n)
+// {
+//   if (n == 1)
+//   {
+//     return 1;
+//   }
+//   else
+//   {
+//     return n + sum(n - 1);
+//   }
+// }
+
+//==========================================
+// Calculate the factorial of number using recursion
+
+#include <stdio.h>
+int factorial(int n);
+
+int main()
+{
+  int n;
+  printf("\nEnter the number: ");
+  scanf("%d", &n);
+
+  printf("\nfactorial is = %d", factorial(n));
+
+  return 0;
+}
+
+int factorial(int n)
+{
+  if(n >= 1){
+    return n * factorial(n - 1);
+  } else {
+    return 1;
+  }
+}
