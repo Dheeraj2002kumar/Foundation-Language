@@ -57,17 +57,36 @@
 //========================================================
 // Global Variable
 
-#include<stdio.h>
+// #include<stdio.h>
 
+// void display();
+// int n = 5; // Global variable
+// int main(){
+//   ++n;
+//   display();
+//   return 0;
+// }
+
+// void display(){
+//   ++n; 
+//   printf("n = %d", n);
+// }
+
+//=====================================================
+
+// Static Variable
+
+# include<stdio.h>
 void display();
-int n = 5; // Global variable
 int main(){
-  ++n;
   display();
-  return 0;
+  display();
+}
+void display(){
+  static int c = 1;
+  c += 5;
+  printf("\nc = %d", c);
 }
 
-void display(){
-  ++n; 
-  printf("n = %d", n);
-}
+
+
