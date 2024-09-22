@@ -146,25 +146,46 @@
 //==========================================
 // Calculate the factorial of number using recursion
 
-#include <stdio.h>
-int factorial(int n);
+// #include <stdio.h>
+// int factorial(int n);
 
+// int main()
+// {
+//   int n;
+//   printf("\nEnter the number: ");
+//   scanf("%d", &n);
+
+//   printf("\nfactorial is = %d", factorial(n));
+
+//   return 0;
+// }
+
+// int factorial(int n)
+// {
+//   if(n >= 1){
+//     return n * factorial(n - 1);
+//   } else {
+//     return 1;
+//   }
+// }
+
+
+//====================================================
+// finding the greatest common diviser (G.C.D) using recursion.
+#include <stdio.h>
+int gcd(int a, int b);
 int main()
 {
-  int n;
-  printf("\nEnter the number: ");
-  scanf("%d", &n);
-
-  printf("\nfactorial is = %d", factorial(n));
-
+  int a, b;
+  printf("\nEnter the first number: ");
+  scanf("%d", &a);
+  printf("\nEnter the second number: ");
+  scanf("%d", &b);
+  printf("\nGCD is = %d", gcd(a, b));
   return 0;
 }
 
-int factorial(int n)
-{
-  if(n >= 1){
-    return n * factorial(n - 1);
-  } else {
-    return 1;
-  }
+int gcd(int a, int b){
+  if (b == 0) return a;
+  else return gcd(b, a % b);  
 }
