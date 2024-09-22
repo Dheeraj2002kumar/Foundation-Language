@@ -41,13 +41,33 @@
 // The auto storage class is used to declare local variables. It is the default storage class
 // for local variables.
 
-#include<stdio.h>
-int main(void) {
-  for(int i = 0; i<5; i++){
-    printf("C programming");
-  }
+// #include<stdio.h>
+// int main(void) {
+//   for(int i = 0; i<5; i++){
+//     printf("C programming");
+//   }
 
-  // Error: i is not declared at this point 
-  printf("%d",i);
+//   // Error: i is not declared at this point 
+//   printf("%d",i);
+//   return 0;
+// }
+
+
+
+//========================================================
+// Global Variable
+
+#include<stdio.h>
+
+void display();
+int n = 5; // Global variable
+int main(){
+  ++n;
+  display();
   return 0;
+}
+
+void display(){
+  ++n; 
+  printf("n = %d", n);
 }
