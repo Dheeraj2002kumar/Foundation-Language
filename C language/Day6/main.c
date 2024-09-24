@@ -253,23 +253,47 @@
 //=================================================================
 // Calculate power of a number using recursion
 
+// #include<stdio.h>
+// #include<math.h>
+// int power_of_number(int n1, int n2); // function prototyping
+// int main(){
+//   int a, result, base;
+
+//   printf("\nEnter the base value: ");
+//   scanf("%d", &base);
+//   printf("\nEnter the power: ");
+//   scanf("%d", &a);
+
+//   result = power_of_number(base, a);
+//   printf("\nResult is = %d", result);
+//   return 0;
+// }
+
+// int power_of_number(int n1, int n2){
+//   if(n2 == 0) return 1;
+//   else return n1 * power_of_number(n1, n2 - 1);
+// }
+
+
+//==============================================================
+// Example: Array Input/Output
+// Program to take 5 values from the user and store them in an array
+// print the elements stored in the array
+
 #include<stdio.h>
-#include<math.h>
-int power_of_number(int n1, int n2); // function prototyping
 int main(){
-  int a, result, base;
+  int values[5];
+  printf("Enter 5 integers: ");
 
-  printf("\nEnter the base value: ");
-  scanf("%d", &base);
-  printf("\nEnter the power: ");
-  scanf("%d", &a);
+  // taking inputs and storing in an array
+  for(int i = 0; i < 5; i++){
+    scanf("%d", &values[i]);
+  }
 
-  result = power_of_number(base, a);
-  printf("\nResult is = %d", result);
-  return 0;
-}
-
-int power_of_number(int n1, int n2){
-  if(n2 == 0) return 1;
-  else return n1 * power_of_number(n1, n2 - 1);
+  printf("Displaying integers: ");
+  // Printing elements of an array
+  for(int i = 0; i < 5; i++){
+    printf("%d ", values[i]);
+  }
+  return  0;
 }
