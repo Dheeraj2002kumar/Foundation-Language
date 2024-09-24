@@ -111,18 +111,41 @@
 
 //===================================================
 // Passing string to a function
+// #include<stdio.h>
+// void displayString(char str[]); // funciton prototyping
+
+// int main(){
+//   char str[50];
+//   printf("Enter string: ");
+//   fgets(str, sizeof(str), stdin);
+//   displayString(str);  // passing string to a function
+//   return 0;
+// }
+
+// void displayString(char str[]){
+//   printf("String Output: ");
+//   puts(str);
+// }
+
+
+//==============================================
+// find the frequency of character in a string
 #include<stdio.h>
-void displayString(char str[]); // funciton prototyping
-
 int main(){
-  char str[50];
-  printf("Enter string: ");
-  fgets(str, sizeof(str), stdin);
-  displayString(str);  // passing string to a function
-  return 0;
-}
+  char frequency[50], ch;
+  int count = 0;
 
-void displayString(char str[]){
-  printf("String Output: ");
-  puts(str);
+  printf("\nEnter the string: ");
+  fgets(frequency, sizeof(frequency), stdin);
+
+  printf("\nEnter the character that needs to be checked for frequency: ");
+  scanf("%c", &ch);
+
+  int i;
+  for(i = 0; frequency[i] != '\0'; i++){
+    if(ch == frequency[i]) count++;
+  }
+
+  printf("\nFrequency of character is = %d", count);
+  return 0;
 }
