@@ -86,11 +86,43 @@
 //================= String =============================
 // Example: scanf() to read a string
 
+// #include<stdio.h>
+// int main(){
+//   char name[20];
+//   printf("Enter name: ");
+//   scanf("%s", &name);
+//   printf("Your name is %s", name);
+//   return 0;
+// }
+
+//=========================================================
+// You can use the fgets() function to read a line of string. And, 
+// You use puts() to display the string.
+
+// #include<stdio.h>
+// int main(){
+//   char name[30];
+//   printf("Enter name: ");
+//   fgets(name, sizeof(name), stdin); // read string
+//   printf("Name: ");
+//   puts(name);  // display string 
+//   return 0;
+// }
+
+//===================================================
+// Passing string to a function
 #include<stdio.h>
+void displayString(char str[]); // funciton prototyping
+
 int main(){
-  char name[20];
-  printf("Enter name: ");
-  scanf("%s", &name);
-  printf("Your name is %s", name);
+  char str[50];
+  printf("Enter string: ");
+  fgets(str, sizeof(str), stdin);
+  displayString(str);  // passing string to a function
   return 0;
+}
+
+void displayString(char str[]){
+  printf("String Output: ");
+  puts(str);
 }
