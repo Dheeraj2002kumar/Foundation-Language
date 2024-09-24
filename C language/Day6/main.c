@@ -193,30 +193,58 @@
 
 //===================================================
 // Convert binary number to decimal number and vice versa using recursion
-#include <stdio.h>
+// #include <stdio.h>
 
-int binaryToDecimal(int binary) {
-    static int decimal = 0;
-    static int base = 1;
+// int binaryToDecimal(int binary) {
+//     static int decimal = 0;
+//     static int base = 1;
 
-    if (binary == 0) {
-        return decimal;
-    }
+//     if (binary == 0) {
+//         return decimal;
+//     }
 
-    decimal += (binary % 10) * base;
-    base *= 2;
-    binary /= 10;
+//     decimal += (binary % 10) * base;
+//     base *= 2;
+//     binary /= 10;
 
-    return binaryToDecimal(binary);
+//     return binaryToDecimal(binary);
+// }
+
+// int main() {
+//     int binary;
+//     printf("Enter a binary number: ");
+//     scanf("%d", &binary);
+
+//     int decimal = binaryToDecimal(binary);
+//     printf("The decimal equivalent is: %d\n", decimal);
+
+//     return 0;
+// }
+
+
+
+// different method =======================================
+#include<stdio.h>
+#include<math.h>
+
+int binary_to_decimal(long n);
+
+int main(){
+  long binary_num;
+  printf("\nEnter binary number: ");
+  scanf("%ld", &binary_num);
+
+  printf("\nResult is %d", binary_to_decimal(binary_num));
+  return 0;
+}
+int binary_to_decimal(long n){
+  int i = 0, res, dec = 0;
+  while(n != 0){
+    res = n % 10;
+    n = n/10;
+    dec = dec + res * pow(2, i);
+    i++;
+  }
+  return dec;
 }
 
-int main() {
-    int binary;
-    printf("Enter a binary number: ");
-    scanf("%d", &binary);
-
-    int decimal = binaryToDecimal(binary);
-    printf("The decimal equivalent is: %d\n", decimal);
-
-    return 0;
-}
