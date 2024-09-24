@@ -30,34 +30,53 @@
 // }
 
 
-//==========================================================
-// C Program to store and print 12 values entered by the user
+// //==========================================================
+// // C Program to store and print 12 values entered by the user
+
+// #include<stdio.h>
+// int main(){
+//   int test[2][3][2];
+//   int i, j, k;
+
+//   printf("Enter 12 values: \n");
+
+//   for(i = 0; i < 2; i++){
+//     for(j = 0; j < 3; j++){
+//       for(k = 0; k < 2; k++){
+//         scanf("%d", &test[i][j][k]);
+//       }
+//     }
+//   }
+
+//   // printing values with proper index.
+//   printf("\nDisplaying values:\n");
+
+//   for(i = 0; i < 2; i++){
+//     for(j = 0; j < 3; j++){
+//       for(k = 0; k < 2; k++){
+//         printf("test[%d][%d][%d] = %d\n", i, j, k, test[i][j][k]);
+//       }
+//     }
+//   }
+
+//   return 0;
+// }
+
+//=====================================================
+// Pass arrays to a function in C
 
 #include<stdio.h>
+void display(int age1, int age2);  // function prototyping
+
 int main(){
-  int test[2][3][2];
-  int i, j, k;
+  int ageArray[] = {2, 8, 4, 12};
 
-  printf("Enter 12 values: \n");
-
-  for(i = 0; i < 2; i++){
-    for(j = 0; j < 3; j++){
-      for(k = 0; k < 2; k++){
-        scanf("%d", &test[i][j][k]);
-      }
-    }
-  }
-
-  // printing values with proper index.
-  printf("\nDisplaying values:\n");
-
-  for(i = 0; i < 2; i++){
-    for(j = 0; j < 3; j++){
-      for(k = 0; k < 2; k++){
-        printf("test[%d][%d][%d] = %d\n", i, j, k, test[i][j][k]);
-      }
-    }
-  }
-
+  // Passing second and third elements to display()
+  display(ageArray[1], ageArray[2]);
   return 0;
+}
+
+void display(int age1, int age2){
+  printf("%d\n", age1);
+  printf("%d\n", age2);
 }
