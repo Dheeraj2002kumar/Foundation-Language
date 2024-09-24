@@ -153,45 +153,74 @@
 //===============================================================
 // Find the number of vowels, consonants, digits and white spaces
 
+// #include<stdio.h>
+// #include<ctype.h> // for tolower() and isdigit()
+
+// int main(){
+//   char str[100];
+//   int i, vowels = 0, consonants = 0, digits = 0, spaces = 0;
+
+//   // Input a string from user
+//   printf("Enter a string: ");
+//   fgets(str, sizeof(str), stdin);  // Use fgets to take input with spaces
+
+//   // Loop through each character of the string
+//   for(i = 0; str[i] != '\0'; i++){
+//     // Convert to lowercase to simplify comparison
+//     char ch = tolower(str[i]);
+
+//     // check for vowels
+//     if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
+//       ++vowels;
+//     }
+//     // check for consonants(alphabetic but not vowels)
+//     else if((ch >= 'a' && ch <= 'z')){
+//       ++consonants;
+//     }
+//     // check for digits
+//     else if (isdigit(ch)){
+//       ++digits;
+//     }
+//     // check for white spaces
+//     else if (ch == ' '){
+//       ++spaces;
+//     }
+//   }
+
+//   // output the result
+//   printf("Vowels: %d\n", vowels);
+//   printf("Consonants: %d\n", consonants);
+//   printf("Digits: %d\n", digits);
+//   printf("White spaces: %d\n", spaces);
+
+//   return 0;
+// }
+
+
+
+// =====================================================
+// find the length of string
 #include<stdio.h>
-#include<ctype.h> // for tolower() and isdigit()
+#include<string.h>
 
 int main(){
-  char str[100];
-  int i, vowels = 0, consonants = 0, digits = 0, spaces = 0;
+  char a[20] = "Programming";  // length = 11
+  char b[20] = {'p', 'r', 'o', 'g', 'r', 'a', 'm', '\0'}; // length = 7 (null  value will be exluded)
+  char c[20];
 
-  // Input a string from user
-  printf("Enter a string: ");
-  fgets(str, sizeof(str), stdin);  // Use fgets to take input with spaces
+  int result1, result2, result3;
 
-  // Loop through each character of the string
-  for(i = 0; str[i] != '\0'; i++){
-    // Convert to lowercase to simplify comparison
-    char ch = tolower(str[i]);
+  printf("\nEnter the string: ");
+  fgets(c, sizeof(c), stdin); // 1 will be included because of nul value
 
-    // check for vowels
-    if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
-      ++vowels;
-    }
-    // check for consonants(alphabetic but not vowels)
-    else if((ch >= 'a' && ch <= 'z')){
-      ++consonants;
-    }
-    // check for digits
-    else if (isdigit(ch)){
-      ++digits;
-    }
-    // check for white spaces
-    else if (ch == ' '){
-      ++spaces;
-    }
-  }
+  result1 = strlen(a);
+  result2 = strlen(b);
+  result3 = strlen(c);
 
-  // output the result
-  printf("Vowels: %d\n", vowels);
-  printf("Consonants: %d\n", consonants);
-  printf("Digits: %d\n", digits);
-  printf("White spaces: %d\n", spaces);
+  printf("\nLength of the string a is = %d", result1);
+  printf("\nLength of the string b is = %d", result2);
+  printf("\nLength of the string c is = %d", result3); 
 
   return 0;
+
 }
