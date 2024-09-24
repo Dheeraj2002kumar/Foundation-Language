@@ -224,27 +224,52 @@
 
 
 // different method =======================================
+// #include<stdio.h>
+// #include<math.h>
+
+// int binary_to_decimal(long n);
+
+// int main(){
+//   long binary_num;
+//   printf("\nEnter binary number: ");
+//   scanf("%ld", &binary_num);
+
+//   printf("\nResult is %d", binary_to_decimal(binary_num));
+//   return 0;
+// }
+// int binary_to_decimal(long n){
+//   int i = 0, res, dec = 0;
+//   while(n != 0){
+//     res = n % 10;
+//     n = n/10;
+//     dec = dec + res * pow(2, i);
+//     i++;
+//   }
+//   return dec;
+// }
+
+
+
+//=================================================================
+// Calculate power of a number using recursion
+
 #include<stdio.h>
 #include<math.h>
-
-int binary_to_decimal(long n);
-
+int power_of_number(int n1, int n2); // function prototyping
 int main(){
-  long binary_num;
-  printf("\nEnter binary number: ");
-  scanf("%ld", &binary_num);
+  int a, result, base;
 
-  printf("\nResult is %d", binary_to_decimal(binary_num));
+  printf("\nEnter the base value: ");
+  scanf("%d", &base);
+  printf("\nEnter the power: ");
+  scanf("%d", &a);
+
+  result = power_of_number(base, a);
+  printf("\nResult is = %d", result);
   return 0;
 }
-int binary_to_decimal(long n){
-  int i = 0, res, dec = 0;
-  while(n != 0){
-    res = n % 10;
-    n = n/10;
-    dec = dec + res * pow(2, i);
-    i++;
-  }
-  return dec;
-}
 
+int power_of_number(int n1, int n2){
+  if(n2 == 0) return 1;
+  else return n1 * power_of_number(n1, n2 - 1);
+}
