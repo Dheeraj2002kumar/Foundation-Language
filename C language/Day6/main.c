@@ -172,20 +172,51 @@
 
 //====================================================
 // finding the greatest common diviser (G.C.D) using recursion.
+// #include <stdio.h>
+// int gcd(int a, int b);
+// int main()
+// {
+//   int a, b;
+//   printf("\nEnter the first number: ");
+//   scanf("%d", &a);
+//   printf("\nEnter the second number: ");
+//   scanf("%d", &b);
+//   printf("\nGCD is = %d", gcd(a, b));
+//   return 0;
+// }
+
+// int gcd(int a, int b){
+//   if (b == 0) return a;
+//   else return gcd(b, a % b);  
+// }
+
+
+//===================================================
+// Convert binary number to decimal number and vice versa using recursion
 #include <stdio.h>
-int gcd(int a, int b);
-int main()
-{
-  int a, b;
-  printf("\nEnter the first number: ");
-  scanf("%d", &a);
-  printf("\nEnter the second number: ");
-  scanf("%d", &b);
-  printf("\nGCD is = %d", gcd(a, b));
-  return 0;
+
+int binaryToDecimal(int binary) {
+    static int decimal = 0;
+    static int base = 1;
+
+    if (binary == 0) {
+        return decimal;
+    }
+
+    decimal += (binary % 10) * base;
+    base *= 2;
+    binary /= 10;
+
+    return binaryToDecimal(binary);
 }
 
-int gcd(int a, int b){
-  if (b == 0) return a;
-  else return gcd(b, a % b);  
+int main() {
+    int binary;
+    printf("Enter a binary number: ");
+    scanf("%d", &binary);
+
+    int decimal = binaryToDecimal(binary);
+    printf("The decimal equivalent is: %d\n", decimal);
+
+    return 0;
 }
