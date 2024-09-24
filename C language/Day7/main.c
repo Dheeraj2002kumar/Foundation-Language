@@ -65,18 +65,32 @@
 //=====================================================
 // Pass arrays to a function in C
 
+// #include<stdio.h>
+// void display(int age1, int age2);  // function prototyping
+
+// int main(){
+//   int ageArray[] = {2, 8, 4, 12};
+
+//   // Passing second and third elements to display()
+//   display(ageArray[1], ageArray[2]);
+//   return 0;
+// }
+
+// void display(int age1, int age2){
+//   printf("%d\n", age1);
+//   printf("%d\n", age2);
+// }
+
+
+//=====================================================================
+//================= String =============================
+// Example: scanf() to read a string
+
 #include<stdio.h>
-void display(int age1, int age2);  // function prototyping
-
 int main(){
-  int ageArray[] = {2, 8, 4, 12};
-
-  // Passing second and third elements to display()
-  display(ageArray[1], ageArray[2]);
+  char name[20];
+  printf("Enter name: ");
+  scanf("%s", &name);
+  printf("Your name is %s", name);
   return 0;
-}
-
-void display(int age1, int age2){
-  printf("%d\n", age1);
-  printf("%d\n", age2);
 }
