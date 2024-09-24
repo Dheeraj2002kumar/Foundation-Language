@@ -130,22 +130,68 @@
 
 //==============================================
 // find the frequency of character in a string
+// #include<stdio.h>
+// int main(){
+//   char frequency[50], ch;
+//   int count = 0;
+
+//   printf("\nEnter the string: ");
+//   fgets(frequency, sizeof(frequency), stdin);
+
+//   printf("\nEnter the character that needs to be checked for frequency: ");
+//   scanf("%c", &ch);
+
+//   int i;
+//   for(i = 0; frequency[i] != '\0'; i++){
+//     if(ch == frequency[i]) count++;
+//   }
+
+//   printf("\nFrequency of character is = %d", count);
+//   return 0;
+// }
+
+//===============================================================
+// Find the number of vowels, consonants, digits and white spaces
+
 #include<stdio.h>
+#include<ctype.h> // for tolower() and isdigit()
+
 int main(){
-  char frequency[50], ch;
-  int count = 0;
+  char str[100];
+  int i, vowels = 0, consonants = 0, digits = 0, spaces = 0;
 
-  printf("\nEnter the string: ");
-  fgets(frequency, sizeof(frequency), stdin);
+  // Input a string from user
+  printf("Enter a string: ");
+  fgets(str, sizeof(str), stdin);  // Use fgets to take input with spaces
 
-  printf("\nEnter the character that needs to be checked for frequency: ");
-  scanf("%c", &ch);
+  // Loop through each character of the string
+  for(i = 0; str[i] != '\0'; i++){
+    // Convert to lowercase to simplify comparison
+    char ch = tolower(str[i]);
 
-  int i;
-  for(i = 0; frequency[i] != '\0'; i++){
-    if(ch == frequency[i]) count++;
+    // check for vowels
+    if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
+      ++vowels;
+    }
+    // check for consonants(alphabetic but not vowels)
+    else if((ch >= 'a' && ch <= 'z')){
+      ++consonants;
+    }
+    // check for digits
+    else if (isdigit(ch)){
+      ++digits;
+    }
+    // check for white spaces
+    else if (ch == ' '){
+      ++spaces;
+    }
   }
 
-  printf("\nFrequency of character is = %d", count);
+  // output the result
+  printf("Vowels: %d\n", vowels);
+  printf("Consonants: %d\n", consonants);
+  printf("Digits: %d\n", digits);
+  printf("White spaces: %d\n", spaces);
+
   return 0;
 }
