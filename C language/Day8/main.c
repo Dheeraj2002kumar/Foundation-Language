@@ -206,18 +206,18 @@
 
 //============================================
 // Example: Arrays and pointers
-#include<stdio.h>
-int main(){
-    int x[5] = {1, 2, 3, 4, 5};
-    int* ptr;
+// #include<stdio.h>
+// int main(){
+//     int x[5] = {1, 2, 3, 4, 5};
+//     int* ptr;
 
-    // ptr is assigned the address of the third element
-    ptr = &x[2];
-    printf("*ptr = %d\n", *ptr); // 3
-    printf("*(ptr+1) = %d \n", *(ptr + 1)); // 4
-    printf("*(ptr - 1) = %d", *(ptr -1)); // 2
-    return 0;
-}
+//     // ptr is assigned the address of the third element
+//     ptr = &x[2];
+//     printf("*ptr = %d\n", *ptr); // 3
+//     printf("*(ptr+1) = %d \n", *(ptr + 1)); // 4
+//     printf("*(ptr - 1) = %d", *(ptr -1)); // 2
+//     return 0;
+// }
 
 // when you run the program, the output will be:
 // *ptr = 3
@@ -226,3 +226,31 @@ int main(){
 // In this example, &x[2], the address of the third element, is assigned to the ptr pointer.
 // Hence, 3 was displayed when we printed *ptr.
 // And, printing *(ptr + 1) gives us the fourth element. Similarly, printing *(ptr - 1) gives us  the second element.
+
+
+//============================================
+// Example: Pass addresses to functions
+#include<stdio.h>
+
+void swap(int *n1, int *n2);
+
+int main(){
+    int num1 = 5, num2 = 10;
+    // address of num1 and num2 is passed
+    swap(&num1, &num2);
+
+    printf("num1 = %d\n", num1);
+    printf("num2 = %d", num2);
+    return 0;
+}
+
+void swap(int* n1, int* n2){
+    int temp;
+    temp = *n1;
+    *n1 = *n2;
+    *n2 = temp;
+}
+
+// when you run the program, the output will be:
+// num1 = 10
+// num2 = 5
