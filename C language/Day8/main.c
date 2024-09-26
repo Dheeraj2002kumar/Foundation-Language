@@ -139,27 +139,66 @@
 // }
 
 
-//=================================================
-// working of pointers
+// //=================================================
+// // working of pointers
+// #include<stdio.h>
+// int main(){
+//     int* pc, c;
+//     c = 22;
+
+//     printf("Address of c: %p\n", &c);
+//     printf("Value of c: %d\n\n", c); // 22
+
+//     pc = &c;
+
+//     printf("Address of pointer pc: %pn", pc);
+//     printf("Content of pointer pc: %d\n\n", *pc); // 22
+
+//     c = 11;
+//     printf("Address of pointer pc: %p\n", pc);
+//     printf("Content of pointer pc: %d\n\n", *pc); // 11
+
+//     *pc = 2;
+//     printf("Address of c: %p\n", &c);
+//     printf("Value of c: %d\n\n", c); // 2
+//     return 0;
+// }
+
+
+//==========================================
+// Here's an example of pointer syntax beginners often find confusing
+
+// #include<stdio.h>
+// int main(){
+//     int c = 5;
+//     int *p = &c;
+
+//     // Why didn't we get an error when using int *p = &c; ?
+//     // It's because 
+
+//     // int *p = &c;
+//     // is equivalent to 
+
+//     // int *p;
+//     // p = &c;
+//     // In both cases, we are creating a pointer p (not *p) and assigning &c to it.
+
+//     printf("%d", *p); // 5
+//     return 0;
+// }
+
+
+// ==============================================
+// Relationship between arrays and pointers
+
 #include<stdio.h>
 int main(){
-    int* pc, c;
-    c = 22;
+    int x[4];
+    int i;
 
-    printf("Address of c: %p\n", &c);
-    printf("Value of c: %d\n\n", c); // 22
-
-    pc = &c;
-
-    printf("Address of pointer pc: %pn", pc);
-    printf("Content of pointer pc: %d\n\n", *pc); // 22
-
-    c = 11;
-    printf("Address of pointer pc: %p\n", pc);
-    printf("Content of pointer pc: %d\n\n", *pc); // 11
-
-    *pc = 2;
-    printf("Address of c: %p\n", &c);
-    printf("Value of c: %d\n\n", c); // 2
+    for(i = 0; i < 4; i++){
+        printf("&x[%d] = %p\n", i, &x[i]);
+    }
+    printf("Address of array x: %p", x);
     return 0;
 }
