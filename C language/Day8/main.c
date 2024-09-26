@@ -191,14 +191,38 @@
 // ==============================================
 // Relationship between arrays and pointers
 
+// #include<stdio.h>
+// int main(){
+//     int x[4];
+//     int i;
+
+//     for(i = 0; i < 4; i++){
+//         printf("&x[%d] = %p\n", i, &x[i]);
+//     }
+//     printf("Address of array x: %p", x);
+//     return 0;
+// }
+
+
+//============================================
+// Example: Arrays and pointers
 #include<stdio.h>
 int main(){
-    int x[4];
-    int i;
+    int x[5] = {1, 2, 3, 4, 5};
+    int* ptr;
 
-    for(i = 0; i < 4; i++){
-        printf("&x[%d] = %p\n", i, &x[i]);
-    }
-    printf("Address of array x: %p", x);
+    // ptr is assigned the address of the third element
+    ptr = &x[2];
+    printf("*ptr = %d\n", *ptr); // 3
+    printf("*(ptr+1) = %d \n", *(ptr + 1)); // 4
+    printf("*(ptr - 1) = %d", *(ptr -1)); // 2
     return 0;
 }
+
+// when you run the program, the output will be:
+// *ptr = 3
+// *(ptr + 1) = 4
+// *(ptr - 1) = 2
+// In this example, &x[2], the address of the third element, is assigned to the ptr pointer.
+// Hence, 3 was displayed when we printed *ptr.
+// And, printing *(ptr + 1) gives us the fourth element. Similarly, printing *(ptr - 1) gives us  the second element.
