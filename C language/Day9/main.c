@@ -100,3 +100,56 @@
 // }
 
 
+//===========================================
+// Example: Population standard Deviation
+// SD of a population
+
+#include<math.h>
+#include <math.h>
+#include <stdio.h>
+
+/**
+ * Calculates the population standard deviation of a given dataset.
+ *
+ * @param data The input dataset.
+ * @param size The size of the input dataset.
+ * @return The population standard deviation.
+ */
+double calculateSD(double data[], int size) {
+    double sumOfValues = 0.0;
+    double mean;
+    double standardDeviation = 0.0;
+    int i;
+
+    // Calculate the sum of values
+    for (i = 0; i < size; i++) {
+        sumOfValues += data[i];
+    }
+
+    // Calculate the mean
+    mean = sumOfValues / size;
+
+    // Calculate the sum of squared differences
+    for (i = 0; i < size; i++) {
+        standardDeviation += (data[i] - mean) * (data[i] - mean);
+    }
+
+    // Calculate the standard deviation
+    return sqrt(standardDeviation / size);
+}
+
+int main() {
+    int i;
+    double data[10];
+
+    printf("Enter 10 elements: ");
+    for (i = 0; i < 10; i++) {
+        if (scanf("%lf", &data[i]) != 1) {
+            printf("Invalid input. Exiting...\n");
+            return 1;
+        }
+    }
+
+    printf("\nStandard Deviation = %.6f", calculateSD(data, 10));
+    return 0;
+}
