@@ -42,28 +42,61 @@
 //===============================================
 // Write a program in C to print the elements of an array in reverse order.
 
-#include<stdio.h>
-void main(){
-  int n, i, arr1[15];
-  int *pt;
-  printf("Input the number of elements to store in the array (max 15): ");
-  scanf("%d", &n);
-  pt = &arr1[0]; // pt stores the address of base array arr1
-  printf("Input %d number of elements in the array: \n", n);
+// #include<stdio.h>
+// void main(){
+//   int n, i, arr1[15];
+//   int *pt;
+//   printf("Input the number of elements to store in the array (max 15): ");
+//   scanf("%d", &n);
+//   pt = &arr1[0]; // pt stores the address of base array arr1
+//   printf("Input %d number of elements in the array: \n", n);
 
-  for(i = 0; i < n; i++){
-    printf("element - %d: ", i+1);
-    scanf("%d", pt); // accept the address of the value
-    pt++;
-  }
+//   for(i = 0; i < n; i++){
+//     printf("element - %d: ", i+1);
+//     scanf("%d", pt); // accept the address of the value
+//     pt++;
+//   }
 
-  pt = &arr1[n - 1];
-  printf("\nThe elements of array in reverse order are: ");
+//   pt = &arr1[n - 1];
+//   printf("\nThe elements of array in reverse order are: ");
 
-  for(i = n; i > 0; i--){
-    printf("\nElement - %d: %d", i, *pt);
-    pt--;
-  }
+//   for(i = n; i > 0; i--){
+//     printf("\nElement - %d: %d", i, *pt);
+//     pt--;
+//   }
 
-  printf("\n\n");
-}
+//   printf("\n\n");
+// }
+
+
+
+// ==============================================
+// Store numbers and calculate average using arrays
+// #include<stdio.h>
+// int main(){
+//   int n, i;
+//   float num[100], sum = 0.0, avg;
+
+//   printf("Enter the number of elements: ");
+//   scanf("%d", &n);
+
+//   while (n > 100 || n < 1)
+//   {
+//     printf("Error! number should in range of (1 to 100).\n");
+//     printf("Enter the number again: ");
+//     scanf("%d", &n);
+//   }
+
+//   for(i = 0; i < n; i++){
+//     printf("%d. Enter number: ", i + 1);
+//     scanf("%f", &num[i]);
+//     sum += num[i];
+//   }
+
+//   avg = sum / n;
+//   printf("Average = %.2f", avg);
+//   return 0;
+  
+// }
+
+
