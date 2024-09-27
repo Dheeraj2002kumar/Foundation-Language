@@ -230,27 +230,77 @@
 
 //============================================
 // Example: Pass addresses to functions
-#include<stdio.h>
+// #include<stdio.h>
 
-void swap(int *n1, int *n2);
+// void swap(int *n1, int *n2);
 
-int main(){
-    int num1 = 5, num2 = 10;
-    // address of num1 and num2 is passed
-    swap(&num1, &num2);
+// int main(){
+//     int num1 = 5, num2 = 10;
+//     // address of num1 and num2 is passed
+//     swap(&num1, &num2);
 
-    printf("num1 = %d\n", num1);
-    printf("num2 = %d", num2);
-    return 0;
-}
+//     printf("num1 = %d\n", num1);
+//     printf("num2 = %d", num2);
+//     return 0;
+// }
 
-void swap(int* n1, int* n2){
-    int temp;
-    temp = *n1;
-    *n1 = *n2;
-    *n2 = temp;
-}
+// void swap(int* n1, int* n2){
+//     int temp;
+//     temp = *n1;
+//     *n1 = *n2;
+//     *n2 = temp;
+// }
 
 // when you run the program, the output will be:
 // num1 = 10
 // num2 = 5
+
+//======================================================
+
+// #include<stdio.h>
+// void m(int *p, int *q){
+//     int temp = *p; 
+//     *p = *q; 
+//     *q = temp;
+// }
+
+// void main(){
+//     int a = 6, b = 5;
+//     m(&a, &b);
+//     printf("%d %d\n", a, b);
+// }
+
+//=======================================
+// #include<stdio.h>
+// int add(int a, int b){
+//     return a + b;
+// }
+
+// int main(){
+//     int (*fn_ptr)(int,int);
+//     fn_ptr = add;
+//     printf("The sum of two number is: %d", (int)fn_ptr(2,3));
+// }
+
+//============================================
+// #include<stdio.h>
+// int x = 0;
+// void main(){
+//     int *ptr = &x;
+//     printf("%p\n", ptr);
+//     x++;
+//     printf("%p\n", ptr);
+// }
+
+
+//=====================================================
+// #include<stdio.h>
+
+// int main(){
+//     int a[4] = {1, 2, 3, 4};
+//     void *p = &a[1];
+//     void *ptr = &a[2];
+//     int n = 1; 
+//     n = ptr -p;
+//     printf("%d\n", n);
+// }
