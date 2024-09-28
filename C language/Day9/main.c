@@ -398,22 +398,59 @@
 
 //=========================================================
 // Program to find the maximum and minimum element in an array
+// #include<stdio.h>
+// int main(){
+//   int a[10], i, max, min;
+//   printf("Enter 10 elements in an array:\n");
+//   for(i=0; i<10; i++)
+//     scanf("%d", &a[i]);
+//   max = a[0];
+//   min = a[0];
+//   for(i=1; i<10; i++){
+//     if(a[i] > max)
+//       max = a[i];
+//     if(a[i] < min)
+//       min = a[i];
+//   }
+//   printf("Maximum element in the array is: %d\n", max);
+//   printf("Minimum element in the array is: %d\n", min);
+//   return 0;
+// }
+
+
+//=========================================================
+// Find the largest element
 #include<stdio.h>
+#include<stdlib.h>
+
 int main(){
-  int a[10], i, max, min;
-  printf("Enter 10 elements in an array:\n");
-  for(i=0; i<10; i++)
-    scanf("%d", &a[i]);
-  max = a[0];
-  min = a[0];
-  for(i=1; i<10; i++){
-    if(a[i] > max)
-      max = a[i];
-    if(a[i] < min)
-      min = a[i];
+  int num;
+  double *data;
+
+  // Get the total number of elements from the user
+  printf("Enter the total number of elements: ");
+  scanf("%d", &num);
+
+  // Allcate memory for num elements
+  data = (double *)malloc(num * sizeof(double));
+  if(data == NULL){
+    printf("Error!!! Memorynot allocated.");
+    exit(0);
   }
-  printf("Maximum element in the array is: %d\n", max);
-  printf("Minimum element in the array is: %d\n", min);
+
+  // store numbers entered by the user
+  for(int i = 0; i < num; i++){
+    printf("Enter element %d: ", i + 1);
+    scanf("%lf", data + i);
+  }
+
+  // find the largest number
+  double max = data[0]; // Initialize max with the first element
+  for(int i = 1; i < num; i++){
+    if(data[i] > max) max = data[i];
+  }
+
+  printf("Largest number = %.2lf\n", max);
+  free(data); // Deallocate the memory
   return 0;
 }
-//=========================================================
