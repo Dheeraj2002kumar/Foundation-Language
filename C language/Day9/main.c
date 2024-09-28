@@ -291,47 +291,70 @@
 // }
 
 
-//=======================================================
-// Program to find the Transpose of a Matrix
+// //=======================================================
+// // Program to find the Transpose of a Matrix
+// #include<stdio.h>
+// int main(){
+//   int a[10][10], transpose[10][10], r, c, i, j;
+//   printf("Enter the number of rows and columns of the matrix: ");
+//   scanf("%d %d", &r, &c);
+
+//   // Assigning elements to the matrix 
+//   printf("\nEnter matrix elements:\n");
+//   for(i = 0; i < r; i++){
+//     for(j = 0; j < c; j++){
+//       printf("Enter element a%d%d: ", i+1, j+1);
+//       scanf("%d", &a[i][j]);
+//     }
+//   }
+
+//   // Displaying the matrix a[][]
+//   printf("\nEnter matrix: \n");
+//   for(i = 0; i < r; i++){
+//     for(j = 0; j < c; j++){
+//       printf("%d\t", a[i][j]);
+//       if(j == c-1) printf("\n");
+//     }
+//   }
+
+//   // Finding the transpose of matrix a 
+//   for(i = 0; i < r; i++){
+//     for(j = 0; j < c; j++){
+//       transpose[j][i] = a[i][j];
+//     }
+//   }
+
+//   // Displaying the transpose of matrix a 
+//   printf("\nTranspose of the matrix:\n");
+//   for(i = 0; i < c; i++){
+//     for(j = 0; j < r; j++){
+//       printf("%d ", transpose[i][j]);
+//       if(j == r-1) printf("\n");
+//     }
+//   }
+
+//   return 0;
+// }
+
+
+// ==================================================
+// Access array elements using pointers
 #include<stdio.h>
+
 int main(){
-  int a[10][10], transpose[10][10], r, c, i, j;
-  printf("Enter the number of rows and columns of the matrix: ");
-  scanf("%d %d", &r, &c);
+  int data[5];
 
-  // Assigning elements to the matrix 
-  printf("\nEnter matrix elements:\n");
-  for(i = 0; i < r; i++){
-    for(j = 0; j < c; j++){
-      printf("Enter element a%d%d: ", i+1, j+1);
-      scanf("%d", &a[i][j]);
-    }
+  printf("============= Enter 5 elements =============\n");  // Specify the number of elements to enter
+  for(int i = 0; i < 5; i++){
+    printf("Enter element %d: ", i + 1);  // Prompt for each element
+    scanf("%d", data + i);
   }
 
-  // Displaying the matrix a[][]
-  printf("\nEnter matrix: \n");
-  for(i = 0; i < r; i++){
-    for(j = 0; j < c; j++){
-      printf("%d\t", a[i][j]);
-      if(j == c-1) printf("\n");
-    }
+  printf("You entered: \n");
+  for(int i = 0; i < 5; i++){
+    printf("%d ", *(data + i));
   }
+  printf("\n");
 
-  // Finding the transpose of matrix a 
-  for(i = 0; i < r; i++){
-    for(j = 0; j < c; j++){
-      transpose[j][i] = a[i][j];
-    }
-  }
-
-  // Displaying the transpose of matrix a 
-  printf("\nTranspose of the matrix:\n");
-  for(i = 0; i < c; i++){
-    for(j = 0; j < r; j++){
-      printf("%d ", transpose[i][j]);
-      if(j == r-1) printf("\n");
-    }
-  }
-
-  return 0;
+  return 0;  
 }
