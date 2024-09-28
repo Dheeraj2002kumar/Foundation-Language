@@ -420,37 +420,64 @@
 
 //=========================================================
 // Find the largest element
+// #include<stdio.h>
+// #include<stdlib.h>
+
+// int main(){
+//   int num;
+//   double *data;
+
+//   // Get the total number of elements from the user
+//   printf("Enter the total number of elements: ");
+//   scanf("%d", &num);
+
+//   // Allcate memory for num elements
+//   data = (double *)malloc(num * sizeof(double));
+//   if(data == NULL){
+//     printf("Error!!! Memorynot allocated.");
+//     exit(0);
+//   }
+
+//   // store numbers entered by the user
+//   for(int i = 0; i < num; i++){
+//     printf("Enter element %d: ", i + 1);
+//     scanf("%lf", data + i);
+//   }
+
+//   // find the largest number
+//   double max = data[0]; // Initialize max with the first element
+//   for(int i = 1; i < num; i++){
+//     if(data[i] > max) max = data[i];
+//   }
+
+//   printf("Largest number = %.2lf\n", max);
+//   free(data); // Deallocate the memory
+//   return 0;
+// }
+
+
+//=====================================================
+// Example: malloc() and free()
+// Program to calulate the sum of n numbers entered by the user
 #include<stdio.h>
 #include<stdlib.h>
 
 int main(){
-  int num;
-  double *data;
-
-  // Get the total number of elements from the user
+  int num, i, *ptr, sum = 0;
   printf("Enter the total number of elements: ");
   scanf("%d", &num);
-
-  // Allcate memory for num elements
-  data = (double *)malloc(num * sizeof(double));
-  if(data == NULL){
-    printf("Error!!! Memorynot allocated.");
+  ptr = (int *)malloc(num * sizeof(int));
+  if(ptr == NULL){
+    printf("Errr ! memory not allocated.");
     exit(0);
   }
 
-  // store numbers entered by the user
-  for(int i = 0; i < num; i++){
-    printf("Enter element %d: ", i + 1);
-    scanf("%lf", data + i);
+  printf("Enter elements: ");
+  for(i = 0; i < num; i++){
+    scanf("%d", ptr + i);
+    sum += *(ptr + i);
   }
-
-  // find the largest number
-  double max = data[0]; // Initialize max with the first element
-  for(int i = 1; i < num; i++){
-    if(data[i] > max) max = data[i];
-  }
-
-  printf("Largest number = %.2lf\n", max);
-  free(data); // Deallocate the memory
+  printf("Sum = %d\n", sum);
+  free(ptr);
   return 0;
 }
