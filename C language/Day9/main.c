@@ -339,22 +339,81 @@
 
 // ==================================================
 // Access array elements using pointers
+// #include<stdio.h>
+
+// int main(){
+//   int data[5];
+
+//   printf("============= Enter 5 elements =============\n");  // Specify the number of elements to enter
+//   for(int i = 0; i < 5; i++){
+//     printf("Enter element %d: ", i + 1);  // Prompt for each element
+//     scanf("%d", data + i);
+//   }
+
+//   printf("You entered: \n");
+//   for(int i = 0; i < 5; i++){
+//     printf("%d ", *(data + i));
+//   }
+//   printf("\n");
+
+//   return 0;  
+// }
+
+
+//===================================================
+// Program to Swap element using call by Reference
+
+// #include<stdio.h>
+// void cyclicSwap(int *a, int *b, int *c);
+// int main(){
+//   int a, b, c;
+
+//   printf("Enter a, b and c respectvely: ");
+//   scanf("%d %d %d", &a, &b, &c);
+
+//   printf("Value before swapping:\n");
+//   printf("a = %d\nb = %d\nc = %d\n", a, b, c);
+
+//   cyclicSwap(&a, &b, &c);
+
+//   printf("Value after swapping:\n");
+//   printf("a = %d\nb = %d\nc = %d", a, b, c);
+//   return 0;
+// }
+
+// void cyclicSwap(int *n1, int *n2, int *n3){
+//   int temp;
+//   // swapping in cyclic order
+//   // temp = *n1;
+//   // *n1 = *n2;
+//   // *n2 = *n3;
+//   // *n3 = temp;
+
+// //swapping clock wish direction 
+//   temp = *n2;
+//   *n2 = *n1;
+//   *n1 = *n3;
+//   *n3 = temp;
+// }
+
+//=========================================================
+// Program to find the maximum and minimum element in an array
 #include<stdio.h>
-
 int main(){
-  int data[5];
-
-  printf("============= Enter 5 elements =============\n");  // Specify the number of elements to enter
-  for(int i = 0; i < 5; i++){
-    printf("Enter element %d: ", i + 1);  // Prompt for each element
-    scanf("%d", data + i);
+  int a[10], i, max, min;
+  printf("Enter 10 elements in an array:\n");
+  for(i=0; i<10; i++)
+    scanf("%d", &a[i]);
+  max = a[0];
+  min = a[0];
+  for(i=1; i<10; i++){
+    if(a[i] > max)
+      max = a[i];
+    if(a[i] < min)
+      min = a[i];
   }
-
-  printf("You entered: \n");
-  for(int i = 0; i < 5; i++){
-    printf("%d ", *(data + i));
-  }
-  printf("\n");
-
-  return 0;  
+  printf("Maximum element in the array is: %d\n", max);
+  printf("Minimum element in the array is: %d\n", min);
+  return 0;
 }
+//=========================================================
