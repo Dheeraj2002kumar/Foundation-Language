@@ -486,26 +486,61 @@
 // ===========================================================
 // Example 2: calloc() and free()
 // program to calclulate the sum of n numbers entered by the user 
+// #include<stdio.h>
+// #include<stdlib.h>
+// int main(){
+//   int n, i, *ptr, sum = 0;
+//   printf("Enter number of elements: ");
+//   scanf("%d", &n);
+//   ptr = (int*) calloc(n, sizeof(int));
+
+//   if(ptr == NULL){
+//     printf("Error! Memory not allocated.");
+//     exit(0);
+//   }
+
+//   printf("Enter elements: ");
+//   for(i = 0; i < n; i++){
+//     scanf("%d", ptr + i);
+//     sum += *(ptr + i);
+//   }
+
+//   printf("Sum = %d", sum);
+//   free(ptr);
+//   return 0;
+// }
+
+//===========================================
+// Example 3: realloc()
+// program to calculate the sum of n numbers entered by the user
 #include<stdio.h>
 #include<stdlib.h>
 int main(){
   int n, i, *ptr, sum = 0;
   printf("Enter number of elements: ");
   scanf("%d", &n);
-  ptr = (int*) calloc(n, sizeof(int));
-
+  ptr = (int*) malloc(n * sizeof(int));
   if(ptr == NULL){
     printf("Error! Memory not allocated.");
     exit(0);
   }
-
   printf("Enter elements: ");
   for(i = 0; i < n; i++){
     scanf("%d", ptr + i);
     sum += *(ptr + i);
   }
-
-  printf("Sum = %d", sum);
-  free(ptr);
+  printf("Sum = %d\n", sum);
+  // Reallocating memory to double the size of array
+  ptr = (int*) realloc(ptr, 2 * n * sizeof(int));
+  if(ptr == NULL){
+    printf("Error! Memory not allocated.");
+  }
+  // Adding more elements to the array
+  printf("Enter more elements: ");
+  for(i = n; i < 2 * n; i++){
+    scanf("%d", ptr + i);
+    sum += *(ptr + i);
+  }
+  printf("Sum = %d\n", sum);
   return 0;
 }
