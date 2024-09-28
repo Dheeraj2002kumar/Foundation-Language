@@ -513,34 +513,96 @@
 //===========================================
 // Example 3: realloc()
 // program to calculate the sum of n numbers entered by the user
-#include<stdio.h>
-#include<stdlib.h>
-int main(){
-  int n, i, *ptr, sum = 0;
-  printf("Enter number of elements: ");
-  scanf("%d", &n);
-  ptr = (int*) malloc(n * sizeof(int));
-  if(ptr == NULL){
-    printf("Error! Memory not allocated.");
-    exit(0);
-  }
-  printf("Enter elements: ");
-  for(i = 0; i < n; i++){
-    scanf("%d", ptr + i);
-    sum += *(ptr + i);
-  }
-  printf("Sum = %d\n", sum);
-  // Reallocating memory to double the size of array
-  ptr = (int*) realloc(ptr, 2 * n * sizeof(int));
-  if(ptr == NULL){
-    printf("Error! Memory not allocated.");
-  }
-  // Adding more elements to the array
-  printf("Enter more elements: ");
-  for(i = n; i < 2 * n; i++){
-    scanf("%d", ptr + i);
-    sum += *(ptr + i);
-  }
-  printf("Sum = %d\n", sum);
-  return 0;
+// #include<stdio.h>
+// #include<stdlib.h>
+// int main(){
+//   int n, i, *ptr, sum = 0;
+//   printf("Enter number of elements: ");
+//   scanf("%d", &n);
+//   ptr = (int*) malloc(n * sizeof(int));
+//   if(ptr == NULL){
+//     printf("Error! Memory not allocated.");
+//     exit(0);
+//   }
+//   printf("Enter elements: ");
+//   for(i = 0; i < n; i++){
+//     scanf("%d", ptr + i);
+//     sum += *(ptr + i);
+//   }
+//   printf("Sum = %d\n", sum);
+//   // Reallocating memory to double the size of array
+//   ptr = (int*) realloc(ptr, 2 * n * sizeof(int));
+//   if(ptr == NULL){
+//     printf("Error! Memory not allocated.");
+//   }
+//   // Adding more elements to the array
+//   printf("Enter more elements: ");
+//   for(i = n; i < 2 * n; i++){
+//     scanf("%d", ptr + i);
+//     sum += *(ptr + i);
+//   }
+//   printf("Sum = %d\n", sum);
+//   return 0;
+// }
+
+
+//=================================================
+// Here's an example program in C that demonstrates the use of realloc() to dynamically allocate and reallocate memory:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *arr = NULL; // Initialize an empty array
+    int size = 0; // Initial size is 0
+    int capacity = 2; // Initial capacity is 2
+
+    // Allocate initial memory
+    arr = (int *)malloc(capacity * sizeof(int));
+    if (arr == NULL) {
+        printf("Memory allocation failed!\n");
+        return -1;
+    }
+
+    // Input values from user
+    for (int i = 0; i < capacity; i++) {
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &arr[i]);
+        size++;
+    }
+
+    // Print the initial array
+    printf("Initial array: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    // Reallocate memory to double the capacity
+    capacity *= 2;
+    arr = (int *)realloc(arr, capacity * sizeof(int));
+    if (arr == NULL) {
+        printf("Memory reallocation failed!\n");
+        return -1;
+    }
+
+    // Input additional values from user
+    for (int i = size; i < capacity; i++) {
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &arr[i]);
+        size++;
+    }
+
+    // Print the updated array
+    printf("Updated array: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    // Free the allocated memory
+    free(arr);
+    arr = NULL;
+
+    return 0;
 }
