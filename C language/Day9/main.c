@@ -209,83 +209,129 @@
 //=======================================================================
 // Multiply Matices by passing it to a function
 
+// #include<stdio.h>
+
+// // fucntion to get mateix elements entered by the user
+// void getMatrixElements(int matrix[][10], int row, int column){
+//   int i, j;
+//   printf("\nEnter elements: \n");
+
+//   for(i = 0; i < row; i++){
+//     for(j = 0; j < column; j++){
+//       printf("Enter element a%d%d: ", i + 1, j + 1);
+//       scanf("%d", &matrix[i][j]);
+//     }
+//   }
+// }
+
+// // function to multiply two matrices
+// void multiplyMatrices(int first[][10], int second[][10], int result[][10], int r1, int c1, int r2, int c2){
+//   int i, j, k;
+
+//   // initializing elements of matrix
+//   for(i = 0; i < r1; i++){
+//     for(j = 0; j < c2; j++){
+//       result[i][j] = 0;
+//     }
+//   }
+
+//   // Multiplying first and second mateices and stoing it in result
+//   for(i = 0; i < r1; i++){
+//     for(j = 0; j < r2; j++){
+//       for(k = 0; k < c1; k++){
+//         result[i][j] += first[i][k] * second[j][k];
+//       }
+//     }
+//   }
+// }
+
+// // function to display the matrix
+// void display(int result[][10], int row, int column){
+//   int i, j;
+//   printf("\nResultant Matrix:\n");
+
+//   for(i = 0; i < row; i++){
+//     for(j = 0; j < column; j++){
+//       printf("%d ", result[i][j]);
+//       if(j == column -1) printf("\n");
+//     }
+//   }
+// }
+
+// int main(){
+//   int matrix1[10][10], matrix2[10][10], result[10][10], r1, c1, r2, c2;
+//   printf("Enter rows and column for the matrix1: ");
+//   scanf("%d %d", &r1, &c1);
+//   printf("Enter rows and column for the matrix2: ");
+//   scanf("%d %d", &r2, &c2);
+
+//   // Taking input until 
+//   // matrix1 columns is not equal to matrix2
+//   while(c1 != r2){
+//     printf("Matrix1 columns is not equal to Matrix2 rows. Please enter again. \n");
+//     printf("Enter rows and columns for the matrix1: ");
+//     scanf("%d %d", &r1, &c1);
+//     printf("Enter rows and columns for the second matrix: ");
+//     scanf("%d %d", &r2, &c2);
+//   }
+
+//   // get elements of the first matrix
+//   getMatrixElements(matrix1, r1, c1);
+
+//   // get elements of the second matrix
+//   getMatrixElements(matrix2, r2, c2);
+
+//   // multiply two mateices
+//   multiplyMatrices(matrix1, matrix2, result, r1, c1, r2, c2);
+
+//   // display the result
+//   display(result, r1, c2);
+
+//   return 0;
+// }
+
+
+//=======================================================
+// Program to find the Transpose of a Matrix
 #include<stdio.h>
-
-// fucntion to get mateix elements entered by the user
-void getMatrixElements(int matrix[][10], int row, int column){
-  int i, j;
-  printf("\nEnter elements: \n");
-
-  for(i = 0; i < row; i++){
-    for(j = 0; j < column; j++){
-      printf("Enter element a%d%d: ", i + 1, j + 1);
-      scanf("%d", &matrix[i][j]);
-    }
-  }
-}
-
-// function to multiply two matrices
-void multiplyMatrices(int first[][10], int second[][10], int result[][10], int r1, int c1, int r2, int c2){
-  int i, j, k;
-
-  // initializing elements of matrix
-  for(i = 0; i < r1; i++){
-    for(j = 0; j < c2; j++){
-      result[i][j] = 0;
-    }
-  }
-
-  // Multiplying first and second mateices and stoing it in result
-  for(i = 0; i < r1; i++){
-    for(j = 0; j < r2; j++){
-      for(k = 0; k < c1; k++){
-        result[i][j] += first[i][k] * second[j][k];
-      }
-    }
-  }
-}
-
-// function to display the matrix
-void display(int result[][10], int row, int column){
-  int i, j;
-  printf("\nResultant Matrix:\n");
-
-  for(i = 0; i < row; i++){
-    for(j = 0; j < column; j++){
-      printf("%d ", result[i][j]);
-      if(j == column -1) printf("\n");
-    }
-  }
-}
-
 int main(){
-  int matrix1[10][10], matrix2[10][10], result[10][10], r1, c1, r2, c2;
-  printf("Enter rows and column for the matrix1: ");
-  scanf("%d %d", &r1, &c1);
-  printf("Enter rows and column for the matrix2: ");
-  scanf("%d %d", &r2, &c2);
+  int a[10][10], transpose[10][10], r, c, i, j;
+  printf("Enter the number of rows and columns of the matrix: ");
+  scanf("%d %d", &r, &c);
 
-  // Taking input until 
-  // matrix1 columns is not equal to matrix2
-  while(c1 != r2){
-    printf("Matrix1 columns is not equal to Matrix2 rows. Please enter again. \n");
-    printf("Enter rows and columns for the matrix1: ");
-    scanf("%d %d", &r1, &c1);
-    printf("Enter rows and columns for the second matrix: ");
-    scanf("%d %d", &r2, &c2);
+  // Assigning elements to the matrix 
+  printf("\nEnter matrix elements:\n");
+  for(i = 0; i < r; i++){
+    for(j = 0; j < c; j++){
+      printf("Enter element a%d%d: ", i+1, j+1);
+      scanf("%d", &a[i][j]);
+    }
   }
 
-  // get elements of the first matrix
-  getMatrixElements(matrix1, r1, c1);
+  // Displaying the matrix a[][]
+  printf("\nEnter matrix: \n");
+  for(i = 0; i < r; i++){
+    for(j = 0; j < c; j++){
+      printf("%d\t", a[i][j]);
+      if(j == c-1) printf("\n");
+    }
+  }
 
-  // get elements of the second matrix
-  getMatrixElements(matrix2, r2, c2);
+  // Finding the transpose of matrix a 
+  for(i = 0; i < r; i++){
+    for(j = 0; j < c; j++){
+      transpose[j][i] = a[i][j];
+    }
+  }
 
-  // multiply two mateices
-  multiplyMatrices(matrix1, matrix2, result, r1, c1, r2, c2);
-
-  // display the result
-  display(result, r1, c2);
+  // Displaying the transpose of matrix a 
+  printf("\nTranspose of the matrix:\n");
+  for(i = 0; i < c; i++){
+    for(j = 0; j < r; j++){
+      printf("%d ", transpose[i][j]);
+      if(j == r-1) printf("\n");
+    }
+  }
 
   return 0;
 }
