@@ -47,23 +47,44 @@
 //====================================================================
 //=============================================================
 // File handling
+// #include <stdio.h>
+// #include <stdlib.h> // for exit()
+
+// int main(){
+//     int num;
+//     FILE *fptr;
+
+//     // use appropriate Location if you are using MacOS or Linux
+//     fptr = fopen("C:\\Users\\hp\\Desktop\\TCS IT\\C language\\Day10\\binary.bin", "wb"); // use double backslashes for Windows-style path
+//     if(fptr == NULL){
+//         printf("Error! Could not open file \n");
+//         exit(1);
+//     }
+
+//     printf("Enter num: ");
+//     scanf("%d", &num); // prevent buffer overflow
+//     fprintf(fptr, "%d\n", num); // add a newline character to the file
+//     fclose(fptr);
+//     return 0;
+// }
+
+//===========================================================
+// read mode
 #include <stdio.h>
 #include <stdlib.h> // for exit()
-
 int main(){
-    int num;
-    FILE *fptr;
+  int num;
+  FILE *fptr;
+  if((fptr = fopen("C:\\Users\\hp\\Desktop\\TCS IT\\C language\\Day10\\test1.txt", "r")) == NULL){
+    printf("Error! Could not open file \n");
+    // program exits if the file pointer return  NULL
+    exit(1);
+  }
 
-    // use appropriate Location if you are using MacOS or Linux
-    fptr = fopen("C:\\Users\\hp\\Desktop\\TCS IT\\C language\\Day10\\binary.bin", "wb"); // use double backslashes for Windows-style path
-    if(fptr == NULL){
-        printf("Error! Could not open file \n");
-        exit(1);
-    }
+  fscanf(fptr, "%d", &num);
+  printf("=================== Content of the file is ===============\n");
+  printf("%d\n", num);
+  fclose(fptr);
 
-    printf("Enter num: ");
-    scanf("%d", &num); // prevent buffer overflow
-    fprintf(fptr, "%d\n", num); // add a newline character to the file
-    fclose(fptr);
-    return 0;
+  return 0;
 }
