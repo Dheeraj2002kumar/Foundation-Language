@@ -142,18 +142,42 @@
 
 
 
-  //====================================================
-  // Example 2: Using #define preprocessor
-  #include<stdio.h>
-  #define PI 3.1415;
-  #define circleArea(r)(PI * r * r);
+  // //====================================================
+  // // Example 2: Using #define preprocessor
+  // #include<stdio.h>
+  // #define PI 3.1415;
+  // #define circleArea(r)(PI * r * r);
 
-  int main(){
-    float radius, area;
+  // int main(){
+  //   float radius, area;
 
-    printf("Enter the radius: ");
-    scanf("%f", &radius);
-    area = circleArea(radius);
-    printf("Area = %.2f", area);
-    return 0;
-  }
+  //   printf("Enter the radius: ");
+  //   scanf("%f", &radius);
+  //   area = circleArea(radius);
+  //   printf("Area = %.2f", area);
+  //   return 0;
+  // }
+
+  //===================================================
+// Difference between unions and structures
+#include<stdio.h>
+
+union unionJob {
+  // defining a union
+  char name[32];
+  float salary;
+  int workerNo;
+} uJob;
+
+struct  structJob
+{
+  char name[32];
+  float salary;
+  int workerNo;
+} sJob;
+
+int main(){
+  printf("size of union = %d bytes", sizeof(uJob));
+  printf("\nsize of structure = %d bytes", sizeof(sJob));
+  return 0;
+}
