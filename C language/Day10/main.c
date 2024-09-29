@@ -70,21 +70,55 @@
 
 //===========================================================
 // read mode
-#include <stdio.h>
-#include <stdlib.h> // for exit()
+// #include <stdio.h>
+// #include <stdlib.h> // for exit()
+// int main(){
+//   int num;
+//   FILE *fptr;
+//   if((fptr = fopen("C:\\Users\\hp\\Desktop\\TCS IT\\C language\\Day10\\test1.txt", "r")) == NULL){
+//     printf("Error! Could not open file \n");
+//     // program exits if the file pointer return  NULL
+//     exit(1);
+//   }
+
+//   fscanf(fptr, "%d", &num);
+//   printf("=================== Content of the file is ===============\n");
+//   printf("%d\n", num);
+//   fclose(fptr);
+
+//   return 0;
+// }
+
+
+//=====================================================
+// read mode with multiple values
+// #include <stdio.h>
+// #include <stdlib.h> // for exit()
+// int main(){
+//   int num1, num2, num3;
+//   FILE *fptr;
+//   if((fptr = fopen("C:\\Users\\hp\\Desktop\\TCS IT\\C language\\Day10\\test1.txt", "r")) == NULL){
+//     printf("Error! Could not open file \n");
+//     // program exits if the file pointer return  NULL
+//     exit(1);
+//     }
+//     fscanf(fptr, "%d %d %d", &num1, &num2,
+//     &num3);
+//     printf("=================== Content of the file is ===============\n");
+//     printf("%d %d %d\n", num1, num2, num3);
+//     fclose(fptr);
+//     return 0;
+// }
+
+//=========================================================
+// An example program to demonstrate working of enum in C
+#include<stdio.h>
+
+enum week{Mon, Tue, Wed, Thur, Fri, Sat, sun};
+
 int main(){
-  int num;
-  FILE *fptr;
-  if((fptr = fopen("C:\\Users\\hp\\Desktop\\TCS IT\\C language\\Day10\\test1.txt", "r")) == NULL){
-    printf("Error! Could not open file \n");
-    // program exits if the file pointer return  NULL
-    exit(1);
-  }
-
-  fscanf(fptr, "%d", &num);
-  printf("=================== Content of the file is ===============\n");
-  printf("%d\n", num);
-  fclose(fptr);
-
+  enum week day;
+  day = Wed;
+  printf("%d",day);
   return 0;
 }
