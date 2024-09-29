@@ -110,15 +110,32 @@
 //     return 0;
 // }
 
-//=========================================================
-// An example program to demonstrate working of enum in C
-#include<stdio.h>
+// //=========================================================
+// // An example program to demonstrate working of enum in C
+// #include<stdio.h>
 
-enum week{Mon, Tue, Wed, Thur, Fri, Sat, sun};
+// enum week{Mon, Tue, Wed, Thur, Fri, Sat, sun};
+
+// int main(){
+//   enum week day;
+//   day = Wed;
+//   printf("%d",day);
+//   return 0;
+// }
+
+//==================================================
+// Example 1: #define preprocessor
+#include<stdio.h>
+#define PI 3.1415;
 
 int main(){
-  enum week day;
-  day = Wed;
-  printf("%d",day);
+  float radius, area;
+  printf("Enter the  radius: ");
+  scanf("%f", &radius);
+
+  // Notice, the use of PI
+  area = PI * radius * radius;
+
+  printf("Area = %.2f", area);
   return 0;
 }
