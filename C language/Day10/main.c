@@ -125,17 +125,35 @@
 
 //==================================================
 // Example 1: #define preprocessor
-#include<stdio.h>
-#define PI 3.1415;
+// #include<stdio.h>
+// #define PI 3.1415;
 
-int main(){
-  float radius, area;
-  printf("Enter the  radius: ");
-  scanf("%f", &radius);
+// int main(){
+//   float radius, area;
+//   printf("Enter the  radius: ");
+//   scanf("%f", &radius);
 
-  // Notice, the use of PI
-  area = PI * radius * radius;
+//   // Notice, the use of PI
+//   area = PI * radius * radius;
 
-  printf("Area = %.2f", area);
-  return 0;
-}
+//   printf("Area = %.2f", area);
+//   return 0;
+// }
+
+
+
+  //====================================================
+  // Example 2: Using #define preprocessor
+  #include<stdio.h>
+  #define PI 3.1415;
+  #define circleArea(r)(PI * r * r);
+
+  int main(){
+    float radius, area;
+
+    printf("Enter the radius: ");
+    scanf("%f", &radius);
+    area = circleArea(radius);
+    printf("Area = %.2f", area);
+    return 0;
+  }
