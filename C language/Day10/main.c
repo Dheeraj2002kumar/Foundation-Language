@@ -158,26 +158,63 @@
   //   return 0;
   // }
 
-  //===================================================
-// Difference between unions and structures
-#include<stdio.h>
+//   //===================================================
+// // Difference between unions and structures
+// #include<stdio.h>
 
-union unionJob {
-  // defining a union
-  char name[32];
-  float salary;
-  int workerNo;
-} uJob;
+// union unionJob {
+//   // defining a union
+//   char name[32];
+//   float salary;
+//   int workerNo;
+// } uJob;
 
-struct  structJob
-{
-  char name[32];
-  float salary;
-  int workerNo;
-} sJob;
+// struct  structJob
+// {
+//   char name[32];
+//   float salary;
+//   int workerNo;
+// } sJob;
 
-int main(){
-  printf("size of union = %d bytes", sizeof(uJob));
-  printf("\nsize of structure = %d bytes", sizeof(sJob));
-  return 0;
-}
+// int main(){
+//   printf("size of union = %d bytes", sizeof(uJob));
+//   printf("\nsize of structure = %d bytes", sizeof(sJob));
+//   return 0;
+// }
+
+
+//================================================================
+// Example: Accessiong Union  Members
+// #include<stdio.h>
+// union Job{
+//   float salary;
+//   int workerNo;
+// } j;
+
+// int main(){
+//   j.salary = 5000.0;
+//   // when j.workerNo is assigned a value,
+//   // j.salary will no longer hold 5000.0
+//   j.workerNo = 100;
+//   printf("Salary = %.1f\n", j.salary);
+//   printf("Number of workers = %d", j.workerNo);
+//   return 0;
+// }
+
+// //============================================
+// // Example: Accessing structure Members
+// #include<stdio.h>
+// struct Job{
+//   float salary;
+//   int workerNo;
+// } j;
+
+// int main(){
+//   j.salary = 5000.0;
+//   // when j.workerNo is assigned a value,
+//   // j.salary will no longer hold 5000.0
+//   j.workerNo = 100;
+//   printf("Salary = %.1f\n", j.salary);
+//   printf("Number of workers = %d", j.workerNo);
+//   return 0;
+// }
