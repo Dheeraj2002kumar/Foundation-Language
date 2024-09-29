@@ -21,3 +21,25 @@
 // }
 
 
+//=============================================================
+// File handling
+#include <stdio.h>
+#include <stdlib.h> // for exit()
+
+int main(){
+    int num;
+    FILE *fptr;
+
+    // use appropriate Location if you are using MacOS or Linux
+    fptr = fopen("C:\\Users\\hp\\Desktop\\TCS IT\\C language\\Day10\\test1.txt", "w"); // use double backslashes for Windows-style path
+    if(fptr == NULL){
+        printf("Error! Could not open file \n");
+        exit(1);
+    }
+
+    printf("Enter num: ");
+    scanf("%d", &num); // prevent buffer overflow
+    fprintf(fptr, "%d\n", num); // add a newline character to the file
+    fclose(fptr);
+    return 0;
+}
