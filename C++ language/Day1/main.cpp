@@ -18,13 +18,32 @@
 //   return 0;
 // }
 
-//==================================================================
-// C++ "Hello, World!" Program
+// //==================================================================
+// // C++ "Hello, World!" Program
 
-#include<iostream>
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//   cout<<"Hello, world!"<<endl;
+//   return 0;
+// }
+
+//=================================================
+// C++ Program to Print Number Entered by User
+
+#include <iostream>
 using namespace std;
 
-int main(){
-  cout<<"Hello, world!"<<endl;
-  return 0;
+int main() {
+    // Write C++ code here
+    int num;
+    cout << "Enter the number: "<< endl;
+    cin >> num;
+    cout << "You entered the number is "<< num << endl;
+
+    return 0;
 }
+
+// =========================================
+// C++ Program to Add Two Numbers
