@@ -97,21 +97,34 @@
 
 //============================================================
 // C++ Program to Swap two Numbers
+// #include<iostream>
+// using namespace std;
+// int main(){
+//   int num1, num2, temp;
+//   cout << "Enter num1: " << endl;
+//   cin >> num1;
+//   cout << "Enter num2: " << endl;
+//   cin >> num2;
+
+//   temp = num1;
+//   num1 = num2;
+//   num2 = temp;
+
+//   cout << "Value of num1 is: " << num1 << endl; 
+//   cout << "Value of num2 is: " << num2 << endl; 
+  
+//   return 0;
+// }
+
+//=========================================================
+// C++ Program to Find ASCII Value of a Caracter
 #include<iostream>
 using namespace std;
 int main(){
-  int num1, num2, temp;
-  cout << "Enter num1: " << endl;
-  cin >> num1;
-  cout << "Enter num2: " << endl;
-  cin >> num2;
+  char ch;
+  cout << "Enter a character: " << endl;
+  cin >> ch;
+  cout << "ASCII value of " << ch << " is: " << int(ch) << endl;
 
-  temp = num1;
-  num1 = num2;
-  num2 = temp;
-
-  cout << "Value of num1 is: " << num1 << endl; 
-  cout << "Value of num2 is: " << num2 << endl; 
-  
   return 0;
 }
