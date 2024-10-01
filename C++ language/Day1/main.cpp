@@ -234,34 +234,60 @@
 //==========================================
 
 // C++ program to find largest number among three number
+//#include <iostream>
+//using namespace std;
+//
+//int main(){
+//	int num1, num2, num3;
+//	
+//	cout << "Enter Three number: ";
+//	cin >> num1 >> num2 >> num3;
+//	
+//	if((num1 > num2) && (num1 > num3))
+//	{
+//		cout << num1 << " is largest number";
+//	}
+//	else if(num2 > num3){
+//		cout << num2 << " is largest number";
+//	} else {
+//		cout << num3 << " is largest number";
+//	}
+//	return 0;
+//}
+
+
+
+
+//=============================================
+// Example: Range Based for loop
+
+//#include <iostream>
+//using namespace std;
+//int main(){
+//	int num_arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//	int n;
+//	for(n : num_arr){
+//		cout<<n<<" ";
+//	}
+//	
+//	return 0;
+//}
+
+//===================================
+// Program to print value of i
 #include <iostream>
 using namespace std;
 
 int main(){
-	int num1, num2, num3;
-	
-	cout << "Enter Three number: ";
-	cin >> num1 >> num2 >> num3;
-	
-	if((num1 > num2) && (num1 > num3))
-	{
-		cout << num1 << " is largest number";
-	}
-	else if(num2 > num3){
-		cout << num2 << " is largest number";
-	} else {
-		cout << num3 << " is largest number";
+	for(int i = 1; i <= 5; i++){
+		// condtion to continue
+		if(i == 3){
+			continue;
+		}
+		cout << i << endl;
 	}
 	return 0;
 }
-
-
-
-
-
-
-
-
 
 
 
