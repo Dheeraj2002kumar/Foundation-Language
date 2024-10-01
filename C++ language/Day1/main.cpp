@@ -6,7 +6,7 @@
 // int main(){
 //   // assigning an int value to num_int
 //   int num_int = 9;
-  
+
 //   // declaring a double type variable
 //   double num_double;
 
@@ -55,10 +55,10 @@
 //     int num1, num2, sum;
 //     cout << "Enter num1: " << endl;
 //     cin >> num1;
-    
+
 //     cout << "Enter num2: " << endl;
 //     cin >> num2;
-    
+
 //     sum = num1 + num2;
 //     cout << "The sum of " << num1 << " + " << num2 << " = " << sum << endl;
 
@@ -110,9 +110,9 @@
 //   num1 = num2;
 //   num2 = temp;
 
-//   cout << "Value of num1 is: " << num1 << endl; 
-//   cout << "Value of num2 is: " << num2 << endl; 
-  
+//   cout << "Value of num1 is: " << num1 << endl;
+//   cout << "Value of num2 is: " << num2 << endl;
+
 //   return 0;
 // }
 
@@ -149,7 +149,7 @@
 
 //=======================================================
 // C++ Program to Find Factorial of a Number
-// #include <iostream> 
+// #include <iostream>
 // using namespace std;
 // int main(){
 //   int num, i, factorial = 1;
@@ -165,29 +165,97 @@
 
 //===========================================================
 // C++ program to find if an integer is even or odd or neither (0) using nested if statements.
-#include<iostream>
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//   int num;
+//   cout << "Enter an integer: ";
+//   cin >> num;
+
+//   // outer if condition
+//   if(num != 0){
+//     // inner if condition
+//     if((num % 2) == 0){
+//       cout << "The number is even." << endl;
+//     }
+//     // inner else condition
+//     else{
+//       cout << "The number is odd." << endl;
+//     }
+//   }
+//   // outer else condition
+//   else {
+//     cout << "The number is 0 and it is neither even nor odd." << endl;
+//   }
+//   cout << "This line is always printed." << endl;
+//   return 0;
+// }
+
+//==========================================================
+// C++ program to check whether number is even or odd
+//#include<iostream>
+//using namespace std;
+//
+//int main(){
+//  int num;
+//  cout << "Enter number: ";
+//  cin >> num;
+//  if(num % 2 == 0){
+//    cout << "Number is even";
+//  } else {
+//    cout << "Number is odd";
+//  }
+//
+//  return 0;
+//}
+
+
+//==========================================
+// C++ program to check whether a character is vowel or consonant.
+
+#include <iostream>
 using namespace std;
 
 int main(){
-  int num;
-  cout << "Enter an integer: ";
-  cin >> num;
-
-  // outer if condition
-  if(num != 0){
-    // inner if condition
-    if((num % 2) == 0){
-      cout << "The number is even." << endl;
-    }
-    // inner else condition
-    else{
-      cout << "The number is odd." << endl;
-    }
-  }
-  // outer else condition
-  else {
-    cout << "The number is 0 and it is neither even nor odd." << endl;
-  }
-  cout << "This line is always printed." << endl;
-  return 0;
+	char c;
+	cout << "Enter a character: ";
+	cin >> c;
+	if(c == 'a' || c == 'A' || c == 'E' || c == 'e' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U'){
+		cout << "Entered character is vowel";
+	} else {
+		cout << "Entered character is consonant";
+	}
+	
+	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
