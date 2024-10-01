@@ -273,27 +273,106 @@
 //	return 0;
 //}
 
-//===================================
-// Program to print value of i
-#include <iostream>
+////===================================
+//// Program to print value of i
+//#include <iostream>
+//using namespace std;
+//
+//int main(){
+//	for(int i = 1; i <= 5; i++){
+//		// condtion to continue
+//		if(i == 3){
+//			continue;
+//		}
+//		cout << i << endl;
+//	}
+//	return 0;
+//}
+
+
+////==================================
+//// Example: Create a Calculator using the switch statement
+//
+//#include<iostream>
+//using namespace std;
+//
+//int main(){
+//	float num1, num2, sum;
+//	int C;
+//	
+//	cout << "Enter first number: ";
+//	cin >> num1;
+//	cout << "\nEnter second number: ";
+//	cin >> num2;
+//	cout << "1. Addintion, 2. Subtraction, 3. Multiplication, 4. Division";
+//	cout << "\nEnter the give number above: "<< endl;
+//	cin >> C;
+//	
+//	switch(C){
+//		case 1: 
+//		cout << "Addition is: " << num1 + num2;
+//		break;
+//		
+//		case 2: 
+//		cout << "Subtraction is: " << num1 - num2;
+//		break;
+//		
+//		case 3: 
+//		cout << "Multiplication is: " << num1 * num2;
+//		break;
+//		
+//		case 4: 
+//		cout << "Division is: " << num1 / num2;
+//		break;
+//		
+//		defaul:
+//			cout << "Entered number is not valid!";
+//			break;
+//	}
+//	return 0;
+//}
+//
+
+//==========================================
+
+#include<iostream>
 using namespace std;
 
 int main(){
-	for(int i = 1; i <= 5; i++){
-		// condtion to continue
-		if(i == 3){
-			continue;
-		}
-		cout << i << endl;
+	float num1, num2, sum;
+	char Oper;
+	
+	cout << "Enter first number: ";
+	cin >> num1;
+	cout << "\nEnter second number: ";
+	cin >> num2;
+	//cout << "1. Addintion, 2. Subtraction, 3. Multiplication, 4. Division";
+	cout << "\nEnter an operator (+, -, *, /): "<< endl;
+	cin >> Oper;
+	
+	switch(Oper){
+		case '+': 
+		cout << "Addition is: " << num1 + num2;
+		break;
+		
+		case '-': 
+		cout << "Subtraction is: " << num1 - num2;
+		break;
+		
+		case '*': 
+		cout << "Multiplication is: " << num1 * num2;
+		break;
+		
+		case '/': 
+		cout << "Division is: " << num1 / num2;
+		break;
+		
+		defaul:
+			cout << "Entered number is not valid!";
+			break;
 	}
 	return 0;
 }
-
-
-
-
-
-
 
 
 
