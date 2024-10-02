@@ -287,17 +287,67 @@ This program computes the factorial of a non-negative integer using an iterative
 //======================================================
 // C++ program to Generate Multiplication Table
 
+//#include <iostream>
+//using namespace std;
+//
+//int main(){
+//	int n;
+//	cout << "Enter number which you want to print the table: ";
+//	cin >> n;
+//	
+//	for(int i = 1; i <= 10; ++i){
+//		cout << n << " * " << i << " = " << n*i << endl;
+//	}
+//	return 0;
+//}
+
+
+
+//==================================================
+// C++ program to display fibonacci series
+
+/*
+Here’s a C++ program to display the Fibonacci series up to a specified number of terms. The Fibonacci series is a sequence in which each number is the sum of the two preceding ones, typically starting with 0 and 1.
+
+The Fibonacci sequence looks like this:
+				0,1,1,2,3,5,8,13,21,34,…
+				
+t1 and t2 store the first two terms of the Fibonacci series, which are initialized to 0 and 1 respectively.
+The program loops through and calculates the next term in the series by adding the previous two terms.
+It continues to print the series until it reaches the specified number of terms.
+*/
+
 #include <iostream>
 using namespace std;
 
 int main(){
-	int n;
-	cout << "Enter number which you want to print the table: ";
+	int n, t1=0, t2 = 1, nextTerm = 0;
+	
+	// input the number of term
+	cout << "Enter the number of term: ";
 	cin >> n;
 	
-	for(int i = 1; i <= 10; ++i){
-		cout << n << " * " << i << " = " << n*i << endl;
+	cout << "Fibonacci series: ";
+	
+	for(int i = 1; i <= n; ++i){
+		// print first two term
+		if(i == 1){
+			cout << t1 << ", ";
+			continue;
+		}
+		
+		if(i == 2){
+			cout << t2 << ", ";
+			continue;
+		}
+		
+		// calculate the next term
+		nextTerm = t1 + t2;
+		t1 = t2;
+		t2 = nextTerm;
+		
+		cout << nextTerm << ", ";
 	}
+	
 	return 0;
 }
-
