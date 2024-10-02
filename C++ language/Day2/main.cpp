@@ -190,22 +190,95 @@ For n = 5, the sum is:
 				1+2+3+4+5=15
 */
 
+//#include <iostream>
+//using namespace std;
+//
+//int main(){
+//	int num, sum = 0;
+//	cout << "Enter positive integer number: ";
+//	cin >> num;
+//	
+//	// method 1:
+//	for(int i = 1; i <= num; i++){
+//		sum += i; // add each number to sum
+//	}
+//	cout << "The sum of positive integer is: " << sum << endl;
+//	
+//	// method 2:
+//	sum = num * (num + 1) / 2;
+//	cout << "The sum (using formula) is: " << sum << endl;
+//	return 0;
+//}
+
+
+
+
+//=============================================
+// C++ program to check leap year
+
+//#include <iostream>
+//using namespace std;
+//
+//int main() {
+//    int year;
+//
+//    // Input year from user
+//    cout << "Enter a year: ";
+//    cin >> year;
+//
+//    // Leap year is divisible by 4 and (not divisible by 100 or divisible by 400)
+//    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+//        cout << year << " is a leap year." << endl;
+//    } else {
+//        cout << year << " is not a leap year." << endl;
+//    }
+//
+//    return 0;
+//}
+
+
+
+//=================================================
+// C++ program to find factorial
+
+/*
+Here's a C++ program to find the factorial of a given number. The factorial of a number n is the product of all positive integers less than or equal to n. It is denoted as n! and can be calculated as:
+
+n!=n×(n-1)×(n-2)×?×1
+For example, 5! = 5 × 4 × 3 × 2 × 1 = 120.
+
+Explanation:
+The program asks for a positive integer.
+It checks if the number is negative since the factorial of a negative number does not exist.
+If the number is non-negative, it calculates the factorial using a for loop.
+The factorial is stored in the variable factorial, which is of type unsigned long long to handle large numbers.
+
+This program computes the factorial of a non-negative integer using an iterative approach. For larger inputs, the unsigned long long type is used to prevent overflow.
+
+
+*/
+
 #include <iostream>
 using namespace std;
 
 int main(){
-	int num, sum = 0;
-	cout << "Enter positive integer number: ";
-	cin >> num;
+	int n;
+	unsigned long long factorial = 1;
 	
-	// method 1:
-	for(int i = 1; i <= num; i++){
-		sum += i; // add each number to sum
+	cout << "Enter number: ";
+	cin >> n;
+	
+	// ensure user enter a non negative integer
+	if(n < 0){
+		cout << "Error! Factorial of negative number doesn't exist." << endl;
 	}
-	cout << "The sum of positive integer is: " << sum << endl;
-	
-	// method 2:
-	sum = num * (num + 1) / 2;
-	cout << "The sum (using formula) is: " << sum << endl;
+	else {
+		// calculate the factorial using for loop
+		for(int i = 1; i <= n; ++i){
+			factorial *= i;
+		}
+	}
+	cout << "factorial of " << n << " = " << factorial << endl;
 	return 0;
 }
+
