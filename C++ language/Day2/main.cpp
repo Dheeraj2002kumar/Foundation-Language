@@ -258,27 +258,46 @@ This program computes the factorial of a non-negative integer using an iterative
 
 */
 
+//#include <iostream>
+//using namespace std;
+//
+//int main(){
+//	int n;
+//	unsigned long long factorial = 1;
+//	
+//	cout << "Enter number: ";
+//	cin >> n;
+//	
+//	// ensure user enter a non negative integer
+//	if(n < 0){
+//		cout << "Error! Factorial of negative number doesn't exist." << endl;
+//	}
+//	else {
+//		// calculate the factorial using for loop
+//		for(int i = 1; i <= n; ++i){
+//			factorial *= i;
+//		}
+//	}
+//	cout << "factorial of " << n << " = " << factorial << endl;
+//	return 0;
+//}
+
+
+
+//======================================================
+// C++ program to Generate Multiplication Table
+
 #include <iostream>
 using namespace std;
 
 int main(){
 	int n;
-	unsigned long long factorial = 1;
-	
-	cout << "Enter number: ";
+	cout << "Enter number which you want to print the table: ";
 	cin >> n;
 	
-	// ensure user enter a non negative integer
-	if(n < 0){
-		cout << "Error! Factorial of negative number doesn't exist." << endl;
+	for(int i = 1; i <= 10; ++i){
+		cout << n << " * " << i << " = " << n*i << endl;
 	}
-	else {
-		// calculate the factorial using for loop
-		for(int i = 1; i <= n; ++i){
-			factorial *= i;
-		}
-	}
-	cout << "factorial of " << n << " = " << factorial << endl;
 	return 0;
 }
 
