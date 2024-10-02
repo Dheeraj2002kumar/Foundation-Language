@@ -317,37 +317,288 @@ The program loops through and calculates the next term in the series by adding t
 It continues to print the series until it reaches the specified number of terms.
 */
 
+//#include <iostream>
+//using namespace std;
+//
+//int main(){
+//	int n, t1=0, t2 = 1, nextTerm = 0;
+//	
+//	// input the number of term
+//	cout << "Enter the number of term: ";
+//	cin >> n;
+//	
+//	cout << "Fibonacci series: ";
+//	
+//	for(int i = 1; i <= n; ++i){
+//		// print first two term
+//		if(i == 1){
+//			cout << t1 << ", ";
+//			continue;
+//		}
+//		
+//		if(i == 2){
+//			cout << t2 << ", ";
+//			continue;
+//		}
+//		
+//		// calculate the next term
+//		nextTerm = t1 + t2;
+//		t1 = t2;
+//		t2 = nextTerm;
+//		
+//		cout << nextTerm << ", ";
+//	}
+//	
+//	return 0;
+//}
+
+
+
+// =============================================
+// C++ program to find GCD
+
+/*
+
+Here's a C++ program to find the GCD (Greatest Common Divisor) of two numbers. The GCD of two integers is the largest number that divides both of them without leaving a remainder. One of the most efficient ways to calculate the GCD is using Euclid's Algorithm.
+
+Euclid’s Algorithm:
+If b is 0, then GCD(a, b) = a.
+Otherwise, GCD(a, b) = GCD(b, a % b).
+
+Explanation:
+-> The function findGCD() uses Euclid's algorithm to recursively compute the GCD.
+-> In the main() function, two integers are input by the user.
+-> The findGCD() function is called, and the result is displayed.
+
+the program calculates the GCD of two input numbers using recursion. Euclid's algorithm is efficient for finding the GCD, even for large numbers.
+*/
+
+//#include <iostream>
+//using namespace std;
+//
+//// Function to find GCD using Euclid's algorithm
+//int findGCD(int a, int b) {
+//    if (b == 0)
+//        return a;
+//    return findGCD(b, a % b);
+//}
+//
+//int main() {
+//    int num1, num2;
+//
+//    // Input two integers from user
+//    cout << "Enter two integers: ";
+//    cin >> num1 >> num2;
+//
+//    // Calculate GCD
+//    int gcd = findGCD(num1, num2);
+//
+//    // Output the result
+//    cout << "GCD of " << num1 << " and " << num2 << " is " << gcd << endl;
+//
+//    return 0;
+//}
+
+
+
+//===================================================
+// C++ program to find LCM
+
+
+
+
+
+
+//===============================================
+// C++ program to Reverse a number
+
+
+
+
+
+
+
+// ===================================================
+// C++ program to calculate power of a number
+
+
+
+
+
+
+
+
+//=============================================
+// C++ program to Check whether a number is Palindrome or Not
+
+
+
+
+
+
+
+
+//============================================
+// C++ program to display prime number between two intervals
+
+
+
+
+
+
+
+// =============================================
+// C++ program to check whether a Number is prime or not
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ============================================
+// C++ program to check Armstrong number
+
+
+
+
+
+
+
+
+
+
+//============================================
+// C++ program to display Armstrong Number Between Two Intervals
+
+
+
+
+
+
+
+
+
+
+
+
+
+//=====================================================
+// C++ program to display factors of a Number
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ============================================
+// C++ program to create Pyramid and pattern
+
+
+
+
+
+
+
+
+
+
+
+// ============================================
+// C++ program to Make a simple calculator to Add, Subtract, 
+// Multiply or Divide Using switch ... case
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//====================================================
+// C++ function
+//#include <iostream>
+//using namespace std;
+//
+//// display a number
+//void displayNum(int n1, float n2){
+//	cout << "The int number is " << n1 << endl;
+//	cout << "The double number is " << n2 << endl;
+//}
+//
+//int main(){
+//	int num1 = 5;
+//	double num2 = 5.5;
+//	
+//	// calling the function 
+//	displayNum(num1, num2);
+//	
+//	return 0;
+//}
+
+
+
+//===============================================
+// functon prototype
 #include <iostream>
 using namespace std;
 
+// function prototype
+void add(int, int);
+
 int main(){
-	int n, t1=0, t2 = 1, nextTerm = 0;
-	
-	// input the number of term
-	cout << "Enter the number of term: ";
-	cin >> n;
-	
-	cout << "Fibonacci series: ";
-	
-	for(int i = 1; i <= n; ++i){
-		// print first two term
-		if(i == 1){
-			cout << t1 << ", ";
-			continue;
-		}
-		
-		if(i == 2){
-			cout << t2 << ", ";
-			continue;
-		}
-		
-		// calculate the next term
-		nextTerm = t1 + t2;
-		t1 = t2;
-		t2 = nextTerm;
-		
-		cout << nextTerm << ", ";
-	}
-	
+	// calling the function before declaration.
+	add(5, 3);
 	return 0;
+}
+
+// function definition
+void add(int a, int b){
+	cout << (a + b);
 }
