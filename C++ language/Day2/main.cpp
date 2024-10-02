@@ -608,18 +608,47 @@ the program calculates the GCD of two input numbers using recursion. Euclid's al
 
 //=============================================
 // function library 
+//#include <iostream>
+//#include <cmath>
+//using namespace std;
+//
+//int main(){
+//	double number, squareRoot;
+//	
+//	number = 25.0;
+//	
+//	// sqrt() is a library function to calculate the square root
+//	squareRoot = sqrt(number);
+//	cout << "Square root of " << number << " = " << squareRoot << endl;
+//	
+//	return 0;
+//}
+
+
+//============================================
+// function with no argument and no return value
+
 #include <iostream>
-#include <cmath>
 using namespace std;
 
+void checkPrime();  // function prototype
+
 int main(){
-	double number, squareRoot;
-	
-	number = 25.0;
-	
-	// sqrt() is a library function to calculate the square root
-	squareRoot = sqrt(number);
-	cout << "Square root of " << number << " = " << squareRoot << endl;
-	
+	checkPrime();  // function call
 	return 0;
+}
+
+void checkPrime(){
+	int n, i, flag = 0;
+	cout << "Enter the  number: ";
+	cin >> n;
+	
+	for(i = 2; i <= n/2; i++){
+		if(n % i == 0){
+			flag = 1;
+		}
+	}
+	
+	if(flag == 1) cout << "\nIt is not Prime number";
+	else cout << "\nIt is a Prime number";
 }
