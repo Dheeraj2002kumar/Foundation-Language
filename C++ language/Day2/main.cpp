@@ -45,19 +45,41 @@
 //==============================================
 // C++ Program to check whether number is Even or Odd
 
+//#include <iostream>
+//using namespace std;
+//
+//int main(){
+//	int num;
+//	cout << "Enter number: ";
+//	cin >> num;
+//	
+//	if(num % 2 == 0){
+//		cout << "Number is Even...";
+//	}
+//	else {
+//		cout << "Number is Odd...";
+//	}
+//	return 0;
+//}
+
+
+
+//================================================
+// C++ Program to check whether a character is vowel or consonant.
+
 #include <iostream>
 using namespace std;
 
 int main(){
-	int num;
-	cout << "Enter number: ";
-	cin >> num;
+	char ch;
+	cout << "Enter single character: ";
+	cin >> ch;
 	
-	if(num % 2 == 0){
-		cout << "Number is Even...";
+	if(ch == 'a' || ch == 'A' || ch == 'E' || ch == 'e' || ch == 'i' || ch == 'I' || ch == 'o' || ch == 'O' || ch == 'u' || ch == 'U'){
+		cout << "Entered character is vowel...";
 	}
 	else {
-		cout << "Number is Odd...";
+		cout << "Entered charater is consonant...";
 	}
 	return 0;
-}
+} 
