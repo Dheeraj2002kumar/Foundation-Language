@@ -586,19 +586,40 @@ the program calculates the GCD of two input numbers using recursion. Euclid's al
 
 //===============================================
 // functon prototype
+//#include <iostream>
+//using namespace std;
+//
+//// function prototype
+//void add(int, int);
+//
+//int main(){
+//	// calling the function before declaration.
+//	add(5, 3);
+//	return 0;
+//}
+//
+//// function definition
+//void add(int a, int b){
+//	cout << (a + b);
+//}
+
+
+
+
+//=============================================
+// function library 
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-// function prototype
-void add(int, int);
-
 int main(){
-	// calling the function before declaration.
-	add(5, 3);
+	double number, squareRoot;
+	
+	number = 25.0;
+	
+	// sqrt() is a library function to calculate the square root
+	squareRoot = sqrt(number);
+	cout << "Square root of " << number << " = " << squareRoot << endl;
+	
 	return 0;
-}
-
-// function definition
-void add(int a, int b){
-	cout << (a + b);
 }
