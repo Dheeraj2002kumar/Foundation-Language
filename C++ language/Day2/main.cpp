@@ -691,29 +691,62 @@ the program calculates the GCD of two input numbers using recursion. Euclid's al
 //===================================================
 // function with argument but no return value
 
+//#include <iostream>
+//using namespace std;
+//
+//int checkPrime(int n);  // function prototype
+//
+//int main(){
+//	int n;
+//	cout << "Enter the  number: ";
+//	cin >> n;
+//	
+//	checkPrime(n);  // function call
+//	return 0;
+//}
+//
+//int checkPrime(int n){
+//	int i, flag = 0;
+//	for(i = 2; i <= n/2; i++){
+//		if(n % i == 0){
+//			flag = 1;
+//		}
+//	}
+//	
+//	if(flag == 1) cout << "\nIt is not Prime number";
+//	else cout << "\nIt is a Prime number";
+//	return 0;
+//}
+
+
+
+
+//==================================================
+// function with argument and return value
+
 #include <iostream>
 using namespace std;
 
 int checkPrime(int n);  // function prototype
 
 int main(){
-	int n;
+	int n, flag;
 	cout << "Enter the  number: ";
 	cin >> n;
 	
-	checkPrime(n);  // function call
+	flag = checkPrime(n);  // function call
+	
+	if(flag == 1) cout << "\nIt is not Prime number";
+	else cout << "\nIt is a Prime number";
 	return 0;
 }
 
 int checkPrime(int n){
-	int i, flag = 0;
+	int i;
 	for(i = 2; i <= n/2; i++){
 		if(n % i == 0){
-			flag = 1;
+			return 1;
 		}
-	}
-	
-	if(flag == 1) cout << "\nIt is not Prime number";
-	else cout << "\nIt is a Prime number";
+	}	
 	return 0;
 }
