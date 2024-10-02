@@ -67,19 +67,45 @@
 //================================================
 // C++ Program to check whether a character is vowel or consonant.
 
+//#include <iostream>
+//using namespace std;
+//
+//int main(){
+//	char ch;
+//	cout << "Enter single character: ";
+//	cin >> ch;
+//	
+//	if(ch == 'a' || ch == 'A' || ch == 'E' || ch == 'e' || ch == 'i' || ch == 'I' || ch == 'o' || ch == 'O' || ch == 'u' || ch == 'U'){
+//		cout << "Entered character is vowel...";
+//	}
+//	else {
+//		cout << "Entered charater is consonant...";
+//	}
+//	return 0;
+//} 
+
+
+
+
+//============================================
+// C++ program to find largest number among three numbers
+
 #include <iostream>
 using namespace std;
 
 int main(){
-	char ch;
-	cout << "Enter single character: ";
-	cin >> ch;
+	int num1, num2, num3;
+	cout << "Enter Three number: ";
+	cin >> num1 >> num2 >> num3;
 	
-	if(ch == 'a' || ch == 'A' || ch == 'E' || ch == 'e' || ch == 'i' || ch == 'I' || ch == 'o' || ch == 'O' || ch == 'u' || ch == 'U'){
-		cout << "Entered character is vowel...";
+	if ((num1 > num2) && (num1 > num3)){
+		cout << num1 << " is largest number!";
+	}
+	else if (num2 > num3){
+		cout << num2 << " is largest number!";
 	}
 	else {
-		cout << "Entered charater is consonant...";
+		cout << num3 << " is largest number!";
 	}
 	return 0;
-} 
+}
