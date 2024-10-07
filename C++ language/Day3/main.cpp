@@ -58,46 +58,46 @@ to a function but you can also return a value by reference.
 //===============================================
 // C++ Program to display prime number between two intervals using functions
 
-#include <iostream>
-using namespace std;
-
-// function to check if a number is prime 
-bool isPrime(int num){
-	if(num <= 1) // Prime numbers are greater than 1
-		return false;
-		
-	for(int i = 2; i <= num / 2; ++i){
-		if(num % 2 == 0)
-			return false;
-	}
-	return true;
-}
-
-// function to print prime numbers between two intervals
-void printPrimeInRange(int start, int end){
-	cout << "Prime number between " << start << " and " << end << " are: ";
-	for(int i = start; i <= end; ++i){
-		if(isPrime(i)){
-			cout << i << " ";
-		}
-	}
-	cout << endl;
-}
-
-int main(){
-	int start, end;
-	
-	// input from the user
-	cout << "Enter the starting number: ";
-	cin >> start;
-	cout << "Enter the ending number: ";
-	cin >> end;
-	
-	// call function to display prime numbers between the range
-	printPrimeInRange(start, end);
-	
-	return 0;
-}
+//#include <iostream>
+//using namespace std;
+//
+//// function to check if a number is prime 
+//bool isPrime(int num){
+//	if(num <= 1) // Prime numbers are greater than 1
+//		return false;
+//		
+//	for(int i = 2; i <= num / 2; ++i){
+//		if(num % 2 == 0)
+//			return false;
+//	}
+//	return true;
+//}
+//
+//// function to print prime numbers between two intervals
+//void printPrimeInRange(int start, int end){
+//	cout << "Prime number between " << start << " and " << end << " are: ";
+//	for(int i = start; i <= end; ++i){
+//		if(isPrime(i)){
+//			cout << i << " ";
+//		}
+//	}
+//	cout << endl;
+//}
+//
+//int main(){
+//	int start, end;
+//	
+//	// input from the user
+//	cout << "Enter the starting number: ";
+//	cin >> start;
+//	cout << "Enter the ending number: ";
+//	cin >> end;
+//	
+//	// call function to display prime numbers between the range
+//	printPrimeInRange(start, end);
+//	
+//	return 0;
+//}
 
 /*
 Enter the starting number: 1
@@ -115,7 +115,7 @@ Process exited after 9.728 seconds with return value 0
 
 //=======================================================
 // C++ program to check prime number by creating a function
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 // function to check if a number is prime 
@@ -147,8 +147,17 @@ int main(){
 	} else {
 		cout << number << " is not a prime number." << endl;
 	}
+	
+	return 0;
 }
 
+/*
+Enter a number: 13
+13 is a prime number.
+
+--------------------------------
+Process exited after 3.618 seconds with return value 0
+*/
 
 
 
