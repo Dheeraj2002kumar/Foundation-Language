@@ -294,6 +294,7 @@ Process exited after 3.618 seconds with return value 0
 //===============================================
 // C++ Program to display marks of 5 students
 
+/*
 #include <iostream>
 using namespace std;
 
@@ -318,7 +319,7 @@ int main(){
 	
 	return 0;
 }
-
+*/
 
 /*
 Displaying marks:
@@ -330,4 +331,42 @@ Student 5: 69
 
 --------------------------------
 Process exited after 0.06605 seconds with return value 0
+*/
+
+
+
+//=====================================================
+// C++ Program to display a string entered by user.
+/*
+The extraction operator >> works as scanf() in c and considers 
+a space " " has a terminating character.
+*/
+
+#include<iostream>
+using namespace std;
+
+int main(){
+	char str[100];
+	
+	cout << "Enter a string: ";
+	cin >> str;
+	cout << "You entered: " << str << endl;
+	
+	cout << "\nEnter another string: ";
+	cin >> str;
+	cout<< "You entered: " << str << endl;
+	
+	return 0;
+}
+
+
+/*
+Enter a string: best
+You entered: best
+
+Enter another string: C++_language
+You entered: C++_language
+
+--------------------------------
+Process exited after 16.61 seconds with return value 0
 */
