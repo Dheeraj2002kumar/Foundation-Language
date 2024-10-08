@@ -376,6 +376,7 @@ Process exited after 16.61 seconds with return value 0
 //================================================
 // C++ program to read and display an entre line entered by user.
 
+/*
 #include<iostream>
 using namespace std;
 
@@ -387,3 +388,50 @@ int main(){
 	cout << "You entered: " << str << endl;
 	return 0;
 }
+/
+
+/*
+Enter a string: Best language is C++ for window application
+You entered: Best language is C++ for window application
+
+--------------------------------
+Process exited after 63.44 seconds with return value 0
+Press any key to continue . . .
+*/
+
+
+
+//==================================================
+/*
+In this program, a string str is declared. Then the 
+string is asked from the user
+
+Instead of using cin >> or cin.get() function, 
+you can get the entered line of text using getline().
+
+getline() function takes the input stream as the first 
+parameter which is cin and str as the location of the line 
+to be stored.
+*/
+
+#include<iostream>
+using namespace std;
+
+int main(){
+	// declaring a string object
+	string str;
+	cout << "Enter a string: ";
+	getline(cin, str);
+	
+	cout << "You entered: " << str << endl;
+	return 0;
+}
+
+/*
+Enter a string: This is the best programming language. I want to crack Google as a software engineer.
+You entered: This is the best programming language. I want to crack Google as a software engineer.
+
+--------------------------------
+Process exited after 41.87 seconds with return value 0
+*/
+
