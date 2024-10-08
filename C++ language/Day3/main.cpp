@@ -557,6 +557,7 @@ defined types like structure.
 
 // Here is how you can create pointer for structures:
 
+/*
 #include<iostream>
 using namespace std;
 struct temp {
@@ -568,3 +569,38 @@ int main(){
 	temp *ptr;
 	return 0;
 }
+*/
+
+
+
+//============================================
+// C++ structure
+
+#include<iostream>
+using namespace std;
+struct Distance{
+	int feet;
+	float inch;
+};
+
+int main(){
+	Distance *ptr, d;
+	ptr = &d;
+	cout << "Enter feet: ";
+	cin >> (*ptr).feet;
+	cout << "Enter inch: ";
+	cin >> (*ptr).inch;
+	
+	cout << "Displaying information." << endl;
+	cout << "Distance = " << (*ptr).feet << " feet " << (*ptr).inch << "inches";
+	
+	return 0;
+}
+
+/*
+Enter feet: 5.5
+Enter inch: Displaying information.
+Distance = 5 feet 0.5inches
+--------------------------------
+Process exited after 2.339 seconds with return value 0
+*/
