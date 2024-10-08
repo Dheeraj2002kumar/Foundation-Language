@@ -414,6 +414,7 @@ parameter which is cin and str as the location of the line
 to be stored.
 */
 
+/*
 #include<iostream>
 using namespace std;
 
@@ -426,6 +427,8 @@ int main(){
 	cout << "You entered: " << str << endl;
 	return 0;
 }
+*/
+
 
 /*
 Enter a string: This is the best programming language. I want to crack Google as a software engineer.
@@ -433,5 +436,52 @@ You entered: This is the best programming language. I want to crack Google as a 
 
 --------------------------------
 Process exited after 41.87 seconds with return value 0
+*/
+
+
+
+//=======================================================
+// C++ structues
+
+#include<iostream>
+using namespace std;
+
+struct Person {
+	char name[50];
+	int age;
+	float salary;
+};
+
+int main(){
+	Person p1;
+	
+	cout << "Enter Full name: ";
+	cin.get(p1.name, 50);
+	
+	cout << "Enter age: ";
+	cin >> p1.age;
+	
+	cout << "Enter salary: ";
+	cin >> p1.salary;
+	
+	cout << "\nDisplaying Information."<<endl;
+	cout << "Name: " << p1.name << endl;
+	cout << "Age: " << p1.age << endl;
+	cout << "Salary: " << p1.salary;
+	
+	return 0;
+}
+
+/*
+Enter Full name: Dheeraj Kumar
+Enter age: 22
+Enter salary: 900000
+
+Displaying Information.
+Name: Dheeraj Kumar
+Age: 22
+Salary: 900000
+--------------------------------
+Process exited after 24.99 seconds with return value 0
 */
 
