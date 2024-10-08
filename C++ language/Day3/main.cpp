@@ -115,41 +115,41 @@ Process exited after 9.728 seconds with return value 0
 
 //=======================================================
 // C++ program to check prime number by creating a function
-#include<iostream>
-using namespace std;
-
-// function to check if a number is prime 
-bool isPrime(int num){
-	if(num <= 1) // prime number are greater than 1
-	{
-		return false;
-	}
-	
-	for(int i = 2; i <= num/2; ++i){
-		if(num % i == 0) // if the number is divisible by any number other than 1 and itself
-		{
-			return false;
-		}
-	}
-	return true; // If no divisors found, it is prime
-}
-
-int main(){
-	int number;
-	
-	// Input from the user
-	cout << "Enter a number: ";
-	cin >> number;
-	
-	// check if the number is prime using the function 
-	if(isPrime(number)){
-		cout << number << " is a prime number." << endl;
-	} else {
-		cout << number << " is not a prime number." << endl;
-	}
-	
-	return 0;
-}
+//#include<iostream>
+//using namespace std;
+//
+//// function to check if a number is prime 
+//bool isPrime(int num){
+//	if(num <= 1) // prime number are greater than 1
+//	{
+//		return false;
+//	}
+//	
+//	for(int i = 2; i <= num/2; ++i){
+//		if(num % i == 0) // if the number is divisible by any number other than 1 and itself
+//		{
+//			return false;
+//		}
+//	}
+//	return true; // If no divisors found, it is prime
+//}
+//
+//int main(){
+//	int number;
+//	
+//	// Input from the user
+//	cout << "Enter a number: ";
+//	cin >> number;
+//	
+//	// check if the number is prime using the function 
+//	if(isPrime(number)){
+//		cout << number << " is a prime number." << endl;
+//	} else {
+//		cout << number << " is not a prime number." << endl;
+//	}
+//	
+//	return 0;
+//}
 
 /*
 Enter a number: 13
@@ -271,3 +271,63 @@ Process exited after 3.618 seconds with return value 0
 
 // ===============================================
 // C++ program to calculate power using recursion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//===============================================
+// C++ Program to display marks of 5 students
+
+#include <iostream>
+using namespace std;
+
+// declare function to display marks
+// take a 1d array as parameter
+void display(int m[5]){
+	cout << "Displaying marks: " << endl;
+	
+	// display array elements
+	for(int i = 0; i < 5; ++i){
+		cout << "Student " << i + 1 << ": " << m[i] << endl;
+	}
+}
+
+int main(){
+	// declare and initialize an array
+	int marks[5] = {88, 76, 90, 61, 69};
+	
+	// call display function 
+	// pass array as argument
+	display(marks);
+	
+	return 0;
+}
+
+
+/*
+Displaying marks:
+Student 1: 88
+Student 2: 76
+Student 3: 90
+Student 4: 61
+Student 5: 69
+
+--------------------------------
+Process exited after 0.06605 seconds with return value 0
+*/
