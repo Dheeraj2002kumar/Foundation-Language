@@ -443,6 +443,7 @@ Process exited after 41.87 seconds with return value 0
 //=======================================================
 // C++ structues
 
+/*
 #include<iostream>
 using namespace std;
 
@@ -471,6 +472,7 @@ int main(){
 	
 	return 0;
 }
+*/
 
 /*
 Enter Full name: Dheeraj Kumar
@@ -485,3 +487,56 @@ Salary: 900000
 Process exited after 24.99 seconds with return value 0
 */
 
+
+//====================================================
+// C++ Structure and function 
+// passing structure to function in C++
+/*
+A stucture variable can be passed to a function in similar
+way as normal argument. Consider this example:
+*/
+
+#include<iostream>
+using namespace std;
+
+struct Person {
+	char name[50];
+	int age;
+	float salary;
+};
+
+void displayData(Person); // Function declaration
+
+int main(){
+	Person p;
+	cout << "Enter full name: ";
+	cin.get(p.name, 50);
+	cout << "Enter age: ";
+	cin >> p.age;
+	cout << "Enter salary: ";
+	cin >> p.salary;
+	
+	// function call with structure variable as an argument
+	displayData(p);
+	return 0;
+}
+
+void displayData(Person p){
+	cout << "\nDisplaying Information." << endl;
+	cout << "Name: " << p.name << endl;
+	cout << "Age: " << p.age << endl;
+	cout << "Salary: " << p.salary;
+}
+
+/*
+Enter full name: Dheeraj
+Enter age: 22
+Enter salary: 900000.99
+
+Displaying Information.
+Name: Dheeraj
+Age: 22
+Salary: 900001
+--------------------------------
+Process exited after 22.84 seconds with return value 0
+*/
