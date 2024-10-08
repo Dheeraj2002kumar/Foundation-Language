@@ -496,6 +496,7 @@ A stucture variable can be passed to a function in similar
 way as normal argument. Consider this example:
 */
 
+/*
 #include<iostream>
 using namespace std;
 
@@ -527,6 +528,7 @@ void displayData(Person p){
 	cout << "Age: " << p.age << endl;
 	cout << "Salary: " << p.salary;
 }
+*/
 
 /*
 Enter full name: Dheeraj
@@ -540,3 +542,29 @@ Salary: 900001
 --------------------------------
 Process exited after 22.84 seconds with return value 0
 */
+
+
+
+
+
+//===================================================
+// C++ Pointers to structure
+/*
+A pointer variable can be created not only for native types like 
+(int, float, double etc.) but they can also be created for user
+defined types like structure.
+*/
+
+// Here is how you can create pointer for structures:
+
+#include<iostream>
+using namespace std;
+struct temp {
+	int i;
+	float f;
+};
+
+int main(){
+	temp *ptr;
+	return 0;
+}
