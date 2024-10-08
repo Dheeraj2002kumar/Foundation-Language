@@ -342,6 +342,7 @@ The extraction operator >> works as scanf() in c and considers
 a space " " has a terminating character.
 */
 
+/*
 #include<iostream>
 using namespace std;
 
@@ -358,7 +359,7 @@ int main(){
 	
 	return 0;
 }
-
+*/
 
 /*
 Enter a string: best
@@ -370,3 +371,19 @@ You entered: C++_language
 --------------------------------
 Process exited after 16.61 seconds with return value 0
 */
+
+
+//================================================
+// C++ program to read and display an entre line entered by user.
+
+#include<iostream>
+using namespace std;
+
+int main(){
+	char str[100];
+	cout << "Enter a string: ";
+	cin.get(str, 100);
+	
+	cout << "You entered: " << str << endl;
+	return 0;
+}
