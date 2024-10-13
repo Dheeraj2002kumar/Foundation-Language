@@ -1,5 +1,5 @@
 # C language
-* <a href=""></a>Day1  (Fundamentals & C Introduction)
+* <a href="https://github.com/Dheeraj2002kumar/Foundation-Language/tree/main/C%20language/Day1"></a>Day1  (Fundamentals & C Introduction)
 - Day2 (Fundamentals & Introduction)
 - Day3 (C Flow Control part 1)
 - Day4 (C Flow Control part 2)
