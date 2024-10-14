@@ -103,6 +103,7 @@ Press any key to continue . . .
 //===============================================
 // Program to illustrate the working of Public and private in C++ class
 
+/*
 #include <iostream>
 using namespace std;
 
@@ -140,7 +141,7 @@ int main(){
 	
 	return 0;
 }
-
+*/
 
 /*
 Area of Room = 1309
@@ -148,4 +149,53 @@ Volume of Room = 25132.8
 
 --------------------------------
 Process exited after 0.06076 seconds with return value 0
+*/
+
+
+
+
+
+//==========================================================
+/*
+In this program, we have created a class named Sample, which 
+contains a public variable age and a public function displayAge().
+
+In main(), we have created an object of the Sample class named
+obj1. We then access the public elements directly by using the 
+codes obj1.age and obj1.displayAge().
+*/
+
+#include <iostream>
+using namespace std;
+
+// define a class
+class Sample {
+	// public elements
+	public:
+		int age;
+		void displayAge(){
+			cout << "Age = " << age << endl;
+		}
+};
+
+int main(){
+	// declare a class object 
+	Sample obj1;
+	cout << "Enter your age: ";
+	
+	// store input in age of the obj1 object
+	cin >> obj1.age;
+	
+	// call class function
+	obj1.displayAge();
+	
+	return 0;
+}
+
+/*
+Enter your age: 22
+Age = 22
+
+--------------------------------
+Process exited after 2.809 seconds with return value 0
 */
