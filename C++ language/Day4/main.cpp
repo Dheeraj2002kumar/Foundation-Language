@@ -165,6 +165,8 @@ obj1. We then access the public elements directly by using the
 codes obj1.age and obj1.displayAge().
 */
 
+
+/*
 #include <iostream>
 using namespace std;
 
@@ -191,6 +193,8 @@ int main(){
 	
 	return 0;
 }
+*/
+
 
 /*
 Enter your age: 22
@@ -198,4 +202,59 @@ Age = 22
 
 --------------------------------
 Process exited after 2.809 seconds with return value 0
+*/
+
+
+
+//===================================================
+/*
+In main(), the object obj1 cannot directly acces the class
+variable age.
+
+// error
+cin >> obj1.age;
+We can only indirectly manipulate age through the public
+funciton displayAge(), since this function initializes age
+with the value of the argument passed to it i.e the funciton
+parameer int a.
+*/
+
+#include <iostream>
+using namespace std;
+
+// define a class 
+class Sample {
+	// private elements
+	private:
+		int age;
+		
+	// public elements
+	public:
+		void displayAge(int a){
+			age = a;
+			cout << "Age = " << age << endl;
+		}
+};
+
+int main(){
+	int ageInput;
+	// declare an object 
+	Sample obj1;
+	
+	cout << "Enter you age: ";
+	cin >> ageInput;
+	
+	// call function and pass ageInput as argument
+	obj1.displayAge(ageInput);
+	return 0;
+}
+
+
+
+/*
+Enter you age: 22
+Age = 22
+
+--------------------------------
+Process exited after 1.974 seconds with return value 0
 */
