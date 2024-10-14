@@ -219,6 +219,8 @@ with the value of the argument passed to it i.e the funciton
 parameer int a.
 */
 
+
+/*
 #include <iostream>
 using namespace std;
 
@@ -248,7 +250,7 @@ int main(){
 	obj1.displayAge(ageInput);
 	return 0;
 }
-
+*/
 
 
 /*
@@ -257,4 +259,52 @@ Age = 22
 
 --------------------------------
 Process exited after 1.974 seconds with return value 0
+*/
+
+
+
+//============================================
+// Protected access modifier
+
+#include <iostream>
+using namespace std;
+
+// declare parent class 
+class Sample {
+	// protected elements
+	protected:
+		int age;
+};
+
+// declare child class
+class SampleChild : public Sample {
+	public:
+		void displayAge(int a){
+			age = a;
+			cout << "Age = " << age << endl;
+		}
+};
+
+int main(){
+	int ageInput;
+	// declare object of child class
+	SampleChild child;
+	cout << "Enter you age:  ";
+	cin >> ageInput;
+	
+	// call child class function
+	// pass ageInput as argument
+	child.displayAge(ageInput);
+	
+	return 0;
+}
+
+
+
+/*
+Enter you age:  22
+Age = 22
+
+--------------------------------
+Process exited after 2.936 seconds with return value 0
 */
