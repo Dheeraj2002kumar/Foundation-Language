@@ -210,6 +210,7 @@ Press any key to continue . . .
 //============================================
 // C++ Return Object from a Function
 
+/*
 #include<iostream>
 using namespace std;
 
@@ -241,7 +242,7 @@ int main(){
 	
 	return 0;
 }
-
+*/
 
 
 /*
@@ -250,4 +251,58 @@ Marks 2 = 75
 
 --------------------------------
 Process exited after 0.06273 seconds with return value 0
+*/
+
+
+
+//====================================================
+/*
+Operator Overloading in Unary Operators
+--> Unaryoperatrs operate on only one operand. The increment
+operator ++ and decrement operator -- are example of unary
+operators.
+
+Here, when we use ++count1;, the void operator ++ () is 
+called.
+This increasees the value attribute for the object 
+coutn1 by 1.
+*/
+
+// Overload ++ when used as prefix 
+
+#include <iostream>
+using namespace std;
+
+class Count {
+	private:
+		int value;
+	
+	public:
+		// Constructor to initialize count to 5
+		Count(): value(5){}
+		// Overload ++ when used as prefix 
+		void operator ++ (){
+			++value;
+		}
+		
+		void display(){
+			cout << "Count: " << value << endl;
+		}
+		
+};
+
+int main(){
+	Count count1;
+	// Call the "void operator ++ ()" function
+	++count1;
+	count1.display();
+	return 0;
+}
+
+
+/*
+Count: 6
+
+--------------------------------
+Process exited after 0.06413 seconds with return value 0
 */
