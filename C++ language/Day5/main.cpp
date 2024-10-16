@@ -100,6 +100,7 @@ Press any key to continue . . .
 // C++ Copy Constructor
 // The copy constructor in C++ is used to copy data of one object to another
 
+/*
 #include <iostream>
 using namespace std;
 
@@ -144,6 +145,7 @@ int main(){
 	
 	return 0;
 }
+*/
 
 
 /*
@@ -152,5 +154,51 @@ Area of Wall 2: 90.3
 
 --------------------------------
 Process exited after 0.1467 seconds with return value 0
+Press any key to continue . . .
+*/
+
+
+//=======================================================
+/*
+How to pass and return object from C++ functions?
+
+In C++ programming, we can pass objects to a function in a 
+similar manner as passing  regular arguments.
+*/
+
+// C++ program to calculate the average marks of two students
+
+#include<iostream>
+using  namespace std;
+
+class Student{
+	public:
+		double marks;
+		// constructor to initialize marks
+		Student(double m){
+			marks = m;
+		}
+};
+
+// function that has object as parameters
+void calculateAverage(Student s1, Student s2){
+	// calculate the average of marks of s1 and s2
+	double average = (s1.marks + s2.marks) / 2;
+	cout << "Average Marks = " << average << endl;
+}
+
+int main(){
+	Student student1(88.0), student2(56.0);
+	// pass the objects as arguments
+	calculateAverage(student1, student2);
+	return 0;
+}
+
+
+/*
+Average Marks = 72
+
+--------------------------------
+Process exited after 0.1455 seconds with return value 0
 Press any key to continue . . .
 */
