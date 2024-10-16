@@ -270,6 +270,8 @@ coutn1 by 1.
 
 // Overload ++ when used as prefix 
 
+
+/*
 #include <iostream>
 using namespace std;
 
@@ -279,7 +281,7 @@ class Count {
 	
 	public:
 		// Constructor to initialize count to 5
-		Count(): value(5){}
+		Count(): value(5){}  // Count(){ value = 5; }
 		// Overload ++ when used as prefix 
 		void operator ++ (){
 			++value;
@@ -298,11 +300,96 @@ int main(){
 	count1.display();
 	return 0;
 }
-
+*/
 
 /*
 Count: 6
 
 --------------------------------
 Process exited after 0.06413 seconds with return value 0
+*/
+
+
+
+//============================================
+#include<iostream>
+using namespace std;
+
+class Time{
+	public:
+		int h, m, s;
+	public:
+		Time(){
+			h = 0, m = 0, s = 0;
+		}
+		
+		void setTime();
+		void show(){
+			cout << h << ":" << m << ":" << s;
+		}
+		Time operator +(Time);
+};
+
+Time Time::operator +(Time t1){
+	Time t;
+	int a, b;
+	a = s + t1.s;
+	t.s = a % 60;
+	
+	b = (a / 60) + m + t1.m;
+	t.m = b % 60;
+	t.h = (b / 60) + h + t1.h;
+	t.h = t.h%12;
+	return t;
+}
+
+void Time::setTime(){
+	cout << "\n enter hour ";
+	cin >> h;
+	cout << "\n enter minute ";
+	cin >> m;
+	cout << "\n enter seconds ";
+	cin >> s;
+}
+
+int main(){
+	Time t1, t2, t3;
+	cout << "\n Enter first time: ";
+	t1.setTime();
+	cout << "\n Enter second time: ";
+	t2.setTime();
+	t3 = t1 + t2;
+	cout << "\n First time ";
+	t1.show();
+	cout << "\n Second time: ";
+	t2.show();
+	
+	cout << "\n T3 = T1 + T2: ";
+	t3.show();
+	
+	return 0;
+}
+
+
+/*
+
+ Enter first time:
+ enter hour 1
+
+ enter minute 2
+
+ enter seconds 22
+
+ Enter second time:
+ enter hour 3
+
+ enter minute 33
+
+ enter seconds 55
+
+ First time 1:2:22
+ Second time: 3:33:55
+ T3 = T1 + T2: 4:36:17
+--------------------------------
+Process exited after 19.3 seconds with return value 0
 */
