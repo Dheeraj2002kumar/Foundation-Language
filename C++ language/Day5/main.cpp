@@ -168,6 +168,7 @@ similar manner as passing  regular arguments.
 
 // C++ program to calculate the average marks of two students
 
+/*
 #include<iostream>
 using  namespace std;
 
@@ -193,7 +194,7 @@ int main(){
 	calculateAverage(student1, student2);
 	return 0;
 }
-
+*/
 
 /*
 Average Marks = 72
@@ -201,4 +202,52 @@ Average Marks = 72
 --------------------------------
 Process exited after 0.1455 seconds with return value 0
 Press any key to continue . . .
+*/
+
+
+
+
+//============================================
+// C++ Return Object from a Function
+
+#include<iostream>
+using namespace std;
+
+class Student{
+	public:
+		double marks1, marks2;
+};
+
+// function that returns object of Student
+Student createStudent(){
+	Student student;
+	
+	// initialize member variables of Student
+	student.marks1 = 96.5;
+	student.marks2 = 75.0;
+	
+	// print memeber variables of Student
+	cout << "Marks 1 = " << student.marks1 << endl;
+	cout << "Marks 2 = " << student.marks2 << endl;
+	
+	return student;
+}
+
+int main(){
+	Student student1;
+	
+	// call function 
+	student1 = createStudent();
+	
+	return 0;
+}
+
+
+
+/*
+Marks 1 = 96.5
+Marks 2 = 75
+
+--------------------------------
+Process exited after 0.06273 seconds with return value 0
 */
