@@ -114,7 +114,7 @@ Process exited after 0.06599 seconds with return value 0
 
 //=========================================
 
-
+/*
 #include<iostream>
 using namespace std;
 
@@ -127,3 +127,55 @@ int main(){
 	cout << "Value of a: " << *p << endl;
 	return 0;
 }
+*/
+
+
+/*
+Address of a: 0x6ffe04
+Value of a: 3
+
+--------------------------------
+Process exited after 0.07587 seconds with return value 0
+*/
+
+
+//========================================
+// c++ pointer
+
+#include<iostream>
+using namespace std;
+
+int main(){
+	int var = 5;
+	
+	// declare pointer variable
+	int* pointVar;
+	
+	// store address of var 
+	pointVar = &var;
+	
+	// print value of var
+	cout << "var = " << var << endl;
+	
+	// print address of var
+	cout << "Address of var (&var) = " << &var << endl << endl;
+	
+	// print pointer pointVar
+	cout << "pointVar = " << pointVar << endl;
+	
+	// print the content of the address pointVar points to 
+	cout << "Content of the address pointed to by pointVar (*pointVar) = "<< *pointVar << endl;
+	return 0;
+}
+
+
+/*
+var = 5
+Address of var (&var) = 0x6ffe04
+
+pointVar = 0x6ffe04
+Content of the address pointed to by pointVar (*pointVar) = 5
+
+--------------------------------
+Process exited after 0.07561 seconds with return value 0
+*/
