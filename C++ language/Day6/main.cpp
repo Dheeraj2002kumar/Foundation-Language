@@ -75,6 +75,8 @@ Press any key to continue . . .
 
 //===============================================
 // C++ pointer 
+
+/*
 #include <iostream>
 using namespace std;
 
@@ -95,7 +97,7 @@ int main(){
 	
 	return 0;
 }
-
+*/
 
 
 /*
@@ -106,3 +108,22 @@ Address of var3: 0x6ffe14
 --------------------------------
 Process exited after 0.06599 seconds with return value 0
 */
+
+
+
+
+//=========================================
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+	int a = 3;
+	int *p;
+	p = &a;
+	
+	cout << "Address of a: " << p << endl;
+	cout << "Value of a: " << *p << endl;
+	return 0;
+}
