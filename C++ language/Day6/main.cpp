@@ -187,6 +187,7 @@ Process exited after 0.07561 seconds with return value 0
 //=================================================
 // Passing by reference without pointers
 
+/*
 #include<iostream>
 using  namespace std;
 
@@ -214,7 +215,7 @@ int main(){
 	cout << "b = " << b << endl;
 	return 0;
 }
-
+*/
 
 
 /*
@@ -228,4 +229,55 @@ b = 1
 
 --------------------------------
 Process exited after 0.117 seconds with return value 0
+*/
+
+
+
+//==================================================
+// Passing by reference using pointers
+
+#include <iostream>
+using namespace std;
+
+// function prototype with pointer as parameters
+void swap(int*, int*);
+
+int main(){
+	// initialize variables
+	int a = 1, b = 2;
+	
+	cout << "Befor swapping" << endl;
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
+	
+	// call function by passing variable addresses
+	swap(&a, &b);
+	
+	cout << "\nAfter swapping" << endl;
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
+	return 0;
+}
+
+// function definition to swap numbers
+void swap(int* n1, int* n2){
+	int temp;
+	temp = *n1;
+	*n1 = *n2;
+	*n2 = temp;
+}
+
+
+
+/*
+Befor swapping
+a = 1
+b = 2
+
+After swapping
+a = 2
+b = 1
+
+--------------------------------
+Process exited after 0.1636 seconds with return value 0
 */
