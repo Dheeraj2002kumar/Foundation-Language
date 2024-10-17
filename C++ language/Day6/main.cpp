@@ -236,6 +236,7 @@ Process exited after 0.117 seconds with return value 0
 //==================================================
 // Passing by reference using pointers
 
+/*
 #include <iostream>
 using namespace std;
 
@@ -266,7 +267,7 @@ void swap(int* n1, int* n2){
 	*n1 = *n2;
 	*n2 = temp;
 }
-
+*/
 
 
 /*
@@ -280,4 +281,50 @@ b = 1
 
 --------------------------------
 Process exited after 0.1636 seconds with return value 0
+*/
+
+
+
+
+//====================================================
+// C++ Dynamic memory allocation
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+	// declare an int pointer
+	int* pointInt;
+	
+	// declare a float pointer
+	float* pointFloat;
+	
+	// dynamically allocate memory 
+	pointInt = new int;
+	pointFloat = new float;
+	
+	// assigning value to the  memory
+	*pointInt = 45;
+	*pointFloat = 45.45f;
+	
+	cout << *pointInt << endl;
+	cout << *pointFloat << endl;
+	
+	// deallocate the memory
+	delete pointInt;
+	delete pointFloat;
+	
+	return 0;
+}
+
+
+
+/*
+45
+45.45
+
+--------------------------------
+Process exited after 0.1411 seconds with return value 0
+
 */
