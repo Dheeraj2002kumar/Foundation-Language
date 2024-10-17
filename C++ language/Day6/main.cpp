@@ -1,6 +1,7 @@
 // C++ program to overload the binary operator + 
 //This program adds two complex numbers
 
+/*
 #include<iostream>
 using namespace std;
 
@@ -54,3 +55,54 @@ int main(){
 	
 	return 0;
 }
+*/
+
+
+/*
+Enter first complex number:
+Enter real and imaginary parts respectively: 4
+3
+Enter second complex number:
+Enter real and imaginary parts respectively: 3
+5
+Output Complex number: 7 + 8i
+--------------------------------
+Process exited after 4.714 seconds with return value 0
+Press any key to continue . . .
+*/
+
+
+
+//===============================================
+// C++ pointer 
+#include <iostream>
+using namespace std;
+
+int main(){
+	// declare variiables
+	int var1 = 3;
+	int var2 = 24;
+	int var3 = 17;
+	
+	// print address of var1
+	cout << "Address of var1: " << &var1 << endl;
+	
+	// print address of var2
+	cout << "Address of var2: " << &var2 << endl;
+	
+	// print address of var3
+	cout << "Address of var3: " << &var3 << endl;
+	
+	return 0;
+}
+
+
+
+/*
+Address of var1: 0x6ffe1c
+Address of var2: 0x6ffe18
+Address of var3: 0x6ffe14
+
+--------------------------------
+Process exited after 0.06599 seconds with return value 0
+*/
