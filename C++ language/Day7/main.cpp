@@ -289,6 +289,7 @@ Press any key to continue . . .
 //============================================
 // Multiple Inheritance
 
+/*
 #include<iostream>
 using namespace std;
 
@@ -312,7 +313,7 @@ int main(){
 	Bat b1;
 	return 0;
 }
-
+*/
 
 
 /*
@@ -321,4 +322,70 @@ Winged animal can flap.
 
 --------------------------------
 Process exited after 0.1364 seconds with return value 0
+*/
+
+
+
+//======================================================
+// C++ program to demonsrate hierarchical inheritance
+
+#include<iostream>
+using namespace std;
+
+// base class
+class Animal{
+	public:
+		void info(){
+			cout << "I am an animal." << endl;
+		}
+};
+
+// derived class 1
+class Dog : public Animal {
+	public:
+		void bark(){
+			cout << "I am a Dog. Woof woof." << endl;
+		}
+};
+
+// derived class 2
+class Cat : public Animal{
+	public:
+		void meow(){
+			cout << "I am a Cat. Meow." << endl;
+		}
+};
+
+int main(){
+	// Create object of Dog class
+	Dog dog1;
+	cout << "Dog Class: " << endl;
+	dog1.info(); // parent Class function
+	dog1.bark();
+	
+	// create object of Cat class
+	Cat cat1;
+	cout << "\nCat Class: " << endl;
+	cat1.info(); // parent class function
+	cat1.meow();
+	
+	return 0;
+}
+
+
+
+
+/*
+Dog Class:
+I am an animal.
+I am a Dog. Woof woof.
+
+Cat Class:
+I am an animal.
+I am a Cat. Meow.
+
+--------------------------------
+Process exited after 0.1271 seconds with return value 0
+Press any key to continue . . .
+
 */
