@@ -198,8 +198,9 @@ Process exited after 0.06775 seconds with return value 0
 
 //==============================================
 // C++ Inheritance
+// Multi-level inheritance
 
-
+/*
 #include <iostream>
 using namespace std;
 
@@ -219,3 +220,105 @@ int main(){
 	obj.display();
 	return 0;
 }
+*/
+
+
+/*
+Base class content.
+--------------------------------
+Process exited after 0.1374 seconds with return value 0
+*/
+
+
+
+//================================================
+
+/*
+#include<iostream>
+using namespace std;
+
+class A; // forward declaration
+class B{
+	public:
+		int  a;
+		
+		void getdata(int n){
+			a = n;
+		}
+		
+		friend int sum(A, B);
+};
+
+class A{
+	public:
+		int b;
+		void getdata(int m){
+			b = m;
+		}
+		
+		friend int sum(A, B);
+};
+
+int sum(A m, B n){
+	int result;
+	result = m.b + n.a;
+	return result;
+}
+
+int main(){
+	B obj1;
+	A obj2;
+	obj2.getdata(10);
+	obj1.getdata(20);
+	
+	cout << "Result of sum = " << sum(obj2, obj1);
+	return 0;
+}
+*/
+
+
+/*
+Result of sum = 30
+--------------------------------
+Process exited after 0.1154 seconds with return value 0
+Press any key to continue . . .
+*/
+
+
+
+//============================================
+// Multiple Inheritance
+
+#include<iostream>
+using namespace std;
+
+class Mammal{
+	public:
+		Mammal(){
+			cout << "Mammals can give direct birth." << endl;
+		}
+};
+
+class WingedAnimal{
+	public:
+		WingedAnimal(){
+			cout << "Winged animal can flap." << endl;
+		}
+};
+
+class Bat: public Mammal, public WingedAnimal{};
+
+int main(){
+	Bat b1;
+	return 0;
+}
+
+
+
+/*
+Mammals can give direct birth.
+Winged animal can flap.
+
+--------------------------------
+Process exited after 0.1364 seconds with return value 0
+*/
