@@ -147,6 +147,7 @@ Press any key to continue . . .
 
 // C++ program to demonstrate inheritance
 
+/*
 #include<iostream>
 using namespace std;
 
@@ -180,5 +181,41 @@ int main(){
 	
 	// Calling member of the derived class
 	dog1.bark();
+	return 0;
+}
+*/
+
+/*
+I can eat!
+I can sleep!
+I can bark! Woof woof!!
+
+--------------------------------
+Process exited after 0.06775 seconds with return value 0
+*/
+
+
+
+//==============================================
+// C++ Inheritance
+
+
+#include <iostream>
+using namespace std;
+
+class A{
+	public:
+		void display(){
+			cout << "Base class content.";
+		}
+};
+
+class B :  public A{};
+
+class C : public B{};
+
+int main(){
+	C obj;
+	obj.display();
 	return 0;
 }
