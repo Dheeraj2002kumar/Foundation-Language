@@ -1,3 +1,5 @@
+
+/*
 #include <iostream>
 using namespace std;
 
@@ -63,7 +65,7 @@ int main(){
 	
 	return 0;
 }
-
+*/
 
 
 /*
@@ -77,3 +79,106 @@ After postfix decrement Value: 0
 Process exited after 0.1404 seconds with return value 0
 */
 
+
+
+
+//======================================================
+
+/*
+#include <iostream>
+
+class Complex {
+private:
+    double real;
+    double imag;
+
+public:
+    // Constructor
+    Complex(double r = 0, double i = 0) : real(r), imag(i) {}
+
+    // Overloading the - operator
+    Complex operator-(const Complex& other) const {
+        return Complex(real - other.real, imag - other.imag);
+    }
+
+    // Display function
+    void display() const {
+        std::cout << real << " + " << imag << "i" << std::endl;
+    }
+};
+
+int main() {
+    double real1, imag1, real2, imag2;
+
+    std::cout << "Enter real and imaginary part of the first complex number: ";
+    std::cin >> real1 >> imag1;
+
+    std::cout << "Enter real and imaginary part of the second complex number: ";
+    std::cin >> real2 >> imag2;
+
+    Complex c1(real1, imag1);
+    Complex c2(real2, imag2);
+
+    Complex c3 = c1 - c2;
+
+    std::cout << "Result of subtraction: ";
+    c3.display();
+
+    return 0;
+}
+*/
+
+
+/*
+Enter real and imaginary part of the first complex number: 4
+3
+Enter real and imaginary part of the second complex number: 6
+5
+Result of subtraction: -2 + -2i
+
+--------------------------------
+Process exited after 4.799 seconds with return value 0
+Press any key to continue . . .
+*/
+
+
+//=======================================================
+// C++ Inheritance
+
+// C++ program to demonstrate inheritance
+
+#include<iostream>
+using namespace std;
+
+// base class
+class Animal{
+	public:
+		void eat(){
+			cout << "I can eat!" << endl;
+		}
+		
+		void sleep(){
+			cout << "I can sleep!" << endl;
+		}
+};
+
+// derived class
+class Dog : public Animal{
+	public:
+		void bark(){
+			cout << "I can bark! Woof woof!!" << endl;
+		}
+};
+
+int main(){
+	// Create object of the Dog class
+	Dog dog1;
+	
+	// Calling members of the base class
+	dog1.eat();
+	dog1.sleep();
+	
+	// Calling member of the derived class
+	dog1.bark();
+	return 0;
+}
