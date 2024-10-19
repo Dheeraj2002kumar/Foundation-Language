@@ -305,7 +305,7 @@ Press any key to continue . . .
 //===============================================
 // file handling --> Reading from a file
 
-
+/*
 #include<iostream>
 #include<fstream>
 using namespace std;
@@ -326,6 +326,8 @@ int main(){
 	}
 	return 0;
 }
+*/
+
 
 
 /*
@@ -335,3 +337,86 @@ Process exited after 0.01591 seconds with return value 0
 Press any key to continue . . .
 */
 
+
+
+
+//==============================================
+// close a file
+// It is done by FilePointer.close()
+
+/*
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main(){
+	fstream st; // step 1: creating object of fstream class
+	st.open("C:/Users/hp/Desktop/TCS IT/C++ language/Day8/program.txt", ios::out); // step 2: creating new file
+	st.close(); // step 3 : closing file
+	
+	return 0;
+}
+*/
+
+/*
+
+--------------------------------
+Process exited after 0.01027 seconds with return value 0
+Press any key to continue . . .
+
+*/
+
+
+//====================================
+
+
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main(){
+	fstream st; // creating object of fstream class
+st.open("C:/Users/hp/Desktop/TCS IT/C++ language/Day8/program.txt", ios::out); // create new file
+	if(!st) // checking whether file exist
+	{
+		cout << "File creation failed";
+	} else {
+		cout << "New file created" << endl;
+		st << "Hello Friends"; // writing to file
+		
+		// checking the file pointer position
+		cout << "File pointer position is " << st.tellp() << endl;
+		
+		st.seekp(-1, ios::cur); // Go one position back from current position
+		
+		// checking the file pointer position
+		cout << "As per tellp file pointer position is " << st.tellp() << endl;
+		
+		st.close(); // closing file
+	}
+	
+	st.open("C:/Users/hp/Desktop/TCS IT/C++ language/Day8/program.txt", ios::in); // opening file in read mode
+	if(!st) // checking whether file exist
+	{
+		cout << "No such file";
+	} else {
+		char ch;
+		st.seekg(5, ios::beg); // go to position 5 from beging.
+		cout << "As per tellg File pointer position is " << st.tellg() << endl; // checking file pointer position
+		cout << endl;
+		st.seekg(1, ios::cur); // Go to position 1 from beginning
+		st.close(); // closing file
+	}
+	return 0;
+}
+
+/*
+New file created
+File pointer position is 13
+As per tellp file pointer position is 12
+As per tellg File pointer position is 5
+
+
+--------------------------------
+Process exited after 0.1185 seconds with return value 0
+Press any key to continue . . .
+*/
