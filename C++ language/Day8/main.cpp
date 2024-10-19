@@ -199,6 +199,7 @@ Press any key to continue . . .
 //============================================
 // pure virtual function
 
+/*
 #include<iostream>
 using namespace std;
 
@@ -222,7 +223,7 @@ int main(){
 	b ->show();
 	return 0;
 }
-
+*/
 
 /*
 Implementation of Virtual funciton in Derived class
@@ -231,5 +232,37 @@ Implementation of Virtual funciton in Derived class
 Process exited after 0.12 seconds with return value 0
 Press any key to continue . . .
 
+*/
+
+
+
+
+//==========================================
+// file handling
+
+#include<fstream>
+#include<iostream>
+using namespace std;
+
+int main(){
+	fstream st; // step 1: creating object of fstream class
+	st.open("C:/Users/hp/Desktop/TCS IT/C++ language/Day8/program.txt", ios::out); // Step 2: create new file
+	if(!st) // step 3: checking whether file exist
+	{
+		cout << "File creation failed";
+	} else {
+		cout << "New file created";
+		st.close(); // step 4: Closing file
+	}
+	
+	return 0;
+}
+
+
+/*
+New file created
+--------------------------------
+Process exited after 0.1531 seconds with return value 0
+Press any key to continue . . .
 */
 
