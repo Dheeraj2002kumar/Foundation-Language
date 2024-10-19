@@ -152,7 +152,7 @@ Press any key to continue . . .
 //===================================================
 
 // C++ program to demonstrate the use of virtural functions
-
+/*
 #include<iostream>
 using namespace std;
 
@@ -180,7 +180,7 @@ int main(){
 	base1 -> print();
 	return 0;
 }
-
+*/
 // Virtul funcitons are runtime polymorphism.
 
 
@@ -191,3 +191,45 @@ Derived function
 Process exited after 0.1403 seconds with return value 0
 Press any key to continue . . .
 */
+
+
+
+
+
+//============================================
+// pure virtual function
+
+#include<iostream>
+using namespace std;
+
+class Base{
+	public:
+		virtual void show()=0; // pure virtual function
+};
+
+class Derived: public Base{
+	public:
+		void show(){
+			cout << "Implementation of Virtual funciton in Derived class\n";
+		}
+};
+
+int main(){
+	//Base obj; // Compile Time Error
+	Base *b;
+	Derived d;
+	b = &d;
+	b ->show();
+	return 0;
+}
+
+
+/*
+Implementation of Virtual funciton in Derived class
+
+--------------------------------
+Process exited after 0.12 seconds with return value 0
+Press any key to continue . . .
+
+*/
+
