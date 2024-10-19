@@ -97,6 +97,7 @@ Press any key to continue . . .
 //===================================================
 // C++ program to demonstrate the working of friend class
 
+/*
 #include <iostream>
 using namespace std;
 
@@ -136,7 +137,7 @@ int main(){
 	cout << "Sum: " << objectB.add();
 	return 0;
 }
-
+*/
 
 /*
 Sum: 13
@@ -144,4 +145,49 @@ Sum: 13
 Process exited after 0.1059 seconds with return value 0
 Press any key to continue . . .
 
+*/
+
+
+
+//===================================================
+
+// C++ program to demonstrate the use of virtural functions
+
+#include<iostream>
+using namespace std;
+
+class Base{
+	public:
+		virtual void print(){
+			cout << "Base Function" << endl;
+		}
+};
+
+class Derived : public Base {
+	public:
+		void print(){
+			cout << "Derived function" << endl;
+		}
+};
+
+int main(){
+	Derived derived1;
+	
+	// pointer of Base type that points to derived1
+	Base*base1 = &derived1;
+	
+	// class member funciton of Derived class
+	base1 -> print();
+	return 0;
+}
+
+// Virtul funcitons are runtime polymorphism.
+
+
+/*
+Derived function
+
+--------------------------------
+Process exited after 0.1403 seconds with return value 0
+Press any key to continue . . .
 */
