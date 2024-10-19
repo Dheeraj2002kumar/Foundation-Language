@@ -272,7 +272,7 @@ Press any key to continue . . .
 //===============================================
 // file handling --> writing too a file
 
-
+/*
 #include<iostream>
 #include<fstream>
 using namespace std;
@@ -290,11 +290,48 @@ int main(){
 	}
 	return 0;
 }
+*/
 
 /*
 New file created
 --------------------------------
 Process exited after 0.01468 seconds with return value 0
+Press any key to continue . . .
+*/
+
+
+
+
+//===============================================
+// file handling --> Reading from a file
+
+
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main(){
+	fstream st; // Step 1: create object of fstream class
+	st.open("C:/Users/hp/Desktop/TCS IT/C++ language/Day8/program.txt", ios::in); // Step 2: creating new file
+	if(!st) // step 3: checking whether file exist
+	{
+		cout << "No such file";
+	} else{
+		char ch;
+		while(!st.eof()){
+			st >> ch; // step 4: Reading from file
+			cout << ch; // Message Read from file
+		}
+		st.close(); // step 5 : closing file
+	}
+	return 0;
+}
+
+
+/*
+ThisisC++filee
+--------------------------------
+Process exited after 0.01591 seconds with return value 0
 Press any key to continue . . .
 */
 
