@@ -369,7 +369,7 @@ Press any key to continue . . .
 
 //====================================
 
-
+/*
 #include<iostream>
 #include<fstream>
 using namespace std;
@@ -408,6 +408,8 @@ st.open("C:/Users/hp/Desktop/TCS IT/C++ language/Day8/program.txt", ios::out); /
 	}
 	return 0;
 }
+*/
+
 
 /*
 New file created
@@ -418,5 +420,62 @@ As per tellg File pointer position is 5
 
 --------------------------------
 Process exited after 0.1185 seconds with return value 0
+Press any key to continue . . .
+*/
+
+
+
+
+//=====================================================
+// Program to display largest among two numbers using function templates.
+// If two characters are passed to functon template, character with larger ASCII value is displayed
+
+#include <iostream>
+using namespace std;
+
+// template funciton
+template <class T>
+T Large(T n1, T n2){
+	return (n1 > n2) ? n1 : n2;
+}
+
+int main(){
+	int i1, i2;
+	float f1, f2;
+	char c1, c2;
+	
+	cout  << "Enter two integers:\n";
+	cin >> i1 >> i2;
+	cout << Large(i1, i2) << " is larger. " << endl;
+	
+	cout << "\n Enter two floating-point numbers:\n";
+	cin >> f1 >> f2;
+	cout << Large(f1, f2) << "is larger." << endl;
+	
+	cout << "\nEnter two characters:\n";
+	cin >> c1 >> c2;
+	cout << Large(c1, c2) << " has larger ASCII value.";
+	
+	return 0;
+}
+
+
+/*
+Enter two integers:
+55
+66
+66 is larger.
+
+ Enter two floating-point numbers:
+33
+22
+33is larger.
+
+Enter two characters:
+h
+l
+l has larger ASCII value.
+--------------------------------
+Process exited after 18.82 seconds with return value 0
 Press any key to continue . . .
 */
