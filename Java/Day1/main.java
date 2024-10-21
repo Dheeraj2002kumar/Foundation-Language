@@ -20,6 +20,11 @@ public class main {
    // byte type
    byte myByte = 123;
    System.out.println(myByte); // prints 123
+
+   // short type
+
+   short temperature = -200;
+   System.out.println(temperature); // -200
   }
   
 }
