@@ -33,6 +33,10 @@ public class main {
    // long type
    long myLong = 1234567890123L;
    System.out.println(myLong); // 1234567890123
+
+   // double type
+   double myDouble = 3.4;
+  System.out.println(myDouble); // 3.4
   }
   
 }
