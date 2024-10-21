@@ -25,6 +25,10 @@ public class main {
 
    short temperature = -200;
    System.out.println(temperature); // -200
+
+   // int type
+   int myInt = 1234567890;
+   System.out.println(myInt); //1234567890
   }
   
 }
