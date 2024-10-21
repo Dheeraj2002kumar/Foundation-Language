@@ -1,6 +1,7 @@
 public class main {
   public static void main(String[] args){
 
+    /*
     double myDouble = 3.4;
     float myFloat = 3.4F;
 
@@ -10,6 +11,11 @@ public class main {
     System.out.println(myDouble); // prints 3.4
     System.out.println(myFloat); // prints 3.4
     System.out.println(myDoubleScientific); // 344.0
+   */
+
+   // boolean type
+   boolean flag = true;
+   System.out.println(flag); // print true
   }
   
 }
