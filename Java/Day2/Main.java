@@ -14,5 +14,18 @@ public class Main {
     // the String class
     result = str instanceof String;
     System.out.println("Is str an object of String? " + result);
+
+
+    // ternary operator
+    result = str instanceof String ? true : false;
+    System.out.println("Is str an object of String? " + result);
+
+    int februaryDay = 29;
+    String result1;
+
+    result1 = (februaryDay == 28) ? "Not a leap year" : "Leap year";
+    System.out.println(result1);
+
+
   }
 }
