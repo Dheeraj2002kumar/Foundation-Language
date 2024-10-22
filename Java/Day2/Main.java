@@ -26,6 +26,10 @@ public class Main {
     result1 = (februaryDay == 28) ? "Not a leap year" : "Leap year";
     System.out.println(result1);
 
+    // printing variables and literals
+    double number = -10.6;
 
+    System.out.println(5);
+    System.out.println(number);
   }
 }
