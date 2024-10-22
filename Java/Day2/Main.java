@@ -31,5 +31,11 @@ public class Main {
 
     System.out.println(5);
     System.out.println(number);
+
+    System.out.println("================= Concatenated Strings =======================");
+
+    // print Concatenated Strings
+    Double numberDouble = -10.6;
+    System.out.println("The number is " + numberDouble);
   }
 }
