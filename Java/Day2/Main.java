@@ -33,9 +33,21 @@ public class Main {
     System.out.println(number);
 
     System.out.println("================= Concatenated Strings =======================");
+    System.out.println();
 
     // print Concatenated Strings
     Double numberDouble = -10.6;
+    System.out.println("Hello, I am " + "a programmer");
     System.out.println("The number is " + numberDouble);
+
+    System.out.println("================= Java Blocks =======================");
+    System.out.println();
+
+    String band = "Beatles";
+    if (band == "Beatles"){ // start of block
+      System.out.println("The Beatles are the best");
+      System.out.println("By!");
+    }
+
   }
 }
