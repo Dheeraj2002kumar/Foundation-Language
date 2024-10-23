@@ -22,6 +22,8 @@ public class control_flow {
     }
 
        */
+
+       /*
       // if-else
       int number = 10;
       // check if number is greater than 0
@@ -35,6 +37,21 @@ public class control_flow {
         }
 
         System.err.println("Statement outside if...else block");
-      
+       */
+
+       // if-else ladder
+       int number = 10;
+       // checks if number is greater than 0
+       if(number > 0){
+        System.err.println("This number is positive");
+       }
+       // check if number is less than 0
+       else if(number < 0){
+        System.err.println("This number is negative");
+       }
+       // if both condition is false
+       else{
+        System.err.println("This number is 0.");
+       }
   }
 }
