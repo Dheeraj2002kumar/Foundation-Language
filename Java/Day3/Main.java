@@ -1,5 +1,7 @@
 package Day3;
 
+import java.util.Scanner;
+
 public class Main {
   public static void main(String[] args){
 
@@ -66,7 +68,7 @@ public class Main {
     }
    */
 
-
+    /*
    // Program to display numbers from 1 to 5 usng while loop
    // declare variables
    int i = 1, n = 5;
@@ -76,8 +78,30 @@ public class Main {
     System.out.println(i);
     i++;    
    }
-  
+   */
 
+
+
+   // java program to find the sum of positive  numbers
+
+   int sum = 0;
+   // create an object of Scanner class
+   Scanner input = new Scanner(System.in);
+
+   // take integerr input from the user
+   System.out.println("Enter a number: ");
+   int number = input.nextInt();
+
+   // while loop continues
+   // until entered number is positive
+   while(number >= 0){
+    // add the number to the sum
+    sum +=  number;
+    System.out.println("Enter a number: ");
+    number = input.nextInt();
+   }
+   System.out.println("Sum of positive numbers is: " + sum);
+   input.close();
       
   }
 
