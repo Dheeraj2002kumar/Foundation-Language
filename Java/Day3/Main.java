@@ -81,7 +81,7 @@ public class Main {
    */
 
 
-
+  /*
    // java program to find the sum of positive  numbers
 
    int sum = 0;
@@ -102,7 +102,18 @@ public class Main {
    }
    System.out.println("Sum of positive numbers is: " + sum);
    input.close();
-      
+   */
+
+
+   // java program to display number from 1 to 5
+   int i = 1, n = 5;
+   // do...while loop from 1 to 5
+   do{
+    System.out.println(i);
+    i++;
+   }while(i <= n);
+
+   
   }
 
 }
