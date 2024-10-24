@@ -47,7 +47,7 @@ public class Main {
 
     */
   
-
+  /*
   // for loop Vs for-each loop
 
     char[] vowels = {'a', 'e', 'i', 'o', 'u'};
@@ -64,6 +64,21 @@ public class Main {
     for(char item: vowels){
       System.out.println(item);
     }
+   */
+
+
+   // Program to display numbers from 1 to 5 usng while loop
+   // declare variables
+   int i = 1, n = 5;
+
+   // while loop for 1 to 5
+   while (i <= n) {
+    System.out.println(i);
+    i++;    
+   }
+  
+
+      
   }
 
 }
