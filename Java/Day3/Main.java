@@ -33,6 +33,8 @@ public class Main {
     }
    */
 
+
+   /*
    // Calculate the sum of all element of an array
    int[] numbers = {3, 4, 5, -5, 0, 12};
    int sum = 0;
@@ -42,5 +44,26 @@ public class Main {
     sum += number;
    }
    System.out.println("Sum = "+ sum);
+
+    */
+  
+
+  // for loop Vs for-each loop
+
+    char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+    System.out.println("=========== for loop =============");
+    // iterating through an array using a for loop
+    for(int i = 0; i < vowels.length; i++){
+      System.out.println(vowels[i]);
+    }
+
+    System.out.println("=========== for-each loop =============");
+    System.out.println();
+
+    // iterating through an array using the for-each loop
+    for(char item: vowels){
+      System.out.println(item);
+    }
   }
+
 }
