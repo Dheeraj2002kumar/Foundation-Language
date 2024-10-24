@@ -23,11 +23,24 @@ public class Main {
     System.out.println("Sum of natural numbers from 1 to 1000 is: " + sum); // 500500
     */
 
+    /*
+
     // java for-each  loop
     int[] numbers = {1, 2, 3, -4, -5};
     // iterating through the array
     for(int number: numbers){
       System.out.println(number);
     }
+   */
+
+   // Calculate the sum of all element of an array
+   int[] numbers = {3, 4, 5, -5, 0, 12};
+   int sum = 0;
+
+   // iterating through  each element of the array
+   for(int number : numbers){
+    sum += number;
+   }
+   System.out.println("Sum = "+ sum);
   }
 }
