@@ -10,6 +10,7 @@ public class Main {
       System.out.println(i);
     */
 
+    /* 
     // Program to find the sum of natural numbers from 1 to 1000.
     int sum = 0;
     int n = 1000;
@@ -20,5 +21,13 @@ public class Main {
       sum += i; // sum = sum + i
     }
     System.out.println("Sum of natural numbers from 1 to 1000 is: " + sum); // 500500
+    */
+
+    // java for-each  loop
+    int[] numbers = {1, 2, 3, -4, -5};
+    // iterating through the array
+    for(int number: numbers){
+      System.out.println(number);
+    }
   }
 }
