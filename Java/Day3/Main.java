@@ -49,6 +49,9 @@ public class Main {
 
     */
   
+    //--------------------------------------------------
+
+
   /*
   // for loop Vs for-each loop
 
@@ -68,6 +71,8 @@ public class Main {
     }
    */
 
+
+   //---------------------------------------------------
     /*
    // Program to display numbers from 1 to 5 usng while loop
    // declare variables
@@ -80,6 +85,8 @@ public class Main {
    }
    */
 
+
+   //-----------------------------------------------
 
   /*
    // java program to find the sum of positive  numbers
@@ -105,6 +112,8 @@ public class Main {
    */
 
 
+   //-------------------------------------------------------
+    /*
    // java program to display number from 1 to 5
    int i = 1, n = 5;
    // do...while loop from 1 to 5
@@ -112,7 +121,20 @@ public class Main {
     System.out.println(i);
     i++;
    }while(i <= n);
+     */
 
+
+     //-------------------------------------------------
+
+     // break statement
+     // break statement is used to terminate the loop 
+     for (int i = 1; i <= 10; i++){
+      // if the value of i is 5 the loop terminates
+      if(i == 5){
+        break;
+      }
+      System.out.println(i);
+     }
    
   }
 
