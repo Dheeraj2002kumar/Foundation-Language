@@ -204,6 +204,8 @@ public class Main {
 
     //----------------------------------------------------------
 
+
+    /*
     // labaled 
     // Note: The use of labeled continue is often discouraged as it makes your code hard to understand. If you are in a situation where you have to use labeled continue, refactor your code and try to solve it in a different way to make it more readable.
 
@@ -219,6 +221,30 @@ public class Main {
         System.out.println("i = " + i + "; j = " + j);
       }
     }
+       */
+
+  
+
+       //-------------------------------------------
+  // java program to check prime number
+  int n = 7;
+  boolean flag = false;
+
+  for(int i = 2; i <= n/2; i++){
+    if(n % i == 0){
+      flag = true;
+    }
+    break;
+  }
+
+  if(!flag){
+    System.out.println(n + " is a prime number");
+  } 
+  else {
+    System.out.println(n + " is not a prime number");
+  }
+
+  
 }
 
 }
