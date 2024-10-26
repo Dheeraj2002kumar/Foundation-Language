@@ -3,6 +3,8 @@ package Day4;
 public class Main {
   public static void main(String[] args) {
     // access array elements
+
+    /*
     // create an array
     int[] age = {12, 4, 5, 2, 5};
 
@@ -14,6 +16,22 @@ public class Main {
     System.out.println("Fourth Element: "+ age[3]);
     System.out.println("Fifth Element: "+ age[4]);
 
+    for(int i = 0; i < age.length; i++){
+      System.out.println(age[i]);
+    }
+     */
+
+
+    //---------------------------------------------------------------
+
+    // looping through Array elements
+
+    // create an array
+    int[] age = {12, 4, 5};
+
+    // loop through the array
+    // using for loop
+    System.out.println("============ Using for loop=============\n");
     for(int i = 0; i < age.length; i++){
       System.out.println(age[i]);
     }
