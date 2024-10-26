@@ -39,6 +39,7 @@ public class Main {
 
    //---------------------------------------------------------
 
+   /*
    // using the for-each loop
 
    // create an array
@@ -50,6 +51,32 @@ public class Main {
    for(int a : age){
     System.out.println(a);
    }
+   */
+
+
+
+   // -------------------------------------------------------------
+   
+   
+   // Example: Computer Sum and Average of Array Elements
+   int[] numbers = {2, -9, 0, 5, 12, -25, 22, 9, 8, 12};
+   int sum = 0;
+   Double average;
+   
+   // access all element using for each loop
+   // add each element in sum
+   for(int number: numbers){
+    sum += number;
+   }
+
+   // get the total number of elements 
+   int arrayLength = numbers.length;
+
+   // claculate the average 
+   // convert the average from int to double
+   average = ((double)sum / (double)arrayLength);
+   System.out.println("Sum = "+ sum);
+   System.out.println("Average = " + average);
 
 
   }
