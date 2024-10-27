@@ -1,5 +1,7 @@
 package Day4;
 
+import java.util.Arrays;
+
 public class Main {
   public static void main(String[] args) {
     // access array elements
@@ -57,7 +59,7 @@ public class Main {
 
    // -------------------------------------------------------------
    
-   
+   /*
    // Example: Computer Sum and Average of Array Elements
    int[] numbers = {2, -9, 0, 5, 12, -25, 22, 9, 8, 12};
    int sum = 0;
@@ -77,6 +79,49 @@ public class Main {
    average = ((double)sum / (double)arrayLength);
    System.out.println("Sum = "+ sum);
    System.out.println("Average = " + average);
+     */
+
+
+  
+
+  //-------------------------------------------------------
+  
+  /*
+  // Example: print all element of 2d array using loop
+
+  int[][] a = {
+    {1, 2, 3},
+    {4, 5, 6, 7},
+    {8}
+  };
+
+  for(int i = 0; i < a.length; i++){
+    for(int j = 0; j < a[i].length; j++){
+      System.out.println(a[i][j]);
+    }
+    System.out.println();
+  }
+ */
+
+
+
+
+ //--------------------------------------------------------
+
+ // java copy Arrays
+
+ int[] numbers = {1,2,3,4,5,6};
+ int[] copy = Arrays.copyOf(numbers, numbers.length);
+ System.out.println(Arrays.toString(copy)); // [1, 2, 3, 4,5,6]
+ // copyOfRange() method is used to copy a range of elements from the original array to 
+ // the new array. The method takes two parameters: the original array and the range of
+ // elements to be copied. The range is specified by the start and end indices.
+
+ 
+ int[] posityveNumbers = numbers; // copying arrays
+ for(int number : posityveNumbers){
+  System.out.println(number + ", ");
+ }
 
 
   }
