@@ -190,7 +190,7 @@ System.out.println();
 
 //==================================================================
 
-
+/*
 // Copying Arrays Using copyOfRange() method
 // we can also use the copyOfRange() method defined in java Arrays class arrays.for example, 
 
@@ -211,6 +211,40 @@ System.out.println("Destination2 = " + Arrays.toString(destination2));
 
 // Destination1 = [2, 3, 12, 4, 12, -2]
 // Destination2 = [12, 4, 12]
+
+*/
+
+
+
+//=====================================================================
+
+
+// Copying 2d Arrays using loop
+
+int[][] source = {
+  {1, 2, 3, 4},
+  {5, 6},
+  {0, 2, 42, -4, 5}
+};
+
+int[][] destination = new int[source.length][];
+
+for(int i = 0; i < destination.length; i++){
+  // allocating space for each row of destination array
+  destination[i] = new int[source[i].length];
+  for(int j = 0; j < destination[i].length; j++){
+    destination[i][j] = source[i][j];
+  }
+}
+
+// displaying destination array
+System.out.println("Destination = " + Arrays.deepToString(destination));
+
+
+// ================== output ======================
+// PS C:\Users\hp\Desktop\TCS IT\Java\Day4> java .\Main.java
+// Destination = [[1, 2, 3, 4], [5, 6], [0, 2, 42, -4, 5]]
+
 
 
 
