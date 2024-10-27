@@ -108,6 +108,7 @@ public class Main {
 
  //--------------------------------------------------------
 
+ /*
  // java copy Arrays
 
  int[] numbers = {1,2,3,4,5,6};
@@ -121,7 +122,25 @@ public class Main {
  int[] posityveNumbers = numbers; // copying arrays
  for(int number : posityveNumbers){
   System.out.println(number + ", ");
+ } */
+
+
+ 
+ 
+ //------------------------------------------------------------
+
+ // Using looping construct to copy arrays
+ 
+ int[] source = {1,2,3,4,5,6};
+ int[] destination = new int[6];
+
+ // iterate and  copy elements from source to destination
+ for(int i = 0; i < source.length; i++){
+  destination[i] = source[i];
  }
+
+ // converting array to string
+ System.out.println(Arrays.toString(destination)); // [1, 2, 3, 4, 5, 6]
 
 
   }
