@@ -108,10 +108,17 @@ public class Main {
 
  //--------------------------------------------------------
 
- /*
+ /* */
  // java copy Arrays
 
  int[] numbers = {1,2,3,4,5,6};
+
+ int[] posityveNumbers = numbers; // copying arrays
+ for(int number : posityveNumbers){
+  System.out.print(number + ", ");
+ }
+System.out.println();
+
  int[] copy = Arrays.copyOf(numbers, numbers.length);
  System.out.println(Arrays.toString(copy)); // [1, 2, 3, 4,5,6]
  // copyOfRange() method is used to copy a range of elements from the original array to 
@@ -119,16 +126,14 @@ public class Main {
  // elements to be copied. The range is specified by the start and end indices.
 
  
- int[] posityveNumbers = numbers; // copying arrays
- for(int number : posityveNumbers){
-  System.out.println(number + ", ");
- } */
+ /* */
 
 
  
  
  //------------------------------------------------------------
 
+ /*
  // Using looping construct to copy arrays
  
  int[] source = {1,2,3,4,5,6};
@@ -141,7 +146,7 @@ public class Main {
 
  // converting array to string
  System.out.println(Arrays.toString(destination)); // [1, 2, 3, 4, 5, 6]
-
+ */
 
   }
 }
