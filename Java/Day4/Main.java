@@ -154,6 +154,7 @@ System.out.println();
 
  //---------------------------------------------------------------------
 
+ /* 
  // To use Arrays.toString() method
 
  int[] n1 = {2, 3, 12, 4, 12, -2};
@@ -174,5 +175,44 @@ System.out.println();
  System.arraycopy(n1, 2, n3, 1, 2);
  // printing n3 array
  System.out.println("n3 = "  + Arrays.toString(n3));
+
+
+ // ========== output ===============
+//  n2 = [2, 3, 12, 4, 12, -2]
+// n3 = [0, 12, 4, 0, 0]
+
+
+*/
+
+
+
+
+
+//==================================================================
+
+
+// Copying Arrays Using copyOfRange() method
+// we can also use the copyOfRange() method defined in java Arrays class arrays.for example, 
+
+// To use toString() and copyOfRange() method
+
+int[] source = {2, 3, 12, 4, 12, -2};
+
+// copying entire source array to destination
+int[] destination1 = Arrays.copyOfRange(source, 0, source.length);
+System.out.println("Destination1 = " + Arrays.toString(destination1));
+
+// copying from index 2 to 5 (5 is not included)
+int[] destination2 = Arrays.copyOfRange(source, 2, 5);
+System.out.println("Destination2 = " + Arrays.toString(destination2));
+
+
+// ================== output: ================== 
+
+// Destination1 = [2, 3, 12, 4, 12, -2]
+// Destination2 = [12, 4, 12]
+
+
+
   }
 }
