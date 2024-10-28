@@ -70,11 +70,42 @@ import java.lang.reflect.Method;
 //==================================================================
 
 // Standerd library method
-
+/*
 public class Main {
 
   public static void main(String[] args) {
     // using the sqrt() method
     System.out.println("Square root of 4 is: " + Math.sqrt(4));
+  }
+}
+ */
+
+// user input
+import java.util.*;
+
+/**
+ * Main
+ */
+public class Main {
+
+  public static void main(String[] args) {
+    // taking input from user
+    System.out.println("Enter a number: ");
+
+    double num;
+
+    Scanner obj = new Scanner(System.in);
+    num = obj.nextFloat();
+
+    double result = Math.sqrt(num);
+
+    System.out.println("Square Root of entered value is: " + result);
+
+    // ============== output =============== 
+      // PS C:\Users\hp\Desktop\TCS IT\Java> java Day5/Main.java
+      // Enter a number: 
+      // 25
+      // Square Root of entered value is: 5.0
+      // PS C:\Users\hp\Desktop\TCS IT\Java> 
   }
 }
