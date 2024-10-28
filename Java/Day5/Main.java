@@ -114,6 +114,7 @@ public class Main {
 
  //===========================================================
 
+ /*
  // what are advantaes of using methods?
  // 1. Reusability of code
  // 2. Code organization
@@ -142,3 +143,33 @@ public class Main {
   // Square of 3 is: 9
   // Square of 4 is: 16
   // Square of 5 is: 25
+
+ */
+
+
+
+ //============================================================
+
+ // Constructor
+ public class Main {
+  
+  private String name;
+
+  // constructor
+  Main(){
+    System.out.println("Constructor Called: ");
+    name = "Programming";
+  }
+
+  public static void main(String[] args) {
+    // constructor is invoked while
+    // creating an object of the Main class
+    Main obj = new Main();
+    System.out.println("The name is " + obj.name);
+  }  
+ }
+
+ // =========== output ===============
+  // PS C:\Users\hp\Desktop\TCS IT\Java> java Day5/Main.java
+  // Constructor Called: 
+  // The name is Programming
