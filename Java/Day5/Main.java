@@ -279,7 +279,7 @@ public class Main {
 
  //======================================================
 
-
+/*
  // 3. Java Default constructor
  // If we do not create any constructor, the java compiler automatically create a no-argument constructor during the execution of the program. This constructor is called default constructor.
 
@@ -305,3 +305,42 @@ public class Main {
   // a = 0
   // b = false
   // PS C:\Users\hp\Desktop\TCS IT\Java> 
+
+ */
+
+
+
+
+ //===============================================================
+
+
+ // Constructors Overloading in java
+ // Similar to java method overloading, we can also create two or more constructors with different paramenters. This is called constructors overloading.
+
+ 
+ public class Main {
+  String language;
+  Main(){
+    this.language = "Java";
+  }
+
+  Main(String language){
+    this.language = language;
+  }
+
+  public void getName(){
+    System.out.println("Programming Language: " + this.language);
+  }
+
+  public static void main(String[] args) {
+    Main obj1 = new Main();
+    Main obj2 = new Main();
+    obj1.getName();
+    obj2.getClass();
+  }  
+ }
+
+ // =============== output ======================
+//  PS C:\Users\hp\Desktop\TCS IT\Java> java Day5/Main.java
+// Programming Language: Java
+// PS C:\Users\hp\Desktop\TCS IT\Java> 
