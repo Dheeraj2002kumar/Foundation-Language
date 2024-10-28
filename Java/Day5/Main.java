@@ -80,12 +80,12 @@ public class Main {
 }
  */
 
+
+
+ /*
 // user input
 import java.util.*;
 
-/**
- * Main
- */
 public class Main {
 
   public static void main(String[] args) {
@@ -109,3 +109,36 @@ public class Main {
       // PS C:\Users\hp\Desktop\TCS IT\Java> 
   }
 }
+ */
+
+
+ //===========================================================
+
+ // what are advantaes of using methods?
+ // 1. Reusability of code
+ // 2. Code organization
+ // 3. Code readability
+
+ public class Main {
+
+  // method defined
+  private static int getSquare(int x){
+    return x * x;
+  }
+
+  public static void main(String[] args) {
+    for (int i = 1; i <= 5; i++){
+      // method call
+      int result = getSquare(i);
+      System.out.println("Square of " + i + " is: " + result);
+    }
+  }
+ }
+
+ // ============ output ================
+  // PS C:\Users\hp\Desktop\TCS IT\Java> java Day5/Main.java
+  // Square of 1 is: 1
+  // Square of 2 is: 4
+  // Square of 3 is: 9
+  // Square of 4 is: 16
+  // Square of 5 is: 25
