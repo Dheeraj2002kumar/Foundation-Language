@@ -35,7 +35,7 @@ import java.lang.reflect.Method;
 //================================================================
 
  // Method Parameters in java
-
+/*
  public class Main {
  
   // method with no parameter
@@ -64,3 +64,17 @@ import java.lang.reflect.Method;
     // Method with a single parameter: 24
   }
  }
+   */
+
+
+//==================================================================
+
+// Standerd library method
+
+public class Main {
+
+  public static void main(String[] args) {
+    // using the sqrt() method
+    System.out.println("Square root of 4 is: " + Math.sqrt(4));
+  }
+}
