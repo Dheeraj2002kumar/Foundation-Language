@@ -180,6 +180,7 @@ public class Main {
 
  //=====================================================
 
+ /*
  // No argument constructor
  public class Main {
   int i;
@@ -201,3 +202,37 @@ public class Main {
   // PS C:\Users\hp\Desktop\TCS IT\Java> java Day5/Main.java
   // Constructor is called 
   // Value of i: 5
+
+ */
+
+
+
+
+//=========================================================
+
+// Example 1: Java program to create a private constructor
+class Test{
+  // create private constructor
+  private Test(){
+    System.out.println("Private constructor called");
+  }
+
+  // create a public static method
+  public static void instanceMethod(){
+    // create an instance of Test class
+    Test obj = new Test();
+  }
+}
+public class Main {
+
+  public static void main(String[] args) {
+    // call the instanceMethod()
+    Test.instanceMethod();
+  }
+}
+
+// ============== output ================
+// PS C:\Users\hp\Desktop\TCS IT\Java> javac .\Day5\Main.java
+// PS C:\Users\hp\Desktop\TCS IT\Java> java Day5.Main
+// Private constructor called
+// PS C:\Users\hp\Desktop\TCS IT\Java> 
