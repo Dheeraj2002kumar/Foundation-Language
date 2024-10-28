@@ -150,6 +150,7 @@ public class Main {
 
  //============================================================
 
+ /*
  // Constructor
  public class Main {
   
@@ -173,3 +174,30 @@ public class Main {
   // PS C:\Users\hp\Desktop\TCS IT\Java> java Day5/Main.java
   // Constructor Called: 
   // The name is Programming
+
+ */
+
+
+ //=====================================================
+
+ // No argument constructor
+ public class Main {
+  int i;
+  // constructor with no parameter
+  private Main(){
+    i = 5;
+    System.out.println("Constructor is called ");
+  }
+
+  public static void main(String[] args) {
+    // calling the constructor without any parameter
+    Main obj = new Main();
+    System.out.println("Value of i: " + obj.i);
+  }
+ }
+
+
+ // =============== output ======================
+  // PS C:\Users\hp\Desktop\TCS IT\Java> java Day5/Main.java
+  // Constructor is called 
+  // Value of i: 5
