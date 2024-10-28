@@ -210,6 +210,7 @@ public class Main {
 
 //=========================================================
 
+/* 
 // Example 1: Java program to create a private constructor
 class Test{
   // create private constructor
@@ -236,3 +237,38 @@ public class Main {
 // PS C:\Users\hp\Desktop\TCS IT\Java> java Day5.Main
 // Private constructor called
 // PS C:\Users\hp\Desktop\TCS IT\Java> 
+
+*/
+
+
+
+//====================================================
+
+// 2. Java parameterized constructor
+// A java constructor can also accept one or more parameters. Such constructors are known as parameterized constructors (constructor with parameters)
+
+
+public class Main {
+
+  String languages;
+  // constructor accepting single value
+  Main(String lang){
+    languages = lang;
+    System.out.println(languages + " Programming Languages");
+  }
+
+  public static void main(String[] args) {
+    // call constructor by passing a single value
+    Main obj1 = new Main("Java");
+    Main obj2 = new Main("Python");
+    Main obj3 = new Main("C++");
+  }
+}
+
+// =========== output ================
+// PS C:\Users\hp\Desktop\TCS IT\Java> javac .\Day5\Main.java
+// PS C:\Users\hp\Desktop\TCS IT\Java> java Day5/Main.java   
+// Java Programming Languages
+// Python Programming Languages
+// C++ Programming Languages
+// PS C:\Users\hp\Desktop\TCS IT\Java>
