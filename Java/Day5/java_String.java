@@ -63,6 +63,7 @@ package Day5;
 
 //---------------------------------------------------------------
 
+/*
 // 2. Join two Strings
 // We can join two strings in java using the concat() method. For example:
 
@@ -88,3 +89,34 @@ public class java_String {
 // First String: Java
 // Second String: Programming
 // Joined String: JavaProgramming
+ */
+
+
+ // ---------------------------------------------------------
+
+
+ // 3. Compare two Strings
+ // In java, we can make comparisons between two strings using the equals() method. for example:
+
+ public class java_String {
+ 
+  public static void main(String[] args) {
+    // create strings
+    String first = "Java Programming";
+    String second = "Java Programming";
+    String third = "C++ Programming";
+
+    // compare first and second strings
+    boolean result1 = first.equals(second);
+    System.out.println("First and Second Strings are equal: " + result1);
+
+    // compare first and third strings
+    boolean result2 = first.equals(third);
+    System.out.println("First and Third Strings are equal: " + result2);
+  }
+ }
+
+ //============== output ==================
+//  PS C:\Users\hp\Desktop\TCS IT\Java> java .\Day5\java_String.java
+// First and Second Strings are equal: true
+// First and Third Strings are equal: false
