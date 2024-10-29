@@ -334,13 +334,14 @@ public class Main {
 
   public static void main(String[] args) {
     Main obj1 = new Main();
-    Main obj2 = new Main();
+    Main obj2 = new Main("Python");
     obj1.getName();
-    obj2.getClass();
+    obj2.getName();
   }  
  }
 
  // =============== output ======================
 //  PS C:\Users\hp\Desktop\TCS IT\Java> java Day5/Main.java
-// Programming Language: Java
-// PS C:\Users\hp\Desktop\TCS IT\Java> 
+//  Programming Language: Java
+//  Programming Language: Python
+//  PS C:\Users\hp\Desktop\TCS IT\Java> 
