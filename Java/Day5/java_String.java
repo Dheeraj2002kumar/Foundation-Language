@@ -94,7 +94,7 @@ public class java_String {
 
  // ---------------------------------------------------------
 
-
+/*
  // 3. Compare two Strings
  // In java, we can make comparisons between two strings using the equals() method. for example:
 
@@ -120,3 +120,25 @@ public class java_String {
 //  PS C:\Users\hp\Desktop\TCS IT\Java> java .\Day5\java_String.java
 // First and Second Strings are equal: true
 // First and Third Strings are equal: false
+
+ */
+
+
+
+//----------------------------------------------------------------
+
+// Example: Create java Strings using the new keyword
+
+public class java_String {
+
+  public static void main(String[] args) {
+    // create strings using new keyword
+    String name = new String("Java String");
+
+    System.out.println(name); // print Java String
+  }
+}
+
+// ================ output ====================
+// PS C:\Users\hp\Desktop\TCS IT\Java> java .\Day5\java_String.java
+// Java String
