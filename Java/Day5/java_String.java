@@ -34,6 +34,8 @@ package Day5;
 
  // java string operation
 
+
+ /*
  // 1. Get Length of a string
  // To find the length of a string, we use the length() method of the String. For example:
 
@@ -55,3 +57,34 @@ package Day5;
 // Length of the string is: 12
 // Length: 12
 // PS C:\Users\hp\Desktop\TCS IT\Java> 
+
+ */
+
+
+//---------------------------------------------------------------
+
+// 2. Join two Strings
+// We can join two strings in java using the concat() method. For example:
+
+public class java_String {
+
+  public static void main(String[] args) {
+    // create strings
+    String first = "Java";
+    System.out.println("First String: " + first);
+
+    // create second 
+    String second = "Programming";
+    System.out.println("Second String: " + second);
+
+    // join two strings
+    String joinedString = first.concat(second);
+    System.out.println("Joined String: " + joinedString);
+  }
+}
+
+// ========== output ==============
+// PS C:\Users\hp\Desktop\TCS IT\Java> java .\Day5\java_String.java
+// First String: Java
+// Second String: Programming
+// Joined String: JavaProgramming
