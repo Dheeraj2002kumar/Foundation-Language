@@ -6,7 +6,7 @@
 
 // Input function 
 #include<stdio.h>
-#include<conio.h>
+// #include<conio>
 int main(){
   int marks;
   printf("\n Enter marks: ");
