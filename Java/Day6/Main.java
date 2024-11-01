@@ -149,6 +149,7 @@ class Main{
 
  // ------------------------------------------------------------
 
+ /*
  // Now, let's rewrite the code using this keyword.
  // Now, we are getting this expected output. It is because when the constructor is called, this inside the constructor is replaced by the object obj that has called the constructor. Hence the age variable is assigned value 8.
 
@@ -169,3 +170,40 @@ class Main{
  // ================== output
 //  PS C:\Users\hp\Desktop\TCS IT\Java\Day6> java .\Main.java                                      
 // obj.age = 8
+
+ */
+
+
+ // --------------------------------------------
+
+ // this with Getters and Setters 
+ // Here, we have used this keyword:
+  // - to assign  value inside the setter method
+  // - to access value inside the getter method
+
+class Main {
+  String name;
+
+  // setter method
+  void setName(String name){
+    this.name = name;
+  }
+
+  // getter method
+  String getName(){
+    return this.name;
+  }
+
+  public static void main(String[] args) {
+    // creating an object of the class
+    Main obj = new Main();
+
+    // calling the setter and the getter method
+    obj.setName("Toshiba");
+    System.out.println("obj.name: " + obj.getName());
+  }
+}
+
+// =============== output ======================
+// PS C:\Users\hp\Desktop\TCS IT\Java\Day6> java .\Main.java
+// obj.name: Toshiba
