@@ -176,16 +176,18 @@ class Main{
 
  // --------------------------------------------
 
+ /* 
  // this with Getters and Setters 
  // Here, we have used this keyword:
   // - to assign  value inside the setter method
   // - to access value inside the getter method
 
 class Main {
-  String name;
+  String name;  // instance
 
   // setter method
-  void setName(String name){
+  void setName(String name)  // String name is parameter
+  {
     this.name = name;
   }
 
@@ -207,3 +209,30 @@ class Main {
 // =============== output ======================
 // PS C:\Users\hp\Desktop\TCS IT\Java\Day6> java .\Main.java
 // obj.name: Toshiba
+
+*/
+
+
+//--------------------------------------------------------
+
+// In java, we cannot  change the value of a final variable.
+// Note: It is recommended to use uppercase to declare final variables in java
+
+class Main{
+  public static void main(String[] args){
+    // create a final variable
+    final int  AGE = 32;
+
+    // try to change the final variable
+    // AGE = 45; //  will gives error
+
+    // Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+    // The final local variable AGE cannot be assigned. It must be blank and not using a compound assignment
+
+    System.out.println("Age: " + AGE);
+  }
+}
+
+// =================== output ====================
+// PS C:\Users\hp\Desktop\TCS IT\Java\Day6> java Main.java
+// Age: 32
