@@ -76,3 +76,11 @@ public class Main {
 // PS C:\Users\hp\Desktop\TCS IT\Java> 
 
 
+
+// =============== different method to get output ===================
+// PS C:\Users\hp\Desktop\TCS IT\Java> java Day6.Main
+// I am an animal.
+// I have 4 legs.
+// PS C:\Users\hp\Desktop\TCS IT\Java> 
+
+
