@@ -124,6 +124,7 @@ class Main{
 
  //---------------------------------------------------------
 
+ /*
  // First,let's see an example without using this keyword:
 
  class Main{
@@ -142,3 +143,29 @@ class Main{
  // ================ output ===================
 //  PS C:\Users\hp\Desktop\TCS IT\Java\Day6> java .\Main.java                                      
 // Object reference = 0  
+
+ */
+
+
+ // ------------------------------------------------------------
+
+ // Now, let's rewrite the code using this keyword.
+ // Now, we are getting this expected output. It is because when the constructor is called, this inside the constructor is replaced by the object obj that has called the constructor. Hence the age variable is assigned value 8.
+
+ class Main{
+
+  int age;
+  Main(int age){
+    this.age = age;
+  }
+
+  public static void main(String[] args) {
+    // creating an object of the class
+    Main obj = new Main(8);
+    System.out.println("obj.age = " + obj.age);
+  }
+ }
+
+ // ================== output
+//  PS C:\Users\hp\Desktop\TCS IT\Java\Day6> java .\Main.java                                      
+// obj.age = 8
