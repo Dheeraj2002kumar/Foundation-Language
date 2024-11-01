@@ -39,6 +39,7 @@ public class Main {
 
  //----------------------------------------------------------
 
+ /*
  // Public Access Modifier
  // When methods, variables, classes, and so on are declared public, then we cna access them from anywhere. The public access modifier has no scope restriction. 
 
@@ -84,3 +85,34 @@ public class Main {
 // PS C:\Users\hp\Desktop\TCS IT\Java> 
 
 
+ */
+
+
+
+
+// ------------------------------------------------------
+
+
+// Java this keyword
+// In java, this keyword is used to refer to the current object inside a method or a constructor. 
+
+class Main{
+  int instVar;
+
+  Main(int instVar){
+    this.instVar = instVar;
+    System.out.println("this reerence = " + this);
+  }
+
+  public static void main(String[] args) {
+    // creating an object of the class
+    Main obj = new Main(10);
+    System.out.println("Object reference = " + obj);
+  }
+}
+
+
+// ============= output ======================
+// PS C:\Users\hp\Desktop\TCS IT\Java\Day6> java .\Main.java 
+// this reerence = Day6.Main@473b46c3
+// Object reference = Day6.Main@473b46c3
