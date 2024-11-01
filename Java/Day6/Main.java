@@ -92,9 +92,11 @@ public class Main {
 
 // ------------------------------------------------------
 
-
+/*
 // Java this keyword
 // In java, this keyword is used to refer to the current object inside a method or a constructor. 
+
+// this  is nothing but the reference to the current  object.
 
 class Main{
   int instVar;
@@ -116,3 +118,27 @@ class Main{
 // PS C:\Users\hp\Desktop\TCS IT\Java\Day6> java .\Main.java 
 // this reerence = Day6.Main@473b46c3
 // Object reference = Day6.Main@473b46c3
+ */
+
+
+
+ //---------------------------------------------------------
+
+ // First,let's see an example without using this keyword:
+
+ class Main{
+  int age;
+  Main(int age){
+    age = age;
+  }
+
+  public static void main(String[] args) {
+    // creating an object of the class
+    Main obj = new Main(10);
+    System.out.println("Object reference = " + obj.age);
+  }
+ }
+
+ // ================ output ===================
+//  PS C:\Users\hp\Desktop\TCS IT\Java\Day6> java .\Main.java                                      
+// Object reference = 0  
