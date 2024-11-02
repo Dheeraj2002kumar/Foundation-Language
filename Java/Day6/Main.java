@@ -231,6 +231,7 @@ class Main{
     // The final local variable AGE cannot be assigned. It must be blank and not using a compound assignment
 
     System.out.println("Age: " + AGE);
+    System.out.println("This is the testing of java install....");
   }
 }
 
