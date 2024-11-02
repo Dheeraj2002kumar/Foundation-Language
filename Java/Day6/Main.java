@@ -219,6 +219,7 @@ class Main {
 // Note: It is recommended to use uppercase to declare final variables in java
 
 class Main{
+  
   public static void main(String[] args){
     // create a final variable
     final int  AGE = 32;
