@@ -383,6 +383,7 @@ class Main{
 
  //-------------------------------------------------------
 
+ /*
  // Method Overriding in Java Inheritance
 
  class Animal{
@@ -426,6 +427,56 @@ class Main{
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day6.Main
 // I eat dog food..
 // I can bark
+
+ */
+
+
+
+
+ // =================================================
+
+ // Super keyword in java inheritance
+
+class Animal{
+  public void eat(){
+    System.out.println("I can eat");
+  }
+}
+
+class Dog extends Animal{
+  // overriding the eat() method
+  @Override
+  public void eat(){
+    // call method of superclass
+    super.eat();
+    System.out.println("I eat dog food..");
+  }
+
+  // new method in subclass
+  public void bark(){
+    System.out.println("I can bark....");
+  }
+}
+
+public class Main {
+
+  public static void main(String[] args) {
+    Dog labrador = new Dog();
+
+    // call the eat() method
+    labrador.eat();
+    labrador.bark();
+  }
+}
+
+
+// ++++++++++++++++++ output +++++++++++++++++++++
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day6/Main.java
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day6.Main
+// I can eat
+// I eat dog food..
+// I can bark....
+
 
 
 
