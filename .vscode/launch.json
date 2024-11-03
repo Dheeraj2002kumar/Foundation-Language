@@ -6,6 +6,13 @@
     "configurations": [
       {
         "type": "java",
+        "name": "Factorial",
+        "request": "launch",
+        "mainClass": "Day6.Factorial",
+        "projectName": "Foundation-Language_c2e17210"
+      },
+      {
+        "type": "java",
         "name": "Main",
         "request": "launch",
         "mainClass": "Day6.Main",
