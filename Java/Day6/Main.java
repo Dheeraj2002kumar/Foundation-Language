@@ -343,6 +343,7 @@ class Factorial{
 
 //----------------------------------------------------------
 
+/*
 // Inheritance
 
 class Animal{
@@ -374,6 +375,57 @@ class Main{
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day6.Main
 // My name is Tommy
 // I can eat
+
+ */
+
+
+
+
+ //-------------------------------------------------------
+
+ // Method Overriding in Java Inheritance
+
+ class Animal{
+  public void eat(){
+    System.out.println("I can eat");
+  }
+ }
+
+ class Dog extends Animal{
+  // overriding the eat() method
+  @Override
+  public void eat(){
+    System.out.println("I eat dog food..");
+  }
+
+  // new method in subclass
+  public void bark(){
+    System.out.println("I can bark");
+  }
+ }
+
+ class Main{
+  public static void main(String[] args) {
+    // create an object of the subclass
+    Dog labrador = new Dog();
+
+    // call the eat() method
+    labrador.eat();
+    labrador.bark();
+  }
+ }
+
+
+
+ // ++++++++++++++ output ++++++++++++++++++
+//  @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day6/M
+// ain.java
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java  Day6/M
+// ain.java
+// error: can't find main(String[]) method in class: Day6.Animal
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day6.Main
+// I eat dog food..
+// I can bark
 
 
 
