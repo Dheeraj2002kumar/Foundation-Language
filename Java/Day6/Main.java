@@ -313,3 +313,27 @@ class Factorial{
 
 
  //--------------------------------------------------------
+
+ class Main{
+  public static void main(String[] args) {
+    // create a variable of string type
+    String name = "Programming";
+
+    // checks if name is instance of String
+    boolean result1 = name instanceof String;
+    System.out.println("name is an instance of String: " + result1);
+
+    // create an object of Main
+    Main obj = new Main();
+
+    // checks if obj is an instance of Main
+    boolean result2 = obj instanceof Main;
+    System.out.println("obj is an instance of Main: " + result2);
+  }
+ }
+
+//  ++++++++++++++++ output ++++++++++++++++++++++
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day6/Main.java
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day6.Main
+// name is an instance of String: true
+// obj is an instance of Main: true
