@@ -215,11 +215,11 @@ class Main {
 
 //--------------------------------------------------------
 
+/*
 // In java, we cannot  change the value of a final variable.
 // Note: It is recommended to use uppercase to declare final variables in java
 
 class Main{
-  
   public static void main(String[] args){
     // create a final variable
     final int  AGE = 32;
@@ -231,10 +231,80 @@ class Main{
     // The final local variable AGE cannot be assigned. It must be blank and not using a compound assignment
 
     System.out.println("Age: " + AGE);
-    System.out.println("This is the testing of java install....");
   }
 }
 
 // =================== output ====================
 // PS C:\Users\hp\Desktop\TCS IT\Java\Day6> java Main.java
 // Age: 32
+
+ */
+
+
+// -------------------------------------------------------
+
+/*
+// Java final Method
+// In java, the final method cannot be overriden by the child class. 
+
+class FinalDemo{
+  // create a final method
+  public final void display(){
+    System.out.println("This is a final method.");
+  }
+}
+
+class Main extends FinalDemo {
+  // try to override the final method
+  public final void display(){
+    System.out.println("The final method is overriden.");
+  }
+  // Exception in thread "main" java.lang.Error: Unresolved compilation problem:
+  // The final method display() cannot be overridden.
+
+
+  public static void main(String[] args) {
+    Main obj = new Main();
+    obj.display();
+  }
+}
+
+//=============== output ========================
+// PS C:\Users\hp\Desktop\TCS IT\Java\Day6> java Main.java
+// Main.java:258: error: display() in Main cannot override display() in FinalDemo
+//   public final void display(){
+//                     ^
+//   overridden method is final
+// 1 error
+// error: compilation failed
+
+ */
+
+
+
+// ----------------------------------------------------------------
+
+// Example: Factorial of a Number Using Recursion
+
+class Factorial{
+  static int factorial(int n){
+    if(n != 0) // termination condition
+      return n * factorial(n-1); // recursive call
+    else{
+      return 1; // base case
+    }
+  }
+
+  public static void main(String[] args){
+    int number = 4, result;
+    result = factorial(number);
+    System.out.println("Factorial of " + number + " = " + result);
+  }
+}
+
+// +++++++++++++ output ++++++++++++++++++++
+// PS C:\Users\hp\Desktop\TCS IT\Java> javac Day6/Main.java
+// PS C:\Users\hp\Desktop\TCS IT\Java> java Day6.Factorial 
+// Factorial of 4 = 24
+
+
