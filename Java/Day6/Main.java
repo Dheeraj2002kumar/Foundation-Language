@@ -284,6 +284,7 @@ class Main extends FinalDemo {
 
 // ----------------------------------------------------------------
 
+/*
 // Example: Factorial of a Number Using Recursion
 
 class Factorial{
@@ -307,4 +308,8 @@ class Factorial{
 // PS C:\Users\hp\Desktop\TCS IT\Java> java Day6.Factorial 
 // Factorial of 4 = 24
 
+ */
 
+
+
+ //--------------------------------------------------------
