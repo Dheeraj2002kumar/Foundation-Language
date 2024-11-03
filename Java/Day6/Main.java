@@ -313,7 +313,7 @@ class Factorial{
 
 
  //--------------------------------------------------------
-
+/*
  class Main{
   public static void main(String[] args) {
     // create a variable of string type
@@ -337,3 +337,46 @@ class Factorial{
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day6.Main
 // name is an instance of String: true
 // obj is an instance of Main: true
+
+ */
+
+
+//----------------------------------------------------------
+
+// Inheritance
+
+class Animal{
+  // field and method of the parent class
+  String name;
+
+  public void eat(){
+    System.out.println("I can eat");
+  }
+}
+
+class Dog extends Animal{
+  public void display(){
+    System.out.println("My name is " + name);
+  }
+}
+
+class Main{
+  public static void main(String[] args){
+    Dog labrador = new Dog();
+    labrador.name = "Tommy";
+    labrador.display();
+    labrador.eat();
+  }
+}
+
+//++++++++++++++ output ++++++++++++++++
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day6/Main.java
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day6.Main
+// My name is Tommy
+// I can eat
+
+
+
+
+
+
