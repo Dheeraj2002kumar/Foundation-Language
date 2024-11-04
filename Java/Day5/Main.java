@@ -30,8 +30,6 @@ public class Main {
 }
  */
 
-import java.lang.reflect.Method;
-
 //================================================================
 
  // Method Parameters in java
@@ -69,7 +67,7 @@ import java.lang.reflect.Method;
 
 //==================================================================
 
-// Standerd library method
+// Stander library method
 /*
 public class Main {
 
@@ -115,7 +113,7 @@ public class Main {
  //===========================================================
 
  /*
- // what are advantaes of using methods?
+ // what are advantages of using methods?
  // 1. Reusability of code
  // 2. Code organization
  // 3. Code readability

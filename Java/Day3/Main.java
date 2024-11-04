@@ -1,7 +1,5 @@
 package Day3;
 
-import java.util.Scanner;
-
 public class Main {
   public static void main(String[] args){
 
@@ -74,7 +72,7 @@ public class Main {
 
    //---------------------------------------------------
     /*
-   // Program to display numbers from 1 to 5 usng while loop
+   // Program to display numbers from 1 to 5 using while loop
    // declare variables
    int i = 1, n = 5;
 
@@ -95,7 +93,7 @@ public class Main {
    // create an object of Scanner class
    Scanner input = new Scanner(System.in);
 
-   // take integerr input from the user
+   // take integer input from the user
    System.out.println("Enter a number: ");
    int number = input.nextInt();
 
@@ -206,7 +204,7 @@ public class Main {
 
 
     /*
-    // labaled 
+    // labeled 
     // Note: The use of labeled continue is often discouraged as it makes your code hard to understand. If you are in a situation where you have to use labeled continue, refactor your code and try to solve it in a different way to make it more readable.
 
     // outer loop is labeled as first
@@ -230,7 +228,7 @@ public class Main {
   int n = 7;
   boolean flag = false;
 
-  for(int i = 2; i <= n/2; i++){
+  for(int i = 2; i <= n/2;){
     if(n % i == 0){
       flag = true;
     }

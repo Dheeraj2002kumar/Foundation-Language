@@ -1,7 +1,7 @@
 package Day4;
 
 import java.util.Arrays;
-import java.util.*;
+
 
 public class Main {
   public static void main(String[] args) {
@@ -75,7 +75,7 @@ public class Main {
    // get the total number of elements 
    int arrayLength = numbers.length;
 
-   // claculate the average 
+   // calculate the average 
    // convert the average from int to double
    average = ((double)sum / (double)arrayLength);
    System.out.println("Sum = "+ sum);
@@ -114,8 +114,8 @@ public class Main {
 
  int[] numbers = {1,2,3,4,5,6};
 
- int[] posityveNumbers = numbers; // copying arrays
- for(int number : posityveNumbers){
+ int[] positiveNumbers = numbers; // copying arrays
+ for(int number : positiveNumbers){
   System.out.print(number + ", ");
  }
 System.out.println();
