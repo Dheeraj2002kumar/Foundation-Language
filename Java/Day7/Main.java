@@ -2,7 +2,7 @@ package Day7;
 
 // Inheritance, Abstraction, Interface, Polymorphism
 
-
+/*
 // Method Overriding in java inheritance
 
 
@@ -43,3 +43,53 @@ class Main {
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day7.Main
 // I eat dog food
 // I can bark
+
+ */
+
+
+
+
+// --------------------------------------------------------------
+
+// super class
+
+class Animal{
+    public void eat(){
+        System.out.println("I can eat");
+    }
+}
+
+class Dog extends Animal{
+    // overriding the eat() method
+    @Override
+    public void eat(){
+        // call mrthod of superclass
+        super.eat();
+        System.out.println("I eat dog food..");
+    }
+
+    // new method in subclass
+    public void bark(){
+        System.out.println("I can bark...");
+    }
+}
+
+public class Main {
+    public static void  main(String[] args){
+        Dog labrador = new Dog();
+
+        // call the eat() method
+        labrador.eat();
+        labrador.bark();
+    }
+    
+}
+
+
+// +++++++++++++++++++++++ output ++++++++++++++++++++++++
+
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day6/Main.java
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day6.Main
+// I can eat
+// I eat dog food..
+// I can bark....
