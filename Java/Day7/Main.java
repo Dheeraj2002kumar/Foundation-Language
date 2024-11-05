@@ -294,7 +294,7 @@ class Main{
 
  //------------------------------------------------------
 
-
+/*
  // Implementing an interface:-
  // Like abstract classes, we cannot create objects of interfaces.
 
@@ -323,3 +323,61 @@ class Main{
 //  @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day7/Main.java
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java  Day7.Main
 // The area of the rectangle is 30
+
+ */
+
+
+
+ // --------------------------------------------------------
+
+// Example: Default Method in java Interface
+
+interface Polygon{
+    void getArea();
+    // default method
+    default void getSides(){
+        System.out.println("I can get sides of a polygon...");
+    }
+}
+
+// implements the interface
+class Rectangle implements Polygon{
+    public void getArea(){
+        int length = 6;
+        int breadth = 5;
+        int area = length * breadth;
+        System.out.println("The area of the rectangle is " + area);
+    }
+
+    // overrides the getSides()
+    public void getSides(){
+        System.out.println("I have 4 sides.");
+    }
+}
+
+// implements the interface
+class Square implements Polygon{
+    public void getArea(){
+        int length = 5;
+        int area = length * length;
+        System.out.println("The area of the square is " + area);
+    }
+}
+
+class Main{
+    public static void main(String[] args){
+        // create an object of Rectangle
+        Rectangle r1 = new Rectangle();
+        r1.getArea();
+        r1.getSides();
+
+        // create an object of Square 
+        Square s1 = new Square();
+        s1.getArea();
+        s1.getSides();
+    }
+}
+
+
+
+// ++++++++++++++++++++++ output
