@@ -380,4 +380,13 @@ class Main{
 
 
 
-// ++++++++++++++++++++++ output
+// ++++++++++++++++++++++ output +++++++++++++++++++++++++
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day7/Main.java
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ 
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ 
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java  Day7.Main
+// The area of the rectangle is 30
+// I have 4 sides.
+// The area of the square is 25
+// I can get sides of a polygon...
+
