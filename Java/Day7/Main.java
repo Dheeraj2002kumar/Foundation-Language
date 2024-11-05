@@ -210,6 +210,7 @@ class Dog extends Animal{
 
 //---------------------------------------------------------------------
 
+/*
 
 // Implementing Abstract Methods:-
 // If the abstract class include any abstract method, then all the child classes inherited from the abstract superclass must provide the implementation of the abstrac method. 
@@ -245,3 +246,44 @@ class Main{
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java  Day7.Main
 // Bark bark...
 // I can eat..
+
+ */
+
+
+// -------------------------------------------------------
+
+
+// java Abstraction
+
+abstract class Animal{
+    abstract void makeSound();
+}
+
+class Dog extends Animal{
+    // implementation of abstract method
+    public void makeSound(){
+        System.out.println("Bark bark....");
+    }
+}
+
+class Cat extends Animal{
+    // implementation of abstract method
+    public void makeSound(){
+        System.out.println("Meows...");
+    }
+}
+
+class Main{
+    public static void main(String[] args){
+        Dog d1 = new Dog();
+        d1.makeSound();
+        Cat c1 = new Cat();
+        c1.makeSound();
+    }
+}
+
+// ++++++++++++++++++++ output +++++++++++++++++++++
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java  Day7.Main
+// Bark bark....
+// Meows...
+
