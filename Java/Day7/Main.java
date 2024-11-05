@@ -330,6 +330,7 @@ class Main{
 
  // --------------------------------------------------------
 
+ /*
 // Example: Default Method in java Interface
 
 interface Polygon{
@@ -390,3 +391,53 @@ class Main{
 // The area of the square is 25
 // I can get sides of a polygon...
 
+
+ */
+
+
+// -------------------------------------------------------
+
+
+// Java polymorphism
+
+class Polygon{
+    // method to render a shape
+    public void render(){
+        System.out.println("Rendering Polygon...");
+    }
+}
+
+class Square extends Polygon{
+    // renders Square 
+    public void render(){
+        System.out.println("Rendering Square...");
+    }
+}
+
+
+class Circle extends Polygon{
+    // renders circle
+    public void render(){
+        System.out.println("Rendering Circle...");
+    }
+}
+
+class Main{
+    public static void main(String[] args){
+        // create an object of Square
+        Square s1 = new Square();
+
+        s1.render();
+
+        // create an object of Circle
+        Circle c1 = new Circle();
+        c1.render();
+    }
+}
+
+
+// +++++++++++++++++ output ++++++++++++++++++++++++++
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day7/Main.java
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day7.Main
+// Rendering Square...
+// Rendering Circle...
