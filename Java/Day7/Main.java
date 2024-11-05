@@ -140,7 +140,7 @@ class Dog extends Animal{
 
  // ---------------------------------------
 
-
+/*
  // super class constructor
 
  class Animal{
@@ -171,3 +171,36 @@ class Dog extends Animal{
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java  Day7.Main
 // I am an animal
 // I am a dog...
+
+ */
+
+
+
+ //-----------------------------------------------------
+
+
+ // Abstract class
+
+ abstract class Language{
+    // method of abstract class
+    public void display(){
+        System.out.println("This is Java Programming...");
+    }
+ }
+
+ class Main extends Language {
+    public static void main(String[] args) {
+        // create an object of Main 
+        Main obj = new  Main();
+
+        // access method of abstract class
+        // using object of Main class
+        obj.display();
+    }
+ }
+
+
+ // ++++++++++++++++++++++ output +++++++++++++++++++++++++++
+//  @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day7/Main.java
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java  Day7.Main
+// This is Java Programming...
