@@ -28,6 +28,7 @@ public class Main{
 }
 
 // ++++++++++++++++++ output +++++++++++++++++++++++
+
 // vscode ➜ /workspaces/Foundation-Language/Java/Day8 (main) $ javac Main.java
 // vscode ➜ /workspaces/Foundation-Language/Java/Day8 (main) $ java Main
 // Java Programming Language
