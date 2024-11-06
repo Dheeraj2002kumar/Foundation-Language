@@ -89,7 +89,7 @@ public class Main {
 
  // ----------------------------------------------
 
-
+/*
  // encapsulation
 
 class Area{
@@ -122,3 +122,42 @@ public class Main{
 // +++++++++++++++++++ output +++++++++++++++++++++++++++
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day8.Main
 // Area: 30
+ */
+
+
+// ---------------------------------------------------------------
+
+// Data Hiding:-
+// Data hiding is a way of restricting the access of our data members by hiding the implementation details.
+
+class Person{
+  // private field
+  private int age;
+
+  // getter method
+  public int getAge(){
+    return age;
+  }
+
+  // setter method
+  public void setAge(int age){
+    this.age = age;
+  }
+}
+
+public class Main{
+  public static void main(String[] args){
+    // create an object of Person
+    Person p1 = new Person();
+
+    // change age using setter
+    p1.setAge(24);
+
+    // access age using getter
+    System.out.println("My age is " + p1.getAge());
+  }
+}
+
+// +++++++++++++++++++++++++++ output ++++++++++++++++++++++++++++
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day8.Main
+// My age is 24
