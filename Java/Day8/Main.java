@@ -43,7 +43,7 @@ public class Main{
 
  //------------------------------------------------------------
 
-
+/*
 // Polymorphis using method overloading
 
 // Note: The method that is called is determined by the compiler. Hence it is also known as compile-time polymorphism
@@ -83,3 +83,4 @@ public class Main {
 // ##########@Dheeraj2002kumar ➜ /workspaces/Foundation-Language (main) $ 
 
 
+ */
