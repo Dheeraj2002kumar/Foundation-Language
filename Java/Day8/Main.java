@@ -127,6 +127,7 @@ public class Main{
 
 // ---------------------------------------------------------------
 
+/*
 // Data Hiding:-
 // Data hiding is a way of restricting the access of our data members by hiding the implementation details.
 
@@ -161,3 +162,58 @@ public class Main{
 // +++++++++++++++++++++++++++ output ++++++++++++++++++++++++++++
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day8.Main
 // My age is 24
+
+ */
+
+
+ // ----------------------------------------------
+
+
+ // none-static nested class
+ // Note: we use the dot(.) operator to create an instance of the inner class using the outer class
+
+ class CPU{
+  double price;
+
+  // nested class
+  class Processor{
+    // members of nested class
+    double core;
+    String manufacturer;
+    double getCache(){
+      return 4.3;
+    }
+  }
+
+  // nested protected clas
+  protected class RAM{
+    // member of protected nested class
+    double memory;
+    String manufacturer;
+    double getClockSpeed(){
+      return 5.5;
+    }
+  }
+ }
+
+ public class Main{
+  public static void main(String[] args) {
+    
+    // create object of Outer class CPU
+    CPU cpu = new CPU();
+
+    // create an objecte of inner class Processor using class
+    CPU.Processor processor = cpu.new Processor();
+
+    // create an object of inner class RAM using outer class CPU 
+    CPU.RAM ram = cpu.new RAM();
+    System.out.println("Processar Cache = " + processor.getCache());
+    System.out.println("Ram Clock speed = " + ram.getClockSpeed());
+  }
+ }
+
+ // ++++++++++++++++++ output ++++++++++++++++++++++++++
+//  @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day8.Main
+// Processar Cache = 4.3
+// Ram Clock speed = 5.5
+
