@@ -1,5 +1,4 @@
 // Example: Polymorphism using method overriding
-
 // Note: The method that is called is determined during the execution of the program. Hence, method overriding is a run-time polymorphism
 
 class Language{
