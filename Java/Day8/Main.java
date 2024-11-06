@@ -52,14 +52,14 @@ class Pattern {
   // method without parameter
   public void display(){
     for(int i = 0; i < 10; i++){
-      System.out.println("*");
+      System.out.print("*");
     }
   }
 
   // method with single parameter
   public void display(char symbol){
     for(int i = 0; i < 10; i++){
-      System.out.println(symbol);
+      System.out.print(symbol);
     }
   }
 }
@@ -77,27 +77,9 @@ public class Main {
 
 
 // +++++++++++++++++++ output ++++++++++++++++++++++
-// PS C:\Users\hp\Desktop\TCS IT\Java> java Day8.Main
-// *
-// *
-// *
-// *
-// *
-// *
-// *
-// *
-// *
-// *
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language (main) $  /usr/bin/env /usr/lib/jvm/msopenjdk-current/bin/java -XX:+ShowCodeDetailsInExceptionMessages -cp /home/vscode/.vscode-remote/data/User/workspaceStorage/77461b5d-1/redhat.java/jdt_ws/Foundation-Language_c2e17210/bin Day8.Main 
+// **********
 
+// ##########@Dheeraj2002kumar ➜ /workspaces/Foundation-Language (main) $ 
 
-// #
-// #
-// #
-// #
-// #
-// #
-// #
-// #
-// #
-// #
 
