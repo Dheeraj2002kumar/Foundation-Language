@@ -8,6 +8,13 @@
         "type": "java",
         "name": "Main",
         "request": "launch",
+        "mainClass": "Main",
+        "projectName": "Foundation-Language_c2e17210"
+      },
+      {
+        "type": "java",
+        "name": "Main",
+        "request": "launch",
         "mainClass": "Java.Day6.Main",
         "projectName": "Foundation-Language_c2e17210"
       },
