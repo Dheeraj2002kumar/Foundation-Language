@@ -17,6 +17,7 @@ public class Main {
    boolean flag = true;
    System.out.println(flag); // print true
 
+    
    // byte type
    byte myByte = 123;
    System.out.println(myByte); // prints 123
