@@ -30,6 +30,7 @@ public class Main {
    int myInt = 1234567890;
    System.out.println(myInt); //1234567890
 
+    
    // long type
    long myLong = 1234567890123L;
    System.out.println(myLong); // 1234567890123
