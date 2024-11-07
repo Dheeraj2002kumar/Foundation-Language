@@ -1,6 +1,7 @@
 public class Main {
   public static void main(String[] args){
 
+    
     /*
     double myDouble = 3.4;
     float myFloat = 3.4F;
