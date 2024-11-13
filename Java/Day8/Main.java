@@ -294,6 +294,9 @@ class Main{
   public static void main(String[] args){
     AnonymousDemo an = new AnonymousDemo();
     an.createClass();
+
+    // Polygon p1 = new Polygon();
+    // p1.display();
   }
 }
 
@@ -303,4 +306,6 @@ class Main{
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day8.Main
 // Inside an anonymous class.
 
+
+// 0:51:07
 
