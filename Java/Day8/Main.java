@@ -171,7 +171,7 @@ public class Main{
 
  // none-static nested class
  // Note: we use the dot(.) operator to create an instance of the inner class using the outer class
-
+/*
  class CPU{
   double price;
 
@@ -211,9 +211,55 @@ public class Main{
     System.out.println("Ram Clock speed = " + ram.getClockSpeed());
   }
  }
+ */
 
  // ++++++++++++++++++ output ++++++++++++++++++++++++++
 //  @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day8.Main
 // Processar Cache = 4.3
 // Ram Clock speed = 5.5
 
+
+
+//-----------------------------------------------------
+
+
+// Java nested static class
+
+class Animal {
+  // inner class
+  class Reptile {
+    public void displayInfo(){
+      System.out.println("I am a reptile...");
+    }
+  }
+
+  // static class
+  static class Mammal{
+    public void displayInfo(){
+      System.out.println("I am a mammal...");
+    }
+  }
+}
+
+class Main{
+  public static void main(String[] args) {
+    // object creation of the outer class
+    Animal animal = new Animal();
+    
+    // object creation of the non-static class
+    Animal.Reptile reptile = animal.new Reptile();
+    reptile.displayInfo();
+
+    // object creation of the static nested class
+    Animal.Mammal mammal = new Animal.Mammal();
+    mammal.displayInfo();
+  }
+}
+
+
+// ++++++++++++++ output +++++++++++++++++++++++++++++++
+
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day8/Main.java 
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day8.Main
+// I am a reptile...
+// I am a mammal...
