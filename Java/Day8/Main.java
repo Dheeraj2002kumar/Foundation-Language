@@ -467,6 +467,7 @@ public class Main {
 // java enum Strings
 // In java, we can get the string representation of an enum constant using the toString() method or the name() method.
 
+/*
 enum Size{
   SMALL, MEDIUM, LARGE, EXTRALARGE;
 }
@@ -477,6 +478,7 @@ class Main{
     System.out.println("String value of Medium is :" + Size.MEDIUM.name());
   }
 }
+ */
 
 // ++++++++++++++++++++++++ output +++++++++++++++++++++++++++++
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day8/Main.java
@@ -484,3 +486,38 @@ class Main{
 // String value of SMALL is :SMALL
 // String value of Medium is :MEDIUM
 
+
+
+// -----------------------------------------------------
+
+// change Default String value of enums
+// We can change the default string representation of enum constants by overriding the toString() method.
+
+// Note: We cannot override the name() method. It is because the name() method is final.
+
+enum Size{
+  SMALL{
+    // override toString for SMALL
+    public String toString(){
+      return "The size is small.";
+    }
+  }, 
+  MEDIUM {
+    // override toString() for MEDIUM
+    public String toString(){
+      return "The size is medium...";
+    }
+  };
+}
+
+class Main{
+  public static void main(String[] args){
+    System.out.println(Size.MEDIUM.toString());
+  }
+}
+
+
+//  ++++++++++++++++++++++++ output +++++++++++++++++++++++++++++
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day8/Main.java
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day8.Main
+// The size is medium...
