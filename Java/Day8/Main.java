@@ -495,6 +495,8 @@ class Main{
 
 // Note: We cannot override the name() method. It is because the name() method is final.
 
+
+/*
 enum Size{
   SMALL{
     // override toString for SMALL
@@ -515,9 +517,11 @@ class Main{
     System.out.println(Size.MEDIUM.toString());
   }
 }
-
+ */
 
 //  ++++++++++++++++++++++++ output +++++++++++++++++++++++++++++
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day8/Main.java
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day8.Main
 // The size is medium...
+
+
