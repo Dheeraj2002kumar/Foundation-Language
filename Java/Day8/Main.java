@@ -270,7 +270,7 @@ class Main{
 // ----------------------------------------------------------
 
 // Java Anonymous Class
-
+/*
 class Polygon {
   public void display(){
     System.out.println("Inside the Polygon class");
@@ -299,8 +299,7 @@ class Main{
     // p1.display();
   }
 }
-
-
+ */
 
 
 // ++++++++++++++++++++ output ++++++++++++++++++++++
@@ -309,5 +308,52 @@ class Main{
 // Inside an anonymous class.
 
 
-// 0:51:07
+
+
+
+//-----------------------------------------------------------------
+
+
+// Java Singleton
+
+
+class Database {
+  private static Database dbObject;
+  private Database(){
+
+  }
+
+  public static Database getInstance(){
+    // create objet if it's not already created
+    if(dbObject == null){
+      dbObject = new Database();
+    }
+
+    // return the singleton object
+    return dbObject;
+  }
+
+  public void getConnection(){
+    System.out.println("You are now connected to the database...");
+  }
+}
+
+public class Main{
+  public static void main(String[] args){
+    Database db1;
+
+    // refers to the only object of Database
+    db1 = Database.getInstance();
+
+    db1.getConnection();
+  }
+}
+
+
+//+++++++++++++++++++ output +++++++++++++++++++++++++
+
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day8/Main.java
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day8.Main
+// You are now connected to the database...
+
 
