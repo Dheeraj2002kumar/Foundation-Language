@@ -316,7 +316,7 @@ class Main{
 
 // Java Singleton
 
-
+/*
 class Database {
   private static Database dbObject;
   private Database(){
@@ -348,7 +348,7 @@ public class Main{
     db1.getConnection();
   }
 }
-
+*/
 
 //+++++++++++++++++++ output +++++++++++++++++++++++++
 
@@ -357,3 +357,33 @@ public class Main{
 // You are now connected to the database...
 
 
+
+
+//-------------------------------------------------------
+
+
+// JAVA enum
+
+
+//----------------------------------------------------
+
+// Java enum
+
+enum Size {
+  SMALL, MEDIUM, LARGE, EXTRALARGE
+}
+
+class Main{
+  public static void main(String[] args){
+    System.out.println(Size.SMALL);
+    System.out.println(Size.MEDIUM);
+  }
+}
+
+
+// ++++++++++++++++++++ output ++++++++++++++++++
+
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day8/Main.java
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day8.Main
+// SMALL
+// MEDIUM
