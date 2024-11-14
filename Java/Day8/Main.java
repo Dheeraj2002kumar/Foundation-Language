@@ -358,17 +358,10 @@ public class Main{
 
 
 
-
-//-------------------------------------------------------
-
-
-// JAVA enum
-
-
 //----------------------------------------------------
 
 // Java enum
-
+/* 
 enum Size {
   SMALL, MEDIUM, LARGE, EXTRALARGE
 }
@@ -379,7 +372,7 @@ class Main{
     System.out.println(Size.MEDIUM);
   }
 }
-
+*/
 
 // ++++++++++++++++++++ output ++++++++++++++++++
 
@@ -387,3 +380,44 @@ class Main{
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day8.Main
 // SMALL
 // MEDIUM
+
+
+
+//----------------------------------------------------------
+
+// java enum
+
+enum Size{
+  SMALL, MEDIUM, LARGE, EXTRALARGE;
+  public String getSize(){
+    // this will refer to the object SMALL
+    switch(this){
+      case SMALL:
+        return "small";
+      case MEDIUM:
+        return "medium";
+      case LARGE:
+        return "large";
+      case EXTRALARGE:
+        return "extra large";
+      default:
+        return null;
+    } 
+  }
+}
+
+public class Main{
+  public static void main(String[] args){
+    // call getSize()
+    // using the object SMALL
+    System.out.println("The size of the pizza is " + Size.SMALL.getSize());
+  }
+}
+
+
+// ++++++++++++++++ output +++++++++++++++++++++++++++++
+
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day8/Main.java
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day8.Main
+// The size of the pizza is small
+
