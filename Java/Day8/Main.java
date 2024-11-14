@@ -426,7 +426,7 @@ public class Main{
 //------------------------------------------------------------
 
 // java enum constructors
-
+/* 
 enum Size {
   // Enum constants calling the enum constructors
   SMALL("The size is small..."),
@@ -452,9 +452,35 @@ public class Main {
     System.out.println(size.getSize());
   }
 }
-
+*/
 
 // ++++++++++++++++++++++++ output +++++++++++++++++++++++++++++
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day8/Main.java
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day8.Main
 // The size is small...
+
+
+
+
+// --------------------------------------------------------
+
+// java enum Strings
+// In java, we can get the string representation of an enum constant using the toString() method or the name() method.
+
+enum Size{
+  SMALL, MEDIUM, LARGE, EXTRALARGE;
+}
+
+class Main{
+  public static void main(String[] args){
+    System.out.println("String value of SMALL is :" + Size.SMALL.toString());
+    System.out.println("String value of Medium is :" + Size.MEDIUM.name());
+  }
+}
+
+// ++++++++++++++++++++++++ output +++++++++++++++++++++++++++++
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day8/Main.java
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ java Day8.Main
+// String value of SMALL is :SMALL
+// String value of Medium is :MEDIUM
+
