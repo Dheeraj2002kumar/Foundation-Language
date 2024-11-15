@@ -63,7 +63,7 @@ class Main{
 // -------------------------------------------------------
 
 // Java throw and throws keyword
-
+/*
 class Main{
 
     public static void divideByZero(){
@@ -77,6 +77,7 @@ class Main{
     }
 }
 
+ */
 // ++++++++++++++++ output ++++++++++++++++++++++++
 
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java (main) $ javac Day9/Main.java
@@ -86,3 +87,37 @@ class Main{
 //         at Main.main(Main.java:76)
 
 
+
+
+// ----------------------------------------------
+
+// Multiple Catch blocks
+
+class ListOfNumbers {
+    public int[] arr = new int[10];
+
+    public void writeList(){
+        try {
+            arr[10] = 11;
+        } catch (NumberFormatException e) {
+            // TODO: handle exception
+            System.out.println("NumberFormatException => " + e.getMessage());
+        } catch (IndexOutOfBoundsException e){
+            System.out.println("IndexOutOfBoundsException => " + e.getMessage());
+        }
+    }
+}
+
+class Main{
+    public static void main(String[] args){
+        ListOfNumbers list = new ListOfNumbers();
+        list.writeList();
+    }
+}
+
+
+// ++++++++++++++++ output ++++++++++++++++++++++++
+
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java/Day9 (main) $ javac Main.java
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java/Day9 (main) $ java Main
+// IndexOutOfBoundsException => Index 10 out of bounds for length 10
