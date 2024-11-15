@@ -130,6 +130,7 @@ class Main{
 
 // What is the output of the following code snippet?
 
+/*
 public class Main {
 
     public void checkForExceptions(int num1, int num2){
@@ -172,6 +173,7 @@ public class Main {
         System.out.println("End of main...");
     }
 }
+ */
 
 
 // +++++++++++++++++++++ output ++++++++++++++++++++++++++
@@ -184,3 +186,37 @@ public class Main {
 // After handling exception!
 // End of main...
 
+
+
+
+
+//---------------------------------------------------------
+
+// Annotation
+
+class Animal {
+    public void displayInfo(){
+        System.out.println("I am an animal...");
+    }
+}
+
+class Dog extends Animal {
+    @Override // Annotation
+    public void displayInfo(){
+        System.out.println("I am a dog...");
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        Dog d1 = new Dog();
+        d1.displayInfo();
+    }
+}
+
+
+// +++++++++++++++++++++ output ++++++++++++++++++
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java/Day9 (main) $ javac Main.java 
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java/Day9 (main) $ java Main
+// I am a dog...
