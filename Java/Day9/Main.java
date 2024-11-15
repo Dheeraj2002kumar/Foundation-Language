@@ -194,6 +194,7 @@ public class Main {
 
 // Annotation
 
+/*
 class Animal {
     public void displayInfo(){
         System.out.println("I am an animal...");
@@ -214,9 +215,42 @@ public class Main {
         d1.displayInfo();
     }
 }
-
+ */
 
 // +++++++++++++++++++++ output ++++++++++++++++++
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java/Day9 (main) $ javac Main.java 
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java/Day9 (main) $ java Main
 // I am a dog...
+
+
+
+
+// ------------------------------------------------------------------
+
+// Custom Annotations
+
+@interface MyCustomAnnotation{
+    String value() default "default value";
+}
+
+public class Main {
+
+    @MyCustomAnnotation(value = "programming")
+        public void method1(){
+            System.out.println("Test method 1");
+        }
+    
+
+    public static void main(String[] args) throws Exception {
+        Main obj = new Main();
+        obj.method1();
+    }
+}
+
+
+// ++++++++++++++++++++++ output +++++++++++++++++++++
+
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java/Day9 (main) $ javac Main.java
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java/Day9 (main) $ java Main
+// Test method 1
+
