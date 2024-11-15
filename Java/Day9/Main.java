@@ -93,6 +93,7 @@ class Main{
 
 // Multiple Catch blocks
 
+/*
 class ListOfNumbers {
     public int[] arr = new int[10];
 
@@ -115,9 +116,71 @@ class Main{
     }
 }
 
+ */
 
 // ++++++++++++++++ output ++++++++++++++++++++++++
 
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java/Day9 (main) $ javac Main.java
 // @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java/Day9 (main) $ java Main
 // IndexOutOfBoundsException => Index 10 out of bounds for length 10
+
+
+
+//-----------------------------------------------------
+
+// What is the output of the following code snippet?
+
+public class Main {
+
+    public void checkForExceptions(int num1, int num2){
+        int intArr[] = {1,2,3};
+        String str = null;
+        System.out.println("Befor any exception!");
+
+        try {
+            str.charAt(0);
+            System.out.println(num1 / num1);
+            System.out.println("Enjoy no exception!");
+        } 
+        catch (ArithmeticException e) {
+            // TODO: handle exception
+            System.out.println("ArithmeticException Handler!");
+        }
+        catch (NullPointerException e){
+            System.out.println("NullPointerException handler!");
+        }
+        catch (Exception e){
+            System.out.println("Default exception handler!");
+        }
+        finally{
+            System.out.println("In finally!");
+        }
+
+        System.out.println("After handling exception!");
+    }
+
+    public static void main(String[] args) {
+        Main exceptionMain = new Main();
+        try {
+            exceptionMain.checkForExceptions(2, 0);     
+        } 
+        catch (ArithmeticException e) {
+            // TODO: handle exception
+            System.out.println("ArithmeticException handler in main!");
+        }
+
+        System.out.println("End of main...");
+    }
+}
+
+
+// +++++++++++++++++++++ output ++++++++++++++++++++++++++
+
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java/Day9 (main) $ javac Main.java
+// @Dheeraj2002kumar ➜ /workspaces/Foundation-Language/Java/Day9 (main) $ java Main
+// Befor any exception!
+// NullPointerException handler!
+// In finally!
+// After handling exception!
+// End of main...
+
